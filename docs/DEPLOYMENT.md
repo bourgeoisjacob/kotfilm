@@ -20,6 +20,17 @@
 Create the database and copy its connection string (use the **pooled** URL for the app,
 and keep the **direct** URL for migrations if the provider distinguishes them).
 
+> ⚠️ **Supabase + Vercel: use the IPv4 connection string, or the build fails.**
+> Supabase's **direct** connection (`db.<ref>.supabase.co:5432`) is **IPv6-only**.
+> Vercel's build/runtime is IPv4, so `prisma migrate deploy` can't reach it and the
+> deploy fails ~1–2s into the migrate step with a connection error. Use the
+> **Session pooler** string instead (IPv4, supports migrations):
+> `postgresql://postgres.<ref>:<password>@aws-0-<region>.pooler.supabase.com:5432/postgres?sslmode=require`
+> — Supabase dashboard → Settings → Database → Connection string → mode **Session**
+> (port `5432`, **not** the Transaction pooler on `6543`, which breaks `migrate deploy`).
+> A machine with IPv6 (e.g. local dev) can use the direct host fine; only the
+> IPv4 host (the pooler) works from Vercel.
+
 ## 2. Switch the schema to Postgres
 
 ```prisma

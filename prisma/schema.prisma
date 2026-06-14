@@ -1,0 +1,258 @@
+generator client {
+  provider   = "prisma-client-js"
+  // engineType = "client" uses the architecture-independent WASM query compiler
+  // (no native engine binary) and requires a driver adapter at runtime. This is
+  // what lets Prisma run on this Windows ARM64 host (no native arm64 engine).
+  engineType = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// NOTE: SQLite does not support Prisma enums, so string fields document their
+// allowed values. When you move to Postgres you may convert these to enums.
+
+model Film {
+  id                 String   @id @default(cuid())
+  slug               String   @unique
+  title              String
+  originalTitle      String?
+  year               Int
+  country            String?
+  runtimeMinutes     Int?
+  shortSummary       String
+  historicalContext  String?
+  interpretation     String?
+  themes             String?  // JSON-encoded string[]
+  starterClassic     Boolean  @default(false) // curated "start here" entry points
+  draft              Boolean  @default(false) // ingested-but-unreviewed; hidden from the public catalogue
+  wikidataId         String?  @unique // idempotency key for the ingestion pipeline
+  imdbId             String? // IMDb id (Wikidata P345)
+  wikipediaUrl       String?
+  commonsCategoryUrl String?
+  createdAt          DateTime @default(now())
+
+  studioId   String?
+  studio     Studio? @relation(fields: [studioId], references: [id])
+  directorId String?
+  director   Person? @relation("Directed", fields: [directorId], references: [id])
+
+  genres            FilmGenre[]
+  cast              CastCredit[]
+  watchLinks        WatchLink[]
+  subtitleLanguages FilmSubtitle[]
+  sourceReferences  SourceReference[]
+  imageAssets       ImageAsset[]
+  watchlistItems    WatchlistItem[]
+  favorites         Favorite[]
+  ratings           Rating[]
+  watched           Watched[]
+}
+
+model Person {
+  id           String  @id @default(cuid())
+  slug         String  @unique
+  name         String
+  bio          String?
+  wikidataId   String?
+  wikipediaUrl String?
+
+  directed         Film[]            @relation("Directed")
+  castCredits      CastCredit[]
+  imageAssets      ImageAsset[]
+  sourceReferences SourceReference[]
+}
+
+model CastCredit {
+  id            String  @id @default(cuid())
+  filmId        String
+  personId      String
+  characterName String? @default("")
+  billingOrder  Int?
+  film          Film    @relation(fields: [filmId], references: [id])
+  person        Person  @relation(fields: [personId], references: [id])
+
+  @@unique([filmId, personId, characterName])
+}
+
+model Genre {
+  id    String      @id @default(cuid())
+  slug  String      @unique
+  name  String
+  films FilmGenre[]
+}
+
+model FilmGenre {
+  filmId  String
+  genreId String
+  film    Film  @relation(fields: [filmId], references: [id])
+  genre   Genre @relation(fields: [genreId], references: [id])
+
+  @@id([filmId, genreId])
+}
+
+model Studio {
+  id    String @id @default(cuid())
+  slug  String @unique
+  name  String
+  films Film[]
+}
+
+model SubtitleLanguage {
+  id    String         @id @default(cuid())
+  code  String         @unique // "en", "ru", ...
+  name  String
+  films FilmSubtitle[]
+}
+
+model FilmSubtitle {
+  filmId     String
+  languageId String
+  film       Film             @relation(fields: [filmId], references: [id])
+  language   SubtitleLanguage @relation(fields: [languageId], references: [id])
+
+  @@id([filmId, languageId])
+}
+
+model WatchLink {
+  id                String    @id @default(cuid())
+  filmId            String
+  platform          String
+  url               String?
+  label             String
+  sourceType        String    @default("UNVERIFIED") // OFFICIAL | ARCHIVE | PUBLIC_REPOSITORY | UNVERIFIED
+  isEmbeddable      Boolean   @default(false)
+  subtitleLanguages String?   // JSON-encoded string[]
+  rightsNote        String?
+  lastCheckedAt     DateTime?
+  film              Film      @relation(fields: [filmId], references: [id])
+}
+
+model SourceReference {
+  id          String  @id @default(cuid())
+  sourceType  String  // "Wikidata" | "Wikipedia" | "Wikimedia Commons" | ...
+  title       String?
+  url         String?
+  note        String?
+  licenseInfo String?
+  filmId      String?
+  personId    String?
+  film        Film?   @relation(fields: [filmId], references: [id])
+  person      Person? @relation(fields: [personId], references: [id])
+}
+
+model ImageAsset {
+  id          String  @id @default(cuid())
+  url         String
+  kind        String  @default("STILL") // POSTER | STILL | PHOTO
+  licenseName String?
+  licenseUrl  String?
+  attribution String?
+  sourceUrl   String?
+  filmId      String?
+  personId    String?
+  film        Film?   @relation(fields: [filmId], references: [id])
+  person      Person? @relation(fields: [personId], references: [id])
+}
+
+model WatchlistItem {
+  id        String   @id @default(cuid())
+  filmId    String
+  userId    String?
+  createdAt DateTime @default(now())
+  film      Film     @relation(fields: [filmId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id])
+
+  @@unique([userId, filmId])
+}
+
+// --- Accounts & personalization (Phase 7a) ---
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  passwordHash  String? // set for email/password (Credentials) sign-in
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+
+  accounts  Account[]
+  sessions  Session[]
+  watchlist WatchlistItem[]
+  favorites Favorite[]
+  ratings   Rating[]
+  watched   Watched[]
+}
+
+// NextAuth / Auth.js models (Prisma adapter).
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  filmId    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  film      Film     @relation(fields: [filmId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, filmId])
+}
+
+model Rating {
+  id        String   @id @default(cuid())
+  userId    String
+  filmId    String
+  value     Int // 1..5
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  film      Film     @relation(fields: [filmId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, filmId])
+}
+
+model Watched {
+  id        String   @id @default(cuid())
+  userId    String
+  filmId    String
+  watchedAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  film      Film     @relation(fields: [filmId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, filmId])
+}

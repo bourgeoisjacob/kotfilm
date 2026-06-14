@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --kot-red: #9e2b25;
+  --kot-red-deep: #7c211c;
+  --kot-cream: #efe4cd;
+  --kot-cream-hi: #f6efe0;
+  --kot-tan: #c9ab7e;
+  --kot-gold: #bd9a55;
+  --kot-ink: #211d18;
+  --kot-char: #2c2722;
+  --kot-line: #cdbb97;
+}
+
+body {
+  background: var(--kot-cream-hi);
+  color: var(--kot-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--kot-red);
+  color: var(--kot-cream-hi);
+}
+
+/* Optional paper grain — add the .grain class to textured surfaces. */
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: radial-gradient(var(--kot-ink) 1px, transparent 1px);
+  background-size: 3px 3px;
+}

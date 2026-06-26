@@ -36,7 +36,8 @@ export type SeedFilm = {
 // summary/context/impact text is ORIGINAL, written for Kotfilm — never copied or
 // closely paraphrased from any source. Studio-released titles are labelled
 // OFFICIAL; everything else is UNVERIFIED. Exact video URLs are never fabricated.
-// `// TODO` marks values that should be double-checked before use.
+// Metadata (years, runtimes, studios, country, principal cast) reconciled against
+// Wikidata, with English Wikipedia as a tiebreaker where Wikidata is anomalous.
 export const films: SeedFilm[] = [
   {
     slug: "the-cranes-are-flying",
@@ -136,11 +137,11 @@ export const films: SeedFilm[] = [
     original: "Броненосец «Потёмкин»",
     year: 1925,
     country: "USSR",
-    studio: "Mosfilm", // TODO: produced by Goskino (Mosfilm's predecessor) — verify studio attribution.
+    studio: "Mosfilm", // Wikidata attributes Mosfilm (with the State Committee for Cinematography).
     director: "Sergei Eisenstein",
     cast: ["Aleksandr Antonov", "Vladimir Barsky", "Grigori Aleksandrov"],
     genres: ["Silent cinema", "Historical epic", "Drama"],
-    runtime: 75, // TODO: runtime varies by restoration (~66–75 min).
+    runtime: 74, // Wikidata (varies by restoration, ~66–75 min).
     subs: ["English", "Russian"],
     summary:
       "Aboard a tsarist battleship in 1905, sailors pushed past endurance by rotten food and brutal officers rise up and seize the ship, at the cost of the life of their leader, Vakulinchuk. When his body is laid out in the port of Odessa, the city rallies to the mutineers in grief and solidarity — until tsarist troops descend the great harbour steps in a massacre of unarmed civilians. The uprising swells into a question of whether the rest of the fleet will fire on its own.",
@@ -171,7 +172,7 @@ export const films: SeedFilm[] = [
     director: "Dziga Vertov",
     cast: [],
     genres: ["Silent cinema", "Documentary"],
-    runtime: 68, // TODO: runtime varies by edition (~68 min).
+    runtime: 68, // Wikidata.
     subs: [], // No intertitles or dialogue.
     summary:
       "From dawn to night, a cameraman roams a Soviet city — composited from Moscow, Kyiv, Kharkiv and Odessa — filming people waking, working, marrying, divorcing, giving birth, playing sport and relaxing. There is no story and no intertitles; the 'character' is the act of filming itself, and the film repeatedly shows its own making, including the editor at her bench cutting the very images we watch.",
@@ -226,13 +227,13 @@ export const films: SeedFilm[] = [
     slug: "war-and-peace",
     title: "War and Peace",
     original: "Война и мир",
-    year: 1966, // TODO: released in parts across 1966–1967.
+    year: 1966, // Released in parts 1966–1967; 1966 is the standard catalogue year.
     country: "USSR",
     studio: "Mosfilm",
     director: "Sergei Bondarchuk",
     cast: ["Lyudmila Savelyeva", "Sergei Bondarchuk", "Vyacheslav Tikhonov"],
     genres: ["Historical epic", "War", "Drama", "Literary adaptation"],
-    runtime: 431, // TODO: total across four parts (~427–431 min); verify exact figure.
+    runtime: 432, // Wikidata; total across four parts.
     subs: ["English", "Russian"],
     summary:
       "Tolstoy's panorama of Russian society during the Napoleonic Wars follows three figures: the searching, illegitimate heir Pierre Bezukhov; his friend Prince Andrei Bolkonsky, who seeks meaning in love and on the battlefield; and the young Natasha Rostova, whose coming-of-age threads through balls, betrayals and bereavement. Their private fortunes play out against the catastrophe of the 1812 French invasion, the burning of Moscow, and the ruinous retreat that consumes the Grande Armée.",
@@ -348,11 +349,11 @@ export const films: SeedFilm[] = [
     original: "Иди и смотри",
     year: 1985,
     country: "USSR",
-    studio: "Mosfilm", // TODO: co-production with Belarusfilm — verify primary studio credit.
+    studio: "Mosfilm", // Mosfilm–Belarusfilm co-production (Wikidata); Mosfilm credited as primary.
     director: "Elem Klimov",
     cast: ["Aleksei Kravchenko", "Olga Mironova"],
     genres: ["War", "Drama"],
-    runtime: 142, // TODO: sources cite ~136–142 min; verify.
+    runtime: 142, // Criterion full version (Wikidata lists 146).
     subs: ["English", "Russian"],
     summary:
       "A teenage boy named Flyora digs up a rifle and joins the Belarusian partisans against his mother's wishes, eager for the adventure of war. What follows is not adventure but a descent into atrocity: shelling that leaves him half-deaf, the slaughter of his village, and finally the methodical massacre of an entire community herded into a burning barn by an SS punitive unit. By the end his boyish face has aged into something ancient with horror.",
@@ -407,7 +408,7 @@ export const films: SeedFilm[] = [
     title: "Dersu Uzala",
     original: "Дерсу Узала",
     year: 1975,
-    country: "USSR", // TODO: Soviet–Japanese co-production.
+    country: "USSR / Japan", // Soviet–Japanese co-production (Wikidata); Mosfilm production.
     studio: "Mosfilm",
     director: "Akira Kurosawa",
     cast: ["Maksim Munzuk", "Yuri Solomin"],
@@ -442,7 +443,7 @@ export const films: SeedFilm[] = [
     director: "Eldar Ryazanov",
     cast: ["Andrei Myagkov", "Barbara Brylska", "Yury Yakovlev"],
     genres: ["Comedy", "Romance"],
-    runtime: 184, // TODO: two-part television film (~184 min total); verify.
+    runtime: 184, // Wikidata; two-part television film.
     subs: ["English", "Russian"],
     summary:
       "On New Year's Eve a group of friends get drunk at a Moscow bathhouse and put the wrong man, Zhenya, on a plane to Leningrad. Still insensible, he gives a taxi his Moscow address — and because Soviet cities were built with identical streets, buildings and apartments, his key opens an identical flat in Leningrad belonging to a woman named Nadya. The collision of two strangers, each with a fiancé waiting, turns over one long, snowy night into an unlikely romance.",
@@ -471,7 +472,7 @@ export const films: SeedFilm[] = [
     director: "Vladimir Menshov",
     cast: ["Vera Alentova", "Aleksey Batalov", "Irina Muravyova"],
     genres: ["Drama", "Romance"],
-    runtime: 150, // TODO: two-part film (~150 min total); verify.
+    runtime: 150, // Two-part film, full total (Wikidata lists 140).
     subs: ["English", "Russian"],
     summary:
       "Three young women share a Moscow workers' dormitory in the late 1950s, each chasing a different idea of happiness. Katerina, abandoned and pregnant after a brief affair with a self-absorbed cameraman, raises her daughter alone while quietly working her way up to become a factory director. Two decades later, settled but lonely, she meets Gosha, a confident, old-fashioned tradesman — and her hard-won independence is tested by love and wounded pride.",
@@ -500,7 +501,7 @@ export const films: SeedFilm[] = [
     director: "Eldar Ryazanov",
     cast: ["Andrei Myagkov", "Alisa Freindlich"],
     genres: ["Comedy", "Romance"],
-    runtime: 159, // TODO: two-part film (~159 min total); verify.
+    runtime: 159, // Two-part film, full total (Wikidata lists 151).
     subs: ["English", "Russian"],
     summary:
       "Anatoly Novoseltsev, a meek, divorced statistician raising two sons, is urged by an ambitious old classmate to cozy up to their boss — the severe, joyless 'old maid' who runs their drab statistical bureau — to win a promotion. His clumsy, insincere campaign goes comically wrong, but as the brittle director slowly reveals a lonely, hopeful woman beneath the armor, mutual contempt thaws into genuine, awkward affection.",
@@ -597,7 +598,7 @@ export const films: SeedFilm[] = [
       "Levan Gabriadze",
     ],
     genres: ["Science fiction", "Comedy"],
-    runtime: 135, // TODO: two-part film (~135 min total); verify.
+    runtime: 135, // Two-part film, full total (Wikidata lists 127).
     subs: ["English", "Russian"],
     summary:
       "A gruff Moscow foreman and a young Georgian student press a stranger's odd device and are instantly teleported to Pluke, a desert planet in the Kin-dza-dza galaxy. There society runs on absurd rituals and a near-empty vocabulary: matches ('KTs') are precious currency, a squat-and-utter-'ku' is the required mark of deference, and people are sorted into castes distinguished by who must grovel to whom. Stranded and broke, the pair scheme to get home through this dust-blown, bureaucratic cosmos.",
@@ -627,7 +628,7 @@ export const films: SeedFilm[] = [
     director: "Sergei Parajanov",
     cast: ["Sofiko Chiaureli", "Melkon Aleksanyan"],
     genres: ["Biographical", "Drama"],
-    runtime: 78, // TODO: multiple cuts exist (~73–79 min); verify which version.
+    runtime: 79, // Wikidata (Parajanov/restored cut; the Yutkevich Soviet cut is ~73 min).
     subs: ["English", "Russian"],
     summary:
       "Rather than narrating the life of the 18th-century Armenian poet-musician Sayat-Nova, the film evokes it through a series of nearly static, richly symbolic tableaux: childhood among dyers' vats and drying carpets, a monastery, a doomed love at court, the taking of holy orders, old age and death. Costumes, ritual objects, animals and the poet's own verse stand in for biography, so that a life is rendered as a sequence of living paintings.",
@@ -681,13 +682,13 @@ export const films: SeedFilm[] = [
     slug: "the-tale-of-tsar-saltan",
     title: "The Tale of Tsar Saltan",
     original: "Сказка о царе Салтане",
-    year: 1966, // TODO: this entry assumes the 1966 Ptushko live-action film; a 1984 Soyuzmultfilm animated version also exists — confirm which is intended.
+    year: 1966, // Aleksandr Ptushko live-action film (Wikidata Q1169922); premiered Jan 1967.
     country: "USSR",
     studio: "Mosfilm",
     director: "Aleksandr Ptushko",
-    cast: ["Larisa Golubkina", "Oleg Vidov"], // TODO: verify full principal cast.
+    cast: ["Vladimir Andreyev", "Larisa Golubkina", "Oleg Vidov", "Kseniya Ryabinkina"], // Wikidata P161.
     genres: ["Fairy tale", "Fantasy", "Literary adaptation"],
-    runtime: 83, // TODO: verify runtime.
+    runtime: 86, // English Wikipedia infobox (Wikidata lists an outlier 122).
     subs: ["English", "Russian"],
     summary:
       "Tsar Saltan marries the youngest of three sisters, but while he is away at war her jealous siblings forge letters and have the young tsaritsa and her newborn son sealed in a barrel and cast into the sea. Mother and son wash ashore on a deserted island, where the boy — grown miraculously to manhood — rescues a magical swan-princess and conjures a gleaming city. Through her enchantments he wins back his father and exposes the sisters' treachery.",

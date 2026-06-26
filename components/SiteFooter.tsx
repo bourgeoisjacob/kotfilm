@@ -1,12 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
-import BrandMark from "@/components/BrandMark";
 
 export default function SiteFooter() {
   return (
     <footer className="border-t border-kot-line bg-kot-cream">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 sm:px-6">
         <div className="flex items-center gap-3">
-          <BrandMark size={32} title="" />
+          <Image
+            src="/kotfilm-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
           <span className="font-display text-lg font-semibold tracking-[0.16em] text-kot-red">
             KOTFILM
           </span>

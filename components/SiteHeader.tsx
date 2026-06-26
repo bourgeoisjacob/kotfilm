@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import BrandMark from "@/components/BrandMark";
 import AuthNav from "@/components/auth/AuthNav";
 
 // Routes are wired to their intended Phase 3+ paths; they will 404 until those
@@ -17,7 +17,14 @@ export default function SiteHeader() {
     <header className="border-b border-kot-line bg-kot-cream">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <BrandMark size={48} title="Kotfilm home" />
+          <Image
+            src="/kotfilm-icon.png"
+            alt="Kotfilm home"
+            width={48}
+            height={48}
+            priority
+            className="rounded-full"
+          />
           <span className="flex flex-col leading-none">
             <span className="font-display text-2xl font-bold tracking-[0.18em] text-kot-red">
               KOTFILM

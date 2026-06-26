@@ -1,3 +1,5 @@
+import { extraFilms } from "./filmsExtra";
+
 export type Watch = {
   platform: string;
   label: string;
@@ -708,4 +710,7 @@ export const films: SeedFilm[] = [
     ],
     wikipediaUrl: "https://en.wikipedia.org/wiki/The_Tale_of_Tsar_Saltan_(1966_film)",
   },
+  // Tier 1–4 catalogue expansion (72 films); see scripts/newFilmsData.ts and
+  // lib/filmsExtra.ts. Editorial text is ORIGINAL; metadata enriched from Wikidata.
+  ...extraFilms,
 ];

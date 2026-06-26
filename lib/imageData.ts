@@ -80,6 +80,153 @@ export const filmImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:2005._Stamp_of_Belarus_0614.jpg",
     "licenseName": "Public domain",
     "attribution": "post of Belarus / http://belpost.by/stamps/catalog-by-date/2005/"
+  },
+  "alexander-nevsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Nevski3.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nevski3.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Sergey Eisenstein / Russian Wikipedia, original description was/is here"
+  },
+  "ivan-vasilievich-changes-profession": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Leonid_Gaidai_2023_cover_of_Russia.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Leonid_Gaidai_2023_cover_of_Russia.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Kh. Betredinova / [1]"
+  },
+  "hamlet": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/1966_CPA_3328.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:1966_CPA_3328.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Почта СССР / http://blog.imhonet.ru/author/svanass22/post/5392080/"
+  },
+  "a-cruel-romance": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Ryazanov_crew_1983.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ryazanov_crew_1983.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/134732073/"
+  },
+  "a-railway-station-for-two": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Crew_of_Station_for_Two_with_actors.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Crew_of_Station_for_Two_with_actors.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/112127073/"
+  },
+  "the-garage": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Semyon_Farada_1979.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Semyon_Farada_1979.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/151611073/"
+  },
+  "cheburashka-and-gena-the-crocodile": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/The_Soviet_Union_1988_CPA_5917_stamp_%28Gena_the_Crocodile._Cheburashka._Shapoklyak%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:The_Soviet_Union_1988_CPA_5917_stamp_(Gena_the_Crocodile._Cheburashka._Shapoklyak).jpg",
+    "licenseName": "Public domain",
+    "attribution": "USSR Post / Scanned 600 dpi by User Matsievsky from personal collection"
+  },
+  "winnie-the-pooh": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Russian_Pooh_and_Piglet_postcard_%28cropped%29.png",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Russian_Pooh_and_Piglet_postcard_(cropped).png",
+    "licenseName": "Public domain",
+    "attribution": "Ministry of Communications of the USSR / Self-scanned, Private collection Weshainstitution QS:P195,somevalue,P3831,Q768717"
+  },
+  "earth": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/1996._%D0%9A%D0%B0%D0%B4%D1%80_%D0%B8%D0%B7_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%D0%97%D0%B5%D0%BC%D0%BB%D1%8F.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:1996._%D0%9A%D0%B0%D0%B4%D1%80_%D0%B8%D0%B7_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%D0%97%D0%B5%D0%BC%D0%BB%D1%8F.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Post of Ukraine / http://www.love-cinema.ru/publ/15-1-0-717"
+  },
+  "arsenal": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/1929._%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD_%D0%A1%D0%B2%D0%B0%D1%88%D0%B5%D0%BD%D0%BA%D0%BE_%D0%B2_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B5_%D0%90%D1%80%D1%81%D0%B5%D0%BD%D0%B0%D0%BB.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:1929._%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD_%D0%A1%D0%B2%D0%B0%D1%88%D0%B5%D0%BD%D0%BA%D0%BE_%D0%B2_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B5_%D0%90%D1%80%D1%81%D0%B5%D0%BD%D0%B0%D0%BB.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Оператор Даниил Демуцкий / http://www.russiancinema.ru/template.php?dept_id=3&amp;e_dept_id=2&amp;e_movie_id=283"
+  },
+  "strike": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Stachka.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Stachka.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Sergueï Eisenstein / see above"
+  },
+  "mother": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82_%D0%BA_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%83_%C2%AB%D0%9C%D0%B0%D1%82%D1%8C%C2%BB.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82_%D0%BA_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D1%83_%C2%AB%D0%9C%D0%B0%D1%82%D1%8C%C2%BB.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Grigory Borisov / Российская государственная библиотека"
+  },
+  "the-end-of-st-petersburg": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/End_spb.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:End_spb.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Vsevolod Pudovkin, Mikhail Doller, Nathan Zarkhi / Russian magazine Art of cinema photofiles"
+  },
+  "bed-and-sofa": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Scene_from_Bed_and_Sofa.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Scene_from_Bed_and_Sofa.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Mosfilm / Performing Arts Special Collections, UCLA Library Digital Collections, https://digital.library.ucla.edu/catalog/ark:/21198/zz00281t30"
+  },
+  "chapaev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/%D0%A7%D0%B0%D0%BF%D0%B0%D0%B5%D0%B2_%D0%BA%D0%B0%D0%B4%D1%80_%D0%91%D0%B0%D0%B1%D0%BE%D1%87%D0%BA%D0%B8%D0%BD.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B0%D0%BF%D0%B0%D0%B5%D0%B2_%D0%BA%D0%B0%D0%B4%D1%80_%D0%91%D0%B0%D0%B1%D0%BE%D1%87%D0%BA%D0%B8%D0%BD.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Ленфильм / к/ф «Чапаев» 1934 года"
+  },
+  "jolly-fellows": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/%D0%92%D0%B5%D1%81%D0%B5%D0%BB%D1%8B%D0%B5_%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%81%D0%B5%D0%BB%D1%8B%D0%B5_%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Mosfilm / Jolly Fellows"
+  },
+  "the-twelve-chairs": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Gomiashvili_and_Filippov_1970.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gomiashvili_and_Filippov_1970.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/20387073/"
+  },
+  "afonya": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Yevgeny_Leonov_on_Afonya.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Yevgeny_Leonov_on_Afonya.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/134907073/"
+  },
+  "an-ordinary-miracle": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Yankovsky%2C_Zakharov%2C_Larionov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Yankovsky,_Zakharov,_Larionov.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/62905073/"
+  },
+  "that-same-munchausen": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Oleg_Yankovsky_1979.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Oleg_Yankovsky_1979.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/62905073/"
+  },
+  "liberation": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bundesarchiv_Bild_183-L0508-0031%2C_Berlin%2C_Karl-Marx-Allee%2C_Kino_%22International%22.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-L0508-0031,_Berlin,_Karl-Marx-Allee,_Kino_%22International%22.jpg",
+    "licenseName": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "attribution": "Hans-Joachim Spremberg / This image was provided to Wikimedia Commons by the German Federal Archive (Deutsches Bundesarchiv) as part of a cooperation project. The German Federal Archive guarantees an authentic representation only using the originals (negative and/or positive), resp. the digitalization of the originals as provided by the Digital Image Archive."
+  },
+  "the-lady-with-the-dog": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Crew_of_The_Lady_with_the_Dog_movie.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Crew_of_The_Lady_with_the_Dog_movie.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "М.А. Трахман (Главархив Москвы) / https://www.mos.ru/news/item/158835073/"
+  },
+  "the-bremen-town-musicians": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/RR5015-0030R_25_%D1%80%D1%83%D0%B1%D0%BB%D0%B5%D0%B9_%D0%BC%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D1%8B%D0%B9_2019_%D0%91%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82%D1%8B_%28%D0%B2_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B8%29_%D1%80%D0%B5%D0%B2%D0%B5%D1%80%D1%81.png",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:RR5015-0030R_25_%D1%80%D1%83%D0%B1%D0%BB%D0%B5%D0%B9_%D0%BC%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D1%8B%D0%B9_2019_%D0%91%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82%D1%8B_(%D0%B2_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B8)_%D1%80%D0%B5%D0%B2%D0%B5%D1%80%D1%81.png",
+    "licenseName": "Public domain",
+    "attribution": "Банк России / https://cbr.ru/cash_circulation/memorable_coins/coins_base/ShowCoins/?cat_num=5015-0030"
   }
 };
 
@@ -410,5 +557,667 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
     "attribution": "History Lab / Владимир Гостюхин о своем творчестве, кинематографе и Советском Союзе | History Lab. Интервью (frame grab, 2:52)"
+  },
+  "vladimir-andreyev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/AndreevVA.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:AndreevVA.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "stanislav-govorukhin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%93%D0%BE%D0%B2%D0%BE%D1%80%D1%83%D1%85%D0%B8%D0%BD_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%93%D0%BE%D0%B2%D0%BE%D1%80%D1%83%D1%85%D0%B8%D0%BD_(cropped).jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Евгения Давыдова / File:Станислав_Говорухин.jpg"
+  },
+  "nikolai-sergeyev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Nikolai_Plotnikov_1939.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nikolai_Plotnikov_1939.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "nikolai-cherkasov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Nevski3.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nevski3.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Sergey Eisenstein / Russian Wikipedia, original description was/is here"
+  },
+  "nikolai-okhlopkov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87_%D0%9E%D1%85%D0%BB%D0%BE%D0%BF%D0%BA%D0%BE%D0%B2.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87_%D0%9E%D1%85%D0%BB%D0%BE%D0%BF%D0%BA%D0%BE%D0%B2.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Unknown authorUnknown author / Газета «Правда» 16 апреля 1949 годаhttps://goskatalog.ru/portal/#/collections?id=5993842"
+  },
+  "andrei-abrikosov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Andrei_Abrikosov_1935.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Andrei_Abrikosov_1935.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "lyudmila-tselikovskaya": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Lyudmila_Tselikovskaya_1948_2.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lyudmila_Tselikovskaya_1948_2.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / https://www.kino-teatr.ru/kino/movie/sov/5220/foto/a4672/78495/"
+  },
+  "serafima-birman": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/%D0%95%D1%84%D1%80%D0%BE%D1%81%D0%B8%D0%BD%D1%8C%D1%8F_%D0%A1%D1%82%D0%B0%D1%80%D0%B8%D1%86%D0%BA%D0%B0%D1%8F.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%95%D1%84%D1%80%D0%BE%D1%81%D0%B8%D0%BD%D1%8C%D1%8F_%D0%A1%D1%82%D0%B0%D1%80%D0%B8%D1%86%D0%BA%D0%B0%D1%8F.jpg",
+    "licenseName": "Public domain",
+    "attribution": "киностудия ru:Мосфильм / russiancinema.ru"
+  },
+  "sergio-corrieri": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Sergio_Corrieri.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Sergio_Corrieri.jpg",
+    "licenseName": "Public domain",
+    "attribution": "No machine-readable author provided. Yasinko assumed (based on copyright claims). / No machine-readable source provided. Own work assumed (based on copyright claims)."
+  },
+  "vladimir-motyl": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%BE%D1%82%D1%8B%D0%BB%D1%8C_%281995-11-26%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%BE%D1%82%D1%8B%D0%BB%D1%8C_(1995-11-26).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/145041073/"
+  },
+  "anatoly-kuznetsov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2_%281995-11-26%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2_(1995-11-26).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/145041073/"
+  },
+  "pavel-luspekayev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Customs_vereschagin.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Customs_vereschagin.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Kipelok / Own work"
+  },
+  "leonid-kuravlyov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Kuravlev_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kuravlev_(cropped).jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Игорь Верещагин / Own work"
+  },
+  "georgiy-daneliya": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Danelia.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Danelia.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Alexey Yushenkov/Алексей Юшенков / Own work"
+  },
+  "vakhtang-kikabidze": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Vakhtang_Kikabidze_2017-07-23_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vakhtang_Kikabidze_2017-07-23_(cropped).jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Okras / File:Vakhtang_Kikabidze_at_Laima_Rendez_Vous_Jurmala_2017.jpg"
+  },
+  "frunzik-mkrtchyan": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Mher_Mkrtchyan_2006_post_card_cropped.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mher_Mkrtchyan_2006_post_card_cropped.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Post Office of Armenia / http://www.armstamp.com/en/category/Stamps/2006.html"
+  },
+  "yelena-proklova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Elena_Proklova.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Elena_Proklova.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "old.oprf.ru / https://old.oprf.ru/ru/chambermembers/members/user/68?year=2006"
+  },
+  "oleg-basilashvili": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%D0%9E%D0%BB%D0%B5%D0%B3_%D0%91%D0%B0%D1%81%D0%B8%D0%BB%D0%B0%D1%88%D0%B2%D0%B8%D0%BB%D0%B8_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%BB%D0%B5%D0%B3_%D0%91%D0%B0%D1%81%D0%B8%D0%BB%D0%B0%D1%88%D0%B2%D0%B8%D0%BB%D0%B8_(cropped).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Unknown authorUnknown author / Олег Басилашвили: «Свободу надо отстаивать»"
+  },
+  "natalya-gundareva": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Natalya_Gundareva_1976.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Natalya_Gundareva_1976.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/143137073/"
+  },
+  "lyudmila-gurchenko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Gurchenko_1980s.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gurchenko_1980s.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/20387073/ (HQ)"
+  },
+  "igor-ilyinsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/%D0%92%D0%BE%D0%BB%D0%B3%D0%B0-%D0%92%D0%BE%D0%BB%D0%B3%D0%B0-%D0%BA%D0%B0%D0%B4%D1%80-2.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D0%BB%D0%B3%D0%B0-%D0%92%D0%BE%D0%BB%D0%B3%D0%B0-%D0%BA%D0%B0%D0%B4%D1%80-2.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Киностудия «Мосфильм» / http://www.rosculture.ru/movies_list/search/show/?id=5912"
+  },
+  "ivan-mykolaichuk": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/%D0%91%D1%8E%D1%81%D1%82_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D1%87%D1%83%D0%BA%D0%B0_%D0%B2_%D0%A7%D0%B5%D1%80%D1%82%D0%BE%D1%80%D0%B8%D0%B8.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%8E%D1%81%D1%82_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D1%87%D1%83%D0%BA%D0%B0_%D0%B2_%D0%A7%D0%B5%D1%80%D1%82%D0%BE%D1%80%D0%B8%D0%B8.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Melnikov v n / Own work"
+  },
+  "larisa-kadochnikova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Larysa_Kadochnikova.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Larysa_Kadochnikova.jpg",
+    "licenseName": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "attribution": "News UTRAlina Naumets, Alina Kats, Ihor Korkodym / PULS NEWS AND PRESS-REVIEW IN ENGLISH. 23:00(+2GTM) 5 MARCH (Creative Commons – Attribution)"
+  },
+  "grigori-kozintsev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Grigori_Kozintsev_1958.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Grigori_Kozintsev_1958.jpg",
+    "licenseName": "CC BY-SA 3.0 nl",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+    "attribution": "Harry Pot for Anefo ]] / [1] Dutch National Archives, The Hague, Fotocollectie Algemeen Nederlands Persbureau (ANEFO), 1945-1989 bekijk toegang 2.24.01.04 Bestanddeelnummer 909-8978"
+  },
+  "innokenty-smoktunovsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/%D0%98%D0%BD%D0%BD%D0%BE%D0%BA%D0%B5%D0%BD%D1%82%D0%B8%D0%B9_%D0%A1%D0%BC%D0%BE%D0%BA%D1%82%D1%83%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%BD%D0%BD%D0%BE%D0%BA%D0%B5%D0%BD%D1%82%D0%B8%D0%B9_%D0%A1%D0%BC%D0%BE%D0%BA%D1%82%D1%83%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Unknown authorUnknown author / Музей МХАТ / Феномен Смоктуновского. На Страстном бульваре откроется фотовыставка к 100-летию со дня рождения артиста"
+  },
+  "mikhail-nazvanov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Mikhail_Nazvanov_1947.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mikhail_Nazvanov_1947.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / https://www.kino-teatr.ru/kino/movie/sov/6099/foto/a3013/143232/"
+  },
+  "anastasiya-vertinskaya": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Anastasiya_Vertinskaya_in_1964.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Anastasiya_Vertinskaya_in_1964.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Валентин Михайлович Мастюков, Главархив Москвы / https://www.mos.ru/news/item/91001073/"
+  },
+  "pavel-kadochnikov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Kadochnikov.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kadochnikov.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / https://www.kino-teatr.ru/kino/movie/sov/2020/foto/a1780/14584/"
+  },
+  "larisa-guzeyeva": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Guzeeva-kremlin-3.jpeg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Guzeeva-kremlin-3.jpeg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Guzeeva-kremlin.jpeg: Presidential Press and Information Office derivative work: IgorEK II (talk) / Guzeeva-kremlin.jpeg"
+  },
+  "nikita-mikhalkov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Mikhalkov_2022.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mikhalkov_2022.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Пресс-служба Президента Российской Федерации / http://kremlin.ru/events/president/news/68650/photos/68228"
+  },
+  "valentin-gaft": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Valentin_Gaft_%28mos.ru%2C_cropped%29_01.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Valentin_Gaft_(mos.ru,_cropped)_01.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "mos.ru / Government of Moscow Press centre"
+  },
+  "iya-savvina": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/%D0%98%D1%8F_%D0%A1%D0%B0%D0%B2%D0%B2%D0%B8%D0%BD%D0%B0_%281968%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%98%D1%8F_%D0%A1%D0%B0%D0%B2%D0%B2%D0%B8%D0%BD%D0%B0_(1968).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/20387073/"
+  },
+  "pavel-boriskin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Pavel_Polunin.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Pavel_Polunin.jpg",
+    "licenseName": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "attribution": "Dmitry Rozhkov / Own work"
+  },
+  "zinaida-kiriyenko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Zinaida_Kirienko_1.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Zinaida_Kirienko_1.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Dmitry Rozhkov / Own work"
+  },
+  "stanislav-rostotsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Stanislav_Rostotsky.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Stanislav_Rostotsky.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Boris Semenov / Boris Semenov archive at vk.com/semenovborisphoto"
+  },
+  "olga-ostroumova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Olga_Ostroumova_2017.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Olga_Ostroumova_2017.jpg",
+    "licenseName": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "attribution": "VIC &amp; ADAMS / YouTube: https://www.youtube.com/watch?v=KEyEZLHYJm0 – View/save archived versions on archive.org"
+  },
+  "yelena-drapeko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Yelena_Drapeko_2018-11-21.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Yelena_Drapeko_2018-11-21.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "duma.gov.ru / http://duma.gov.ru/multimedia/photo/28817/"
+  },
+  "sergei-stolyarov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Stoliarov.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Stoliarov.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "alla-larionova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Alla_Larionova_in_%22Sadko%22_%281952%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alla_Larionova_in_%22Sadko%22_(1952).jpg",
+    "licenseName": "Public domain",
+    "attribution": "Кинокстудия «Мосфильм» / https://www.kino-teatr.ru/kino/acter/w/ros/2434/foto/m6164/1465314/"
+  },
+  "boris-andreyev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Boris_Andreev_in_The_Fall_of_Berlin.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Boris_Andreev_in_The_Fall_of_Berlin.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Мосфильм / YouTube: https://www.youtube.com/watch?v=8WfkPZ13HwM – View/save archived versions on archive.org"
+  },
+  "shukur-burkhanov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Shukur_Burkhanov_-_Soviet_Life%2C_August_1983.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Shukur_Burkhanov_-_Soviet_Life,_August_1983.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Published by the Embassy of the Union of Soviet Socialist Republics to the United States of America - uncredited photographer / losslessly cropped from File:Soviet Life, 1983-08, № 323.pdf"
+  },
+  "konstantin-yershov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%D0%9D%D0%B0_%D1%81%D1%8A%D1%91%D0%BC%D0%BA%D0%B0%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%C2%AB%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BA%D0%B0%C2%BB_%D1%80%D0%B5%D0%B6%D0%B8%D1%81%D1%81%D0%B5%D1%80_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%95%D1%80%D1%88%D0%BE%D0%B2_%D0%B8_%D0%B0%D0%BA%D1%82%D0%B5%D1%80_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D0%B8%D0%B9_%D0%95%D0%B3%D0%BE%D1%80%D0%BE%D0%B2.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0_%D1%81%D1%8A%D1%91%D0%BC%D0%BA%D0%B0%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%C2%AB%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BA%D0%B0%C2%BB_%D1%80%D0%B5%D0%B6%D0%B8%D1%81%D1%81%D0%B5%D1%80_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%95%D1%80%D1%88%D0%BE%D0%B2_%D0%B8_%D0%B0%D0%BA%D1%82%D0%B5%D1%80_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D0%B8%D0%B9_%D0%95%D0%B3%D0%BE%D1%80%D0%BE%D0%B2.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "фотограф Егорова Татьяна Сергеевна, photographer Tatyana Egorova / Own work. Ранее была опубликована с разрешения автора на ресурсе: http://www.kino-teatr.ru/teatr/acter/m/ros/1409/foto/447873/#foto"
+  },
+  "natalya-varley": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Natalya_Varley_03.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Natalya_Varley_03.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Dmitry Rozhkov / Own work"
+  },
+  "aleksandr-dovzhenko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Alexander_Dovzhenko.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alexander_Dovzhenko.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Na / https://www.archives.gov.ua/Sections/Dovzhenko_2/CDAMLM/index.php?21"
+  },
+  "stepan-shkurat": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Stepan_Shkurat.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Stepan_Shkurat.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "semyon-svashenko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/1929._%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD_%D0%A1%D0%B2%D0%B0%D1%88%D0%B5%D0%BD%D0%BA%D0%BE_%D0%B2_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B5_%D0%90%D1%80%D1%81%D0%B5%D0%BD%D0%B0%D0%BB_%282%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:1929._%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD_%D0%A1%D0%B2%D0%B0%D1%88%D0%B5%D0%BD%D0%BA%D0%BE_%D0%B2_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B5_%D0%90%D1%80%D1%81%D0%B5%D0%BD%D0%B0%D0%BB_(2).jpg",
+    "licenseName": "Public domain",
+    "attribution": "Оператор Даниил Демуцкий / http://www.russiancinema.ru/template.php?dept_id=3&amp;e_dept_id=2&amp;e_movie_id=283"
+  },
+  "yuliya-solntseva": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Solntseva_1924.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Solntseva_1924.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "amvrosii-buchma": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Amvrosy_Buchma.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Amvrosy_Buchma.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Unknown authorUnknown author / https://www.archives.gov.ua/Sections/Buchma/Buchma.pdf"
+  },
+  "vasily-lanovoy": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/LanovoiV2001.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:LanovoiV2001.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "pavel-klushantsev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB_%D0%9A%D0%BB%D1%83%D1%88%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_1965.png",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB_%D0%9A%D0%BB%D1%83%D1%88%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_1965.png",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Michael Klushansev / Own work"
+  },
+  "georgi-zhzhonov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ZhzhonovG.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:ZhzhonovG.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "maksim-shtraukh": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Maksim_Shtraukh_2025_postal_cover_of_Russia_cr.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maksim_Shtraukh_2025_postal_cover_of_Russia_cr.jpg",
+    "licenseName": "Public domain",
+    "attribution": "A. Moskovets / [1]"
+  },
+  "vsevolod-pudovkin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Vsevolod_Pudovkin_1929.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vsevolod_Pudovkin_1929.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "vera-baranovskaya": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%D0%91%D0%B0%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%D0%92%D0%B5%D1%80%D0%B0%D0%92%D1%81%D0%B5%D0%B2%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B2%D0%BD%D0%B0.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B0%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%D0%92%D0%B5%D1%80%D0%B0%D0%92%D1%81%D0%B5%D0%B2%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B2%D0%BD%D0%B0.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Unknown authorUnknown author / http://www.kino-teatr.ru/kino/acter/w/empire/29154/forum/#1083502"
+  },
+  "nikolai-batalov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Mat.Pavel_Vlasov_-_Batalov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mat.Pavel_Vlasov_-_Batalov.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Vsevolod Pudovkin / Screenshot from soviet film Mat (1926) by Vsevolod Pudovkin"
+  },
+  "aleksandr-chistyakov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/APChistyakov1935.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:APChistyakov1935.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Мосфильм / кадр из фильма «Лётчики»"
+  },
+  "valery-inkijinoff": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Actor_Val%C3%A9ry_Inkijinoff.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Actor_Val%C3%A9ry_Inkijinoff.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "The picture should be a still frame of the Russian production Storm over Asia (1928) / https://en.wikipedia.org/wiki/File:Val%C3%A9ry_Inkijinoff.jpg"
+  },
+  "yakov-protazanov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%AF._%D0%9F%D1%80%D0%BE%D1%82%D0%B0%D0%B7%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0_%28%D0%97%D0%B0%D0%BB%D1%8C%D1%86%D0%B5%D1%80%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%AF._%D0%9F%D1%80%D0%BE%D1%82%D0%B0%D0%B7%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0_(%D0%97%D0%B0%D0%BB%D1%8C%D1%86%D0%B5%D1%80).jpg",
+    "licenseName": "Public domain",
+    "attribution": "Семён Зельманович Зальцер (1898—1941) / Портрет Я. Протазанова"
+  },
+  "nikolai-tsereteli": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Nikolai_Tseretelli_as_Lagutin.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nikolai_Tseretelli_as_Lagutin.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "abram-room": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Abram_Room_1940s.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Abram_Room_1940s.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Unknown authorUnknown author / Ekran. revija za film in TV, leto III, marec- april 64. št. 16 - 17"
+  },
+  "lyudmila-semyonova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Liudmila_Semenova_1929.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Liudmila_Semenova_1929.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "vladimir-fogel": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Vladimir_Fogel.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vladimir_Fogel.JPG",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Paul Munhoven / Own work"
+  },
+  "georgi-vasilyev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2_%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_%28%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2_%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_(%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82).jpg",
+    "licenseName": "Public domain",
+    "attribution": "Аникин А. / filpersona.ru"
+  },
+  "boris-babochkin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Babochkin_Chapayev1.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Babochkin_Chapayev1.jpg",
+    "licenseName": "Public domain",
+    "attribution": "en:Lenfilm / http://www.kp.ru/daily/23397/33678/"
+  },
+  "leonid-kmit": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Leonid_Kmit.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Leonid_Kmit.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "varvara-myasnikova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/VarvaraMiasnikova.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:VarvaraMiasnikova.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "lyubov-orlova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lyubov_Orlova_in_1945.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lyubov_Orlova_in_1945.jpg",
+    "licenseName": "Public domain",
+    "attribution": "1945 / http://www.museum.ru/alb/image.asp?113564"
+  },
+  "kira-muratova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Muratova.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Muratova.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "attribution": "Wikimedia Commons"
+  },
+  "vladimir-vysotsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%92%D1%8B%D1%81%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_-_%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%92%D1%8B%D1%81%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_-_%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_(cropped).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Unknown authorUnknown author / Москва в памяти Владимира Высоцкого (immediate source) (HQ)"
+  },
+  "archil-gomiashvili": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Gomiashvili_1970.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gomiashvili_1970.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Главархив Москвы / https://www.mos.ru/news/item/20387073/"
+  },
+  "mikhail-pugovkin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/%D0%9F%D1%83%D0%B3%D0%BE%D0%B2%D0%BA%D0%B8%D0%BD_%D0%B2_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B5_%C2%AB%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B5_%D1%83%D1%82%D1%80%D0%BE%C2%BB.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%83%D0%B3%D0%BE%D0%B2%D0%BA%D0%B8%D0%BD_%D0%B2_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B5_%C2%AB%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B5_%D1%83%D1%82%D1%80%D0%BE%C2%BB.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Mosfilm / film screeenshots"
+  },
+  "galina-polskikh": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/%D0%93%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D1%85_%D0%BD%D0%B0_%D0%B2%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B8_%D0%BF%D1%80%D0%B5%D0%BC%D0%B8%D0%B8_%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5_%D0%B3%D0%BE%D0%B4%D0%B0.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D1%85_%D0%BD%D0%B0_%D0%B2%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B8_%D0%BF%D1%80%D0%B5%D0%BC%D0%B8%D0%B8_%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5_%D0%B3%D0%BE%D0%B4%D0%B0.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Михаил Метцель / http://duma.gov.ru/media/photos/1254x705/rcfht44ZWyKyKGL6TnZFSAQBdU7WnHb4.jpg"
+  },
+  "aleksandr-mikhailov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Mikhailov-1998.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mikhailov-1998.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "nina-doroshina": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Vladimir_Zemlyanikin_and_Nina_Doroshina.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vladimir_Zemlyanikin_and_Nina_Doroshina.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Unknown authorUnknown author / https://www.mos.ru/news/item/89429073/"
+  },
+  "mark-zakharov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Mark_Zakharov_2011.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mark_Zakharov_2011.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Совет Федерации / http://council.gov.ru/events/news/108239/ (HQ)"
+  },
+  "oleg-yankovsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Oleg_Yankovsky2.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Oleg_Yankovsky2.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Tatyana Pankratova / https://bulldog-fill.com/kino.htm"
+  },
+  "inna-churikova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Inna_Churikova_on_XXII_MIFF.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Inna_Churikova_on_XXII_MIFF.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Сергей Поминов / https://www.mos.ru/news/item/126886073/"
+  },
+  "leonid-bronevoy": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Leonid_Bronevoy_%282008%29_03.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Leonid_Bronevoy_(2008)_03.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Пресс-служба Президента России / http://www.kremlin.ru/events/president/news/2543/photos"
+  },
+  "vladimir-bortko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Vladimir_Bortko_2018.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vladimir_Bortko_2018.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "duma.gov.ru / http://duma.gov.ru/multimedia/photo/29902/"
+  },
+  "vladimir-tolokonnikov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%A2%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%D0%BD%D0%B0_%D1%81%D1%8A%D0%B5%D0%BC%D0%BA%D0%B0%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%C2%AB%D0%A5%D0%BE%D1%82%D1%82%D0%B0%D0%B1%D1%8B%D1%87%C2%BB_04.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%A2%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%D0%BD%D0%B0_%D1%81%D1%8A%D0%B5%D0%BC%D0%BA%D0%B0%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%C2%AB%D0%A5%D0%BE%D1%82%D1%82%D0%B0%D0%B1%D1%8B%D1%87%C2%BB_04.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Pure Engineer / Own work"
+  },
+  "roman-kartsev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Roman_Kartsev.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Roman_Kartsev.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Dmitry Rozhkov / Own work"
+  },
+  "yuri-ozerov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Stalingrad_Ozerov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Stalingrad_Ozerov.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Photo from personal archive / http://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Stalingrad_Ozerov.jpg"
+  },
+  "vasily-shukshin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_%D0%A8%D1%83%D0%BA%D1%88%D0%B8%D0%BD_%281972%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_%D0%A8%D1%83%D0%BA%D1%88%D0%B8%D0%BD_(1972).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/20387073/"
+  },
+  "andrei-smirnov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%A1%D0%BC%D0%B8%D1%80%D0%BD%D0%BE%D0%B2_%2810-06-2023%29_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%A1%D0%BC%D0%B8%D1%80%D0%BD%D0%BE%D0%B2_(10-06-2023)_(cropped).jpg",
+    "licenseName": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "attribution": "Forbes / YouTube: Режиссер Андрей Смирнов о новом фильме «За нас с вами», цензуре и кино в современной России (Time: 2m10s) – View/save archived versions on archive.org"
+  },
+  "nina-urgant": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Nina_Urgant_1962.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nina_Urgant_1962.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Cameraphoto / https://megalodon.jp/2026-0401-0152-00/https://www.ebay.com:443/itm/316998640640"
+  },
+  "aleksei-petrenko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Alexey_Petrenko.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alexey_Petrenko.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Игорь Верещагин / Own work"
+  },
+  "aleksandr-kalyagin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kalyagin.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kalyagin.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "oleg-tabakov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/OlegTabakov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:OlegTabakov.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "andrei-konchalovsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/2023_Andrei_Konchalovsky_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:2023_Andrei_Konchalovsky_(cropped).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "duma.gov.ru / http://duma.gov.ru/multimedia/photo/95923/"
+  },
+  "iosif-kheifits": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/%D0%98%D0%BE%D1%81%D0%B8%D1%84_%D0%A5%D0%B5%D0%B9%D1%84%D0%B8%D1%86_%281960%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%BE%D1%81%D0%B8%D1%84_%D0%A5%D0%B5%D0%B9%D1%84%D0%B8%D1%86_(1960).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "М.А. Трахман (Главархив Москвы) / https://www.mos.ru/news/item/158835073/"
+  },
+  "elza-radzina": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Elza_Radzi%C5%86a_2017_envelope_of_Latvia_cr2.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Elza_Radzi%C5%86a_2017_envelope_of_Latvia_cr2.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Latvia Post / https://www.flickr.com/photos/48113023@N03/32616481351"
+  },
+  "oleg-dal": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Oleg_Dahl_in_Sovremennik_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Oleg_Dahl_in_Sovremennik_(cropped).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "mos.ru / https://www.mos.ru/news/item/49173073/"
+  },
+  "tengiz-abuladze": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Tengiz_Abuladze_2024_stamp_of_Georgia.png",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tengiz_Abuladze_2024_stamp_of_Georgia.png",
+    "licenseName": "Public domain",
+    "attribution": "B.Gagnidze (Georgia Post) / https://www.gpost.ge/shop/product?id=2862"
+  },
+  "natalya-negoda": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F_%D0%9D%D0%B5%D0%B3%D0%BE%D0%B4%D0%B0_%D0%B2_%D0%95%D0%BB%D1%8C%D1%86%D0%B8%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5_7_%D0%BC%D0%B0%D1%80%D1%82%D0%B0_2020_%D0%B3%D0%BE%D0%B4%D0%B0.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F_%D0%9D%D0%B5%D0%B3%D0%BE%D0%B4%D0%B0_%D0%B2_%D0%95%D0%BB%D1%8C%D1%86%D0%B8%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5_7_%D0%BC%D0%B0%D1%80%D1%82%D0%B0_2020_%D0%B3%D0%BE%D0%B4%D0%B0.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Иван Абатуров / Own work"
+  },
+  "yuri-nazarov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Nazarov_Yuri_vlad_2.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nazarov_Yuri_vlad_2.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Барканов Сергей Владимирович / Личная фототека"
+  },
+  "rashid-nugmanov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/RachidNougmanov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:RachidNougmanov.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Y.Romanova / Own work"
+  },
+  "marina-smirnova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Marina_Smirnova_President_of_Young_Readers_Found.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Marina_Smirnova_President_of_Young_Readers_Found.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Michael Balaev / http://www.balaev.spb.ru/"
+  },
+  "pyotr-mamonov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Petr_Mamonov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Petr_Mamonov.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Дмитрий Рузов / http://ruzovdmitry.livejournal.com/30329.html"
+  },
+  "sergei-solovyov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Sergey_Solovyov_2017.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Sergey_Solovyov_2017.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Svklimkin / Own work"
+  },
+  "tatyana-drubich": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Tatyana_Drubich.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tatyana_Drubich.jpg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Zimin.V.G. / Own work"
   }
 };

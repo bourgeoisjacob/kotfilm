@@ -17,14 +17,28 @@ async function throttle() {
 }
 
 export async function getJson<T = unknown>(url: string): Promise<T> {
-  await throttle();
-  const res = await fetch(url, {
-    headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-  });
-  if (!res.ok) {
-    throw new Error(`GET ${url} → ${res.status} ${res.statusText}`);
+  // Retry transient network/5xx failures with backoff; Wikimedia and flaky
+  // connections occasionally drop requests over a long run.
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    await throttle();
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
+      });
+      if (res.status === 429 || res.status >= 500) {
+        throw new Error(`GET ${url} → ${res.status} ${res.statusText}`);
+      }
+      if (!res.ok) {
+        throw new Error(`GET ${url} → ${res.status} ${res.statusText}`);
+      }
+      return (await res.json()) as T;
+    } catch (e) {
+      lastErr = e;
+      await new Promise((r) => setTimeout(r, 600 * (attempt + 1)));
+    }
   }
-  return (await res.json()) as T;
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
 
 /** Strip HTML tags (Commons attribution fields arrive as HTML). */

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Star, BadgeCheck } from "lucide-react";
 import WatchlistButton from "@/components/watchlist/WatchlistButton";
@@ -15,14 +16,25 @@ export default function FilmCard({
   const genres = film.genres.map((g) => g.genre.name);
   const subtitleCodes = film.subtitleLanguages.map((s) => s.language.code);
   const hasOfficial = film.watchLinks.some((w) => w.sourceType === "OFFICIAL");
+  const poster = film.imageAssets[0]?.url;
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-kot-line bg-kot-cream transition-colors hover:border-kot-red">
-      {/* Poster placeholder — imagery arrives with the Commons ingestion. */}
-      <div className="relative flex aspect-[3/2] items-center justify-center bg-kot-char">
-        <span className="font-display text-4xl font-bold tracking-widest text-kot-cream/25">
-          {film.year}
-        </span>
+      {/* Freely-licensed Commons image when available, else a year placeholder. */}
+      <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden bg-kot-char">
+        {poster ? (
+          <Image
+            src={poster}
+            alt=""
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-cover"
+          />
+        ) : (
+          <span className="font-display text-4xl font-bold tracking-widest text-kot-cream/25">
+            {film.year}
+          </span>
+        )}
         {film.starterClassic && (
           <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-kot-red px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-kot-creamHi">
             <Star aria-hidden className="h-3 w-3 fill-current" />

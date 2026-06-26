@@ -14,18 +14,25 @@ export const filmCardInclude = {
     include: { language: { select: { code: true, name: true } } },
   },
   watchLinks: { select: { sourceType: true, url: true } },
+  imageAssets: { select: { url: true }, take: 1 },
 } satisfies Prisma.FilmInclude;
 
 export type FilmCard = Prisma.FilmGetPayload<{ include: typeof filmCardInclude }>;
 
 // Everything the film detail page needs.
 const filmDetailInclude = {
-  director: { select: { name: true, slug: true, bio: true } },
+  director: {
+    select: { name: true, slug: true, bio: true, imageAssets: { select: { url: true }, take: 1 } },
+  },
   studio: { select: { name: true, slug: true } },
   genres: { include: { genre: { select: { name: true, slug: true } } } },
   cast: {
     orderBy: { billingOrder: "asc" },
-    include: { person: { select: { name: true, slug: true } } },
+    include: {
+      person: {
+        select: { name: true, slug: true, imageAssets: { select: { url: true }, take: 1 } },
+      },
+    },
   },
   watchLinks: true,
   subtitleLanguages: { include: { language: true } },
@@ -180,8 +187,12 @@ export function listRelatedFilms(
 // People & genres
 // ---------------------------------------------------------------------------
 
+const personInclude = {
+  imageAssets: { select: { url: true }, take: 1 },
+} satisfies Prisma.PersonInclude;
+
 export type PersonWithFilms = {
-  person: Prisma.PersonGetPayload<true>;
+  person: Prisma.PersonGetPayload<{ include: typeof personInclude }>;
   directed: FilmCard[];
   actedIn: FilmCard[];
 };
@@ -190,7 +201,10 @@ export type PersonWithFilms = {
 export async function getPersonWithFilms(
   slug: string,
 ): Promise<PersonWithFilms | null> {
-  const person = await prisma.person.findUnique({ where: { slug } });
+  const person = await prisma.person.findUnique({
+    where: { slug },
+    include: personInclude,
+  });
   if (!person) return null;
 
   const [directed, actedIn] = await Promise.all([

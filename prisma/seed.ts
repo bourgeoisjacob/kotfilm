@@ -1,5 +1,6 @@
 import { films } from "../lib/films";
 import { createPrismaClient } from "../lib/prisma";
+import { filmImages, personImages } from "../lib/imageData";
 
 // This script runs via `tsx` (not the Prisma CLI), so load DATABASE_URL from
 // .env ourselves before creating the client. No-op if the file is absent.
@@ -168,10 +169,48 @@ async function main() {
       },
     });
 
-    // TODO (Phase 7): seed licensed ImageAssets once the Commons ingestion lands.
   }
 
-  console.log(`Seeded ${films.length} films.`);
+  // Freely-licensed images from Wikimedia Commons (see scripts/fetch-images.ts).
+  let filmImageCount = 0;
+  for (const [slug, img] of Object.entries(filmImages)) {
+    const film = await prisma.film.findUnique({ where: { slug }, select: { id: true } });
+    if (!film) continue;
+    await prisma.imageAsset.create({
+      data: {
+        filmId: film.id,
+        url: img.url,
+        kind: "STILL",
+        licenseName: img.licenseName,
+        licenseUrl: img.licenseUrl ?? null,
+        attribution: img.attribution,
+        sourceUrl: img.descriptionUrl,
+      },
+    });
+    filmImageCount += 1;
+  }
+
+  let personImageCount = 0;
+  for (const [slug, img] of Object.entries(personImages)) {
+    const person = await prisma.person.findUnique({ where: { slug }, select: { id: true } });
+    if (!person) continue;
+    await prisma.imageAsset.create({
+      data: {
+        personId: person.id,
+        url: img.url,
+        kind: "PHOTO",
+        licenseName: img.licenseName,
+        licenseUrl: img.licenseUrl ?? null,
+        attribution: img.attribution,
+        sourceUrl: img.descriptionUrl,
+      },
+    });
+    personImageCount += 1;
+  }
+
+  console.log(
+    `Seeded ${films.length} films, ${filmImageCount} film images, ${personImageCount} person images.`,
+  );
 }
 
 main()

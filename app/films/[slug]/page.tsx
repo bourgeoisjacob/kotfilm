@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, Clock, Globe, Star } from "lucide-react";
@@ -70,9 +71,20 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
       {/* Hero */}
       <header className="mt-4 grid gap-6 sm:grid-cols-[220px_1fr]">
         <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-lg bg-kot-char sm:aspect-[3/4]">
-          <span className="font-display text-5xl font-bold tracking-widest text-kot-cream/25">
-            {film.year}
-          </span>
+          {film.imageAssets[0]?.url ? (
+            <Image
+              src={film.imageAssets[0].url}
+              alt={`Still or poster from ${film.title}`}
+              fill
+              sizes="220px"
+              className="object-cover"
+              priority
+            />
+          ) : (
+            <span className="font-display text-5xl font-bold tracking-widest text-kot-cream/25">
+              {film.year}
+            </span>
+          )}
           {film.starterClassic && (
             <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-kot-red px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-kot-creamHi">
               <Star aria-hidden className="h-3 w-3 fill-current" />
@@ -210,6 +222,7 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
                 name={film.director.name}
                 href={`/directors/${film.director.slug}`}
                 role="Director"
+                imageUrl={film.director.imageAssets[0]?.url}
               />
             </li>
           )}
@@ -219,6 +232,7 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
                 name={credit.person.name}
                 href={`/actors/${credit.person.slug}`}
                 role={credit.characterName ? `as ${credit.characterName}` : "Cast"}
+                imageUrl={credit.person.imageAssets[0]?.url}
               />
             </li>
           ))}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import FilmGrid from "@/components/catalogue/FilmGrid";
@@ -36,21 +37,32 @@ export default async function PersonProfile({
         {backLabel}
       </Link>
 
-      <header className="mt-4">
-        <p className="font-display text-xs uppercase tracking-[0.18em] text-kot-red">
-          {roleLabel}
-        </p>
-        <h1 className="mt-1 font-display text-4xl font-bold tracking-wide text-kot-ink">
-          {person.name}
-        </h1>
-        <p className="mt-3 max-w-2xl leading-relaxed text-kot-char">
-          {person.bio ?? (
-            <span className="italic text-kot-char/70">
-              A short, original biography will appear here once added — Kotfilm
-              writes its own concise summaries rather than copying source text.
-            </span>
-          )}
-        </p>
+      <header className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start">
+        {person.imageAssets[0]?.url && (
+          <Image
+            src={person.imageAssets[0].url}
+            alt={person.name}
+            width={120}
+            height={120}
+            className="h-28 w-28 shrink-0 rounded-full object-cover ring-1 ring-kot-line"
+          />
+        )}
+        <div>
+          <p className="font-display text-xs uppercase tracking-[0.18em] text-kot-red">
+            {roleLabel}
+          </p>
+          <h1 className="mt-1 font-display text-4xl font-bold tracking-wide text-kot-ink">
+            {person.name}
+          </h1>
+          <p className="mt-3 max-w-2xl leading-relaxed text-kot-char">
+            {person.bio ?? (
+              <span className="italic text-kot-char/70">
+                A short, original biography will appear here once added — Kotfilm
+                writes its own concise summaries rather than copying source text.
+              </span>
+            )}
+          </p>
+        </div>
       </header>
 
       <section className="mt-8">

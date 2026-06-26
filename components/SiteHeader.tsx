@@ -6,9 +6,9 @@ import AuthNav from "@/components/auth/AuthNav";
 // pages are built.
 const navItems = [
   { href: "/films", label: "Catalogue" },
+  { href: "/genres", label: "Genres" },
   { href: "/directors", label: "Directors" },
   { href: "/actors", label: "Actors" },
-  { href: "/genres", label: "Genres" },
   { href: "/watchlist", label: "Watchlist" },
 ];
 

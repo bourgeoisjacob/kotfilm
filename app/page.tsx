@@ -11,7 +11,7 @@ const features = [
   {
     icon: BookOpenText,
     title: "Understand",
-    body: "Original summaries, historical context, and interpretation for every film.",
+    body: "Original summaries, historical context, and notes on each film's impact.",
   },
   {
     icon: PlayCircle,

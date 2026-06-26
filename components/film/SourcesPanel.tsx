@@ -8,7 +8,7 @@ export default function SourcesPanel({ film }: { film: FilmDetail }) {
   return (
     <div className="flex flex-col gap-4 rounded-lg border border-kot-line bg-kot-cream p-5 text-sm text-kot-char">
       <p>
-        The summary, historical context, and interpretation above are{" "}
+        The summary, historical context, and impact notes above are{" "}
         <strong className="text-kot-ink">original text written for Kotfilm</strong>,
         not copied from any source. Facts are drawn from the references below and
         should be re-verified before publication.

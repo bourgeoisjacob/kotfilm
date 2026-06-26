@@ -124,7 +124,7 @@ async function main() {
     runtimeMinutes: wd.runtimeMinutes ?? null,
     shortSummary: generated?.summary ?? "Draft — original summary pending review.",
     historicalContext: generated?.context ?? null,
-    interpretation: generated?.interpretation ?? null,
+    impact: generated?.impact || null,
     wikipediaUrl: bg?.url ?? null,
     wikidataId: qid,
     imdbId: wd.imdbId ?? null,

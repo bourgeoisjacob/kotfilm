@@ -8,7 +8,7 @@ import SourcesPanel from "@/components/film/SourcesPanel";
 import WatchLinks from "@/components/film/WatchLinks";
 import WatchlistButton from "@/components/watchlist/WatchlistButton";
 import PersonalControls from "@/components/film/PersonalControls";
-import { getFilmBySlug, listRelatedFilms, parseStringArray } from "@/lib/queries";
+import { getFilmBySlug, listRelatedFilms } from "@/lib/queries";
 import { getFilmUserState, getWatchlistContext } from "@/lib/userData";
 
 type Params = Promise<{ slug: string }>;
@@ -54,7 +54,6 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
     getFilmUserState(film.id),
     getWatchlistContext(),
   ]);
-  const themes = parseStringArray(film.themes);
   const genres = film.genres.map((g) => g.genre);
   const signedIn = watchlist.signedIn;
 
@@ -197,24 +196,9 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
         </Section>
       )}
 
-      {film.interpretation && (
-        <Section title="Interpretation">
-          <p className="leading-relaxed text-kot-ink">{film.interpretation}</p>
-        </Section>
-      )}
-
-      {themes.length > 0 && (
-        <Section title="Key themes">
-          <ul className="flex flex-wrap gap-2">
-            {themes.map((theme) => (
-              <li
-                key={theme}
-                className="rounded-full bg-kot-cream px-3 py-1 text-sm text-kot-ink/80 ring-1 ring-kot-line"
-              >
-                {theme}
-              </li>
-            ))}
-          </ul>
+      {film.impact && (
+        <Section title="Impact on cinema">
+          <p className="leading-relaxed text-kot-ink">{film.impact}</p>
         </Section>
       )}
 

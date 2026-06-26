@@ -102,7 +102,7 @@ async function main() {
         runtimeMinutes: f.runtime,
         shortSummary: f.summary,
         historicalContext: f.context,
-        interpretation: f.interpretation,
+        impact: f.impact ?? null,
         themes: JSON.stringify(f.themes),
         starterClassic: f.starterClassic ?? false,
         wikipediaUrl: f.wikipediaUrl,

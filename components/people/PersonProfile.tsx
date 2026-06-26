@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import FilmGrid from "@/components/catalogue/FilmGrid";
+import CollaborationText from "@/components/people/CollaborationText";
 import type { PersonWithFilms } from "@/lib/queries";
+import { collaborations } from "@/lib/collaborations";
 import { getWatchlistContext } from "@/lib/userData";
 
 export default async function PersonProfile({
@@ -13,6 +15,7 @@ export default async function PersonProfile({
 }) {
   const { person, directed, actedIn } = data;
   const watchlist = await getWatchlistContext();
+  const collaborationNote = collaborations[person.slug];
 
   const isDirector = role === "director";
   const primary = isDirector ? directed : actedIn;
@@ -75,6 +78,17 @@ export default async function PersonProfile({
               signedIn={watchlist.signedIn}
               savedSlugs={watchlist.savedSlugs}
             />
+          </div>
+        </section>
+      )}
+
+      {collaborationNote && (
+        <section className="mt-10">
+          <h2 className="font-display text-xl font-semibold uppercase tracking-[0.14em] text-kot-red">
+            Collaborators
+          </h2>
+          <div className="mt-3">
+            <CollaborationText text={collaborationNote} />
           </div>
         </section>
       )}

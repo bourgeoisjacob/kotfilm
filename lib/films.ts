@@ -20,7 +20,9 @@ export type SeedFilm = {
   subs: string[];
   summary: string;
   context?: string;
-  interpretation?: string;
+  /** "Impact on Cinema" — set ONLY when the film had a discernible influence on
+   * film history (innovation, influence on later filmmakers). Omit otherwise. */
+  impact?: string;
   themes: string[];
   watch: Watch[];
   wikipediaUrl?: string;
@@ -31,10 +33,10 @@ export type SeedFilm = {
 };
 
 // The Kotfilm seed catalogue (~22 well-known Soviet classics). All
-// summary/context/interpretation text is ORIGINAL, written for Kotfilm — never
-// copied or closely paraphrased from any source. Studio-released titles are
-// labelled OFFICIAL; everything else is UNVERIFIED. Exact video URLs are never
-// fabricated. `// TODO` marks values that should be double-checked before use.
+// summary/context/impact text is ORIGINAL, written for Kotfilm — never copied or
+// closely paraphrased from any source. Studio-released titles are labelled
+// OFFICIAL; everything else is UNVERIFIED. Exact video URLs are never fabricated.
+// `// TODO` marks values that should be double-checked before use.
 export const films: SeedFilm[] = [
   {
     slug: "the-cranes-are-flying",
@@ -49,13 +51,12 @@ export const films: SeedFilm[] = [
     runtime: 97,
     subs: ["English", "Russian"],
     summary:
-      "A young woman waits for her fiancé through the upheaval of war, her hope tested by loss and circumstance.",
+      "In Moscow on the eve of the German invasion, Veronika and Boris are young and in love. When Boris volunteers for the front, Veronika is left behind to endure bombardment, the loss of her family, and a coerced marriage to his cowardly cousin. As the war grinds on with no word from Boris, she clings to a fading hope while struggling to hold on to her own decency amid the chaos of the home front.",
     context:
-      "Part of the cultural thaw after Stalin, it traded heroic clichés for intimate, fallible characters.",
-    interpretation:
-      "Its fluid, soaring camerawork turns private grief into something universal.",
+      "Made at Mosfilm during the cultural 'Thaw' that followed Stalin's death, the film broke sharply with the heroic, ideologically tidy war pictures of the preceding decades. Kalatozov and cinematographer Sergei Urusevsky built the film around restless, subjective camerawork — handheld runs, spiralling crane shots, and a famous vertiginous staircase sequence — to render private emotion rather than collective triumph. Its heroine is fallible and human rather than a model citizen, a startling choice for Soviet screens of the period.",
+    impact:
+      "It won the Palme d'Or at Cannes in 1958 — still the only Soviet film to do so — and announced to the world that Soviet cinema had re-emerged as an artistic force. Urusevsky's fluid, emotionally charged camerawork influenced a generation of filmmakers and remains a touchstone for expressive cinematography.",
     themes: ["the home front", "fidelity", "loss"],
-    starterClassic: true,
     watch: [
       {
         platform: "YouTube",
@@ -66,6 +67,7 @@ export const films: SeedFilm[] = [
       },
     ],
     wikipediaUrl: "https://en.wikipedia.org/wiki/The_Cranes_Are_Flying",
+    starterClassic: true,
   },
   {
     slug: "solaris",
@@ -80,11 +82,11 @@ export const films: SeedFilm[] = [
     runtime: 167,
     subs: ["English", "Russian"],
     summary:
-      "Scientists aboard a station orbiting a strange ocean-planet find it conjuring their guilt and memory into living form.",
+      "Psychologist Kris Kelvin travels to a research station orbiting Solaris, a distant planet covered by a sentient ocean. The skeleton crew is unravelling: the ocean has been reaching into their minds and giving physical form to their buried memories and guilt. When Kris's long-dead wife reappears, materialised from his own grief, he must decide whether the apparition is a cruel illusion or a second chance — and what it means to love something the mind itself has made.",
     context:
-      "Tarkovsky's meditative reply to colder, hardware-focused science fiction.",
-    interpretation:
-      "Less about space than about conscience, love, and what it means to be human.",
+      "Adapted at Mosfilm from Polish writer Stanisław Lem's 1961 novel, Tarkovsky used the premise less as science fiction than as a vehicle for his abiding concerns: memory, conscience, and faith. He deliberately slowed the film to a contemplative pace and grounded its space-station drama in earthly textures — rain, leaves, a long opening at a country house, and a celebrated drive through city tunnels — pushing back against the cold, hardware-obsessed sci-fi of the era. Lem himself disliked the adaptation's emotional, inward turn, but it became Tarkovsky's most internationally accessible work.",
+    impact:
+      "Frequently discussed as a philosophical counterweight to Western space epics, Solaris reshaped what serious science fiction on film could attempt, prioritising inner life over spectacle. Its influence runs through later contemplative sci-fi, and it was prominently remade by Steven Soderbergh in 2002.",
     themes: ["memory", "guilt", "contact"],
     watch: [
       {
@@ -110,12 +112,12 @@ export const films: SeedFilm[] = [
     runtime: 10,
     subs: ["English", "Russian"],
     summary:
-      "A small hedgehog crossing the woods at dusk becomes lost in fog and wonder on his way to visit a friend.",
-    context: "A landmark of hand-crafted Soviet animation.",
-    interpretation:
-      "A few minutes that turn a simple errand into a meditation on the unknown.",
+      "A small hedgehog sets out at dusk to visit his friend the bear cub for their nightly ritual of counting stars over tea. Crossing the woods, he is swallowed by a thick fog where familiar things turn strange and frightening — a looming horse, an unseen presence, a fall into a river — and ordinary courage becomes an adventure into the unknown. He emerges shaken and changed, the world quietly larger than before.",
+    context:
+      "Produced at the Soyuzmultfilm studio, Norstein created the film with a painstaking multi-plane technique, layering translucent paper cutouts and glass to achieve the breathing, atmospheric fog that gives the film its name. Working with art director Francheska Yarbusova and adapting a story by Sergei Kozlov, he spent extraordinary care on only ten minutes of footage, treating animation as a serious poetic medium rather than children's entertainment.",
+    impact:
+      "Widely regarded as one of the greatest animated films ever made — it topped a 2003 poll of animators and critics as the best animation of all time — and it cemented Norstein's international reputation. Filmmakers including Hayao Miyazaki have cited Norstein's work as an inspiration.",
     themes: ["wonder", "fear", "friendship"],
-    starterClassic: true,
     watch: [
       {
         platform: "YouTube",
@@ -126,6 +128,7 @@ export const films: SeedFilm[] = [
       },
     ],
     wikipediaUrl: "https://en.wikipedia.org/wiki/Hedgehog_in_the_Fog",
+    starterClassic: true,
   },
   {
     slug: "battleship-potemkin",
@@ -140,11 +143,11 @@ export const films: SeedFilm[] = [
     runtime: 75, // TODO: runtime varies by restoration (~66–75 min).
     subs: ["English", "Russian"],
     summary:
-      "A 1905 mutiny aboard a tsarist warship swells into a citywide uprising, ending in a massacre on the Odessa steps.",
+      "Aboard a tsarist battleship in 1905, sailors pushed past endurance by rotten food and brutal officers rise up and seize the ship, at the cost of the life of their leader, Vakulinchuk. When his body is laid out in the port of Odessa, the city rallies to the mutineers in grief and solidarity — until tsarist troops descend the great harbour steps in a massacre of unarmed civilians. The uprising swells into a question of whether the rest of the fleet will fire on its own.",
     context:
-      "Made for the twentieth anniversary of the 1905 revolution, this silent landmark was built to showcase the power of montage.",
-    interpretation:
-      "Its rhythmic cutting makes the crowd the true protagonist and turns editing itself into an emotional weapon.",
+      "Commissioned for the twentieth anniversary of the 1905 revolution, the silent film was conceived by Eisenstein as a demonstration of cinema's capacity to move masses. He cast largely non-professionals as types rather than individuals and structured the film as a five-act tragedy. Above all it was a laboratory for his theory of montage — the idea that meaning and emotion are generated by the collision of shots rather than by any single image — most famously in the rhythmic, terrifying Odessa Steps sequence, which was a cinematic invention rather than a literal historical event.",
+    impact:
+      "One of the most influential films ever made: its montage techniques and the Odessa Steps sequence have been studied, imitated, and homaged for a century (from De Palma's The Untouchables to Woody Allen). It helped establish editing as the central expressive tool of cinema and remains a fixture of film education worldwide.",
     themes: ["revolt", "solidarity", "montage"],
     watch: [
       {
@@ -171,11 +174,11 @@ export const films: SeedFilm[] = [
     runtime: 68, // TODO: runtime varies by edition (~68 min).
     subs: [], // No intertitles or dialogue.
     summary:
-      "A plotless 'city symphony' follows a cameraman through a single Soviet day, stitching work, leisure, and machinery into pure motion.",
+      "From dawn to night, a cameraman roams a Soviet city — composited from Moscow, Kyiv, Kharkiv and Odessa — filming people waking, working, marrying, divorcing, giving birth, playing sport and relaxing. There is no story and no intertitles; the 'character' is the act of filming itself, and the film repeatedly shows its own making, including the editor at her bench cutting the very images we watch.",
     context:
-      "Vertov rejected scripted fiction, treating the camera as a new kind of eye that could capture life unstaged.",
-    interpretation:
-      "It is cinema about cinema — every split screen and freeze-frame flaunts what the medium alone can do.",
+      "Produced by the Ukrainian studio VUFKU, the film was the manifesto of Vertov's 'Kino-Eye' movement, which rejected scripted, theatrical fiction ('film-drama') in favour of capturing life unstaged. With his brother, cinematographer Mikhail Kaufman, and editor Elizaveta Svilova, Vertov assembled a dizzying catalogue of techniques — split screens, freeze frames, jump cuts, slow motion, stop-motion, Dutch angles, extreme close-ups — to celebrate both modern urban life and the machinery of cinema.",
+    impact:
+      "A foundational work of documentary and avant-garde film, it pioneered or popularised a huge range of editing and camera techniques still in use today. Its reputation has only grown — in 2012 a Sight & Sound poll of critics named it the greatest documentary of all time.",
     themes: ["the city", "labor", "the camera-eye"],
     watch: [
       {
@@ -201,11 +204,11 @@ export const films: SeedFilm[] = [
     runtime: 88,
     subs: ["English", "Russian"],
     summary:
-      "Granted brief leave for an act of battlefield courage, a young soldier travels home, meeting ordinary people the war has touched.",
+      "Nineteen-year-old signalman Alyosha knocks out two German tanks in a moment of panic and is offered a medal; he asks instead for a few days' leave to visit his mother and repair the roof of their home. His journey across a war-torn country becomes a series of brief, tender encounters — with a disabled veteran afraid to go home, with strangers' kindness and pettiness, and with a girl named Shura, with whom he falls in love on a freight train — as the leave dwindles away and the front waits.",
     context:
-      "A Thaw-era film that found heroism in tenderness rather than combat, and travelled widely abroad.",
-    interpretation:
-      "The road home becomes a portrait of a generation, its gentleness sharpened by what waits back at the front.",
+      "A landmark of Thaw-era cinema made at Mosfilm, Chukhrai's film deliberately turned away from generals and grand strategy to find the war's meaning in the goodness and frailty of ordinary people. The framing device — the audience knows from the opening that Alyosha will not survive the war — lends the gentle road movie an air of elegy, mourning a whole generation through one boy.",
+    impact:
+      "Internationally celebrated and awarded at Cannes and beyond, it helped define the humane, intimate strain of Soviet war cinema and broadened Western audiences' sense of Soviet film during the Thaw.",
     themes: ["youth", "kindness", "wartime"],
     watch: [
       {
@@ -232,11 +235,11 @@ export const films: SeedFilm[] = [
     runtime: 431, // TODO: total across four parts (~427–431 min); verify exact figure.
     subs: ["English", "Russian"],
     summary:
-      "Tolstoy's sweep of Russian society through the Napoleonic Wars, following intertwined families across love, disillusion, and the 1812 invasion.",
+      "Tolstoy's panorama of Russian society during the Napoleonic Wars follows three figures: the searching, illegitimate heir Pierre Bezukhov; his friend Prince Andrei Bolkonsky, who seeks meaning in love and on the battlefield; and the young Natasha Rostova, whose coming-of-age threads through balls, betrayals and bereavement. Their private fortunes play out against the catastrophe of the 1812 French invasion, the burning of Moscow, and the ruinous retreat that consumes the Grande Armée.",
     context:
-      "A state-backed production of staggering scale, mounted partly as a Soviet answer to a Hollywood adaptation.",
-    interpretation:
-      "Its vast battlefields and intimate drawing rooms together argue that history is made of countless private moments.",
+      "Released in four parts over 1966–67, the film was a vast state undertaking — mounted partly as a Soviet answer to a 1956 Hollywood adaptation — with budgets, sets and crowd scenes on a scale rarely attempted before or since. Director Sergei Bondarchuk, who also played Pierre, drew on thousands of Soviet Army soldiers as extras and pioneering large-format cinematography to stage the Battle of Borodino. The production stretched across years and reportedly endangered Bondarchuk's health.",
+    impact:
+      "Often cited as one of the most expensive and logistically ambitious films ever made, its enormous, meticulously choreographed battle sequences set a benchmark for epic filmmaking. It won the Academy Award for Best Foreign Language Film and a Golden Globe.",
     themes: ["history", "love", "war"],
     watch: [
       {
@@ -262,11 +265,11 @@ export const films: SeedFilm[] = [
     runtime: 162,
     subs: ["English", "Russian"],
     summary:
-      "A guide leads a writer and a scientist into the forbidden 'Zone' toward a room said to grant one's deepest wish.",
+      "In a bleak near-future, a forbidden, militarised area called the Zone is said to contain a room that grants a person's deepest, truest wish. A guide known as the Stalker — one of the few willing to risk the Zone's shifting, lethal traps — leads two clients, a disillusioned Writer and a rationalist Professor, on a slow pilgrimage toward the room. As they approach, the journey becomes less about the Zone's dangers than about whether any of them dares to know what he actually desires.",
     context:
-      "Loosely drawn from a Strugatsky brothers novel, Tarkovsky reshaped it into a slow, metaphysical pilgrimage.",
-    interpretation:
-      "The journey tests not the Zone's dangers but each man's faith, desire, and willingness to know himself.",
+      "Loosely adapted at Mosfilm from the Strugatsky brothers' novel Roadside Picnic, the film was a famously tortured production: an initial version was lost or ruined in processing, forcing a near-complete reshoot, and the toxic locations in Estonia have been linked to the later illnesses of Tarkovsky and members of the crew. Tarkovsky stripped the source novel's action almost entirely, rendering the Zone through long takes, subtly shifting color, and an atmosphere of ruined, waterlogged landscapes.",
+    impact:
+      "A profoundly influential work whose imagery and central conceit of 'the Zone' permeated later culture, from literature and cinema to the S.T.A.L.K.E.R. video game series. It remains a defining reference for slow, atmospheric, philosophically dense science fiction.",
     themes: ["faith", "desire", "the unknown"],
     watch: [
       {
@@ -292,11 +295,11 @@ export const films: SeedFilm[] = [
     runtime: 95,
     subs: ["English", "Russian"],
     summary:
-      "A twelve-year-old orphan works as a scout for the Red Army, his lost childhood surfacing only in dreams.",
+      "Twelve-year-old Ivan, his mother and sister killed by the Germans, works as a reconnaissance scout for the Red Army, slipping behind enemy lines because his small size makes him invaluable. Hardened and driven by hatred, he resists the officers who want to send him to safety in a military school. Only in dreams does the lost, sunlit world of his childhood return, in radiant contrast to the ruined, nocturnal landscape of the war.",
     context:
-      "Tarkovsky's feature debut won the top prize at Venice and announced his lyrical, dream-laced style.",
-    interpretation:
-      "War is measured by what it steals from the young, contrasting luminous memory with a ruined present.",
+      "Tarkovsky's feature debut, made at Mosfilm when he was in his late twelve, was adapted from a Vladimir Bogomolov story. He transformed conventional war material into something lyrical and dreamlike, intercutting the grim realism of the front with luminous dream sequences, and using stark, expressive imagery of water, fire and dead forests. It established the visual and thematic preoccupations — memory, childhood, a ravaged natural world — that would define his career.",
+    impact:
+      "It won the Golden Lion at the 1962 Venice Film Festival, launching Tarkovsky internationally, and its poetic approach to wartime trauma influenced filmmakers worldwide; admirers from Ingmar Bergman to Krzysztof Kieślowski praised his work.",
     themes: ["lost childhood", "war", "memory"],
     watch: [
       {
@@ -322,11 +325,11 @@ export const films: SeedFilm[] = [
     runtime: 107,
     subs: ["English", "Russian"],
     summary:
-      "A dying man's memories, dreams, and newsreels fold together into a non-linear meditation on family and a century of upheaval.",
+      "A dying, unseen narrator drifts through the fragments of his life: a prewar childhood at a country dacha, his mother at a printing house in the Stalin years, the absence of his father, his own faltering marriage, and his troubled relationship with his son. Personal recollection blurs with dream and with documentary newsreel of the century's upheavals, so that one woman (played by the same actress as both mother and ex-wife) and one boy seem to recur across time.",
     context:
-      "Tarkovsky's most personal film draws on his own childhood and his mother's life.",
-    interpretation:
-      "Time here is emotional rather than chronological — the past returns whenever feeling, not sequence, demands it.",
+      "Tarkovsky's most personal and formally radical film, produced at Mosfilm, draws directly on his own childhood, his mother's life, and poems written and read by his father, Arseny Tarkovsky. He abandoned linear storytelling entirely, organising the film by the logic of memory and feeling rather than chronology, and weaving in archival footage of the Spanish Civil War, World War II and other events to bind private and national history. Soviet authorities were baffled by it and gave it limited release.",
+    impact:
+      "Its associative, non-linear structure expanded the vocabulary of autobiographical and 'memory' cinema, and it is now regularly ranked among the greatest films ever made, widely studied for its fusion of personal and historical time.",
     themes: ["memory", "family", "time"],
     watch: [
       {
@@ -352,11 +355,11 @@ export const films: SeedFilm[] = [
     runtime: 142, // TODO: sources cite ~136–142 min; verify.
     subs: ["English", "Russian"],
     summary:
-      "A boy joins the partisans in occupied Belarus and witnesses the Nazi destruction of his world in unbearable detail.",
+      "A teenage boy named Flyora digs up a rifle and joins the Belarusian partisans against his mother's wishes, eager for the adventure of war. What follows is not adventure but a descent into atrocity: shelling that leaves him half-deaf, the slaughter of his village, and finally the methodical massacre of an entire community herded into a burning barn by an SS punitive unit. By the end his boyish face has aged into something ancient with horror.",
     context:
-      "Made for the fortieth anniversary of victory, it draws on survivor testimony of village massacres.",
-    interpretation:
-      "It refuses heroism, showing war as something that hollows out a child's face frame by frame.",
+      "A co-production involving Mosfilm and the Belarusian studio Belarusfilm, released for the fortieth anniversary of the Soviet victory, the film was drawn from survivor testimony of the Nazi destruction of Belarusian villages, in which hundreds of communities were annihilated. Klimov used long takes, near-documentary immediacy, Steadicam, and reportedly live ammunition to immerse the viewer in the boy's experience, refusing any heroic or redemptive framing of combat.",
+    impact:
+      "Regarded as one of the most harrowing and powerful war films ever made, it is frequently cited by critics and filmmakers — its unflinching, subjective depiction of atrocity is often invoked in discussions of later war cinema such as Saving Private Ryan.",
     themes: ["atrocity", "innocence lost", "witness"],
     watch: [
       {
@@ -382,11 +385,11 @@ export const films: SeedFilm[] = [
     runtime: 111,
     subs: ["English", "Russian"],
     summary:
-      "Two partisans set out across a frozen landscape for supplies, are captured, and face interrogation and the choice between survival and conscience.",
+      "Two Soviet partisans, the steadfast Sotnikov and the pragmatic Rybak, set out across a frozen Belarusian landscape to find food for their hidden unit. Captured by the Germans and their collaborators, the two men face interrogation and the gallows, and their responses diverge: one moves toward sacrifice and a kind of transcendence, the other toward survival at any moral cost. Their final reckoning turns a wartime errand into a parable of conscience.",
     context:
-      "Shepitko's stark final film won the top prize at the Berlin festival.",
-    interpretation:
-      "Its snow-blinded imagery turns a wartime errand into a near-spiritual test of integrity.",
+      "Adapted from a Vasil Bykaŭ novella and shot at Mosfilm in punishing real winter conditions, Shepitko's final film before her death in a car accident invests the partisan-war genre with overt spiritual and Christian imagery — the prisoners' ordeal explicitly evokes martyrdom and betrayal. Its stark, snow-blinded close-ups and moral seriousness set it apart from conventional Soviet war pictures.",
+    impact:
+      "It won the Golden Bear at the 1977 Berlin Film Festival and is held up as one of the finest works by a Soviet woman director, admired for bringing a transcendental, morally searching dimension to war cinema.",
     themes: ["conscience", "endurance", "betrayal"],
     watch: [
       {
@@ -412,11 +415,11 @@ export const films: SeedFilm[] = [
     runtime: 142,
     subs: ["English", "Russian"],
     summary:
-      "A Russian surveyor in the Siberian wilderness forms a deep friendship with an aging native hunter who reads the forest like a language.",
+      "Surveying the wild Ussuri region of the Russian Far East in the early 1900s, the army explorer Vladimir Arsenyev is guided by Dersu Uzala, an aging Nanai hunter who reads the forest, weather and animals like a language and lives by a code of respect for the natural world. Over two expeditions a deep friendship forms between the educated officer and the woodsman. As Dersu's eyesight and his way of life fail, Arsenyev tries to bring him into the city, with quietly tragic results.",
     context:
-      "Kurosawa directed this Soviet production, adapting explorer Vladimir Arsenyev's memoirs.",
-    interpretation:
-      "It mourns a way of life attuned to nature, and the loneliness that follows when that world fades.",
+      "A Soviet–Japanese co-production shot for Mosfilm on location in Siberia, the film gave the great Japanese director Akira Kurosawa a path back to work after a difficult period and a suicide attempt. Adapting Arsenyev's memoirs, Kurosawa used the vast Siberian landscape and his first widescreen 70mm photography to dwell on humanity's small place within nature, a meditative register distinct from his earlier samurai films.",
+    impact:
+      "It won the Academy Award for Best Foreign Language Film in 1976 and marked a celebrated revival of Kurosawa's career; it is also frequently cited as a landmark of ecological, nature-centered cinema.",
     themes: ["friendship", "nature", "loss"],
     watch: [
       {
@@ -442,11 +445,9 @@ export const films: SeedFilm[] = [
     runtime: 184, // TODO: two-part television film (~184 min total); verify.
     subs: ["English", "Russian"],
     summary:
-      "A drunken mix-up sends a man to an identical apartment in another city, where he stumbles into the life — and love — of a stranger.",
+      "On New Year's Eve a group of friends get drunk at a Moscow bathhouse and put the wrong man, Zhenya, on a plane to Leningrad. Still insensible, he gives a taxi his Moscow address — and because Soviet cities were built with identical streets, buildings and apartments, his key opens an identical flat in Leningrad belonging to a woman named Nadya. The collision of two strangers, each with a fiancé waiting, turns over one long, snowy night into an unlikely romance.",
     context:
-      "A two-part television comedy that became an inescapable Soviet New Year's tradition.",
-    interpretation:
-      "Its gentle joke about cookie-cutter housing blocks blossoms into a warm argument for chance over routine.",
+      "A two-part television film made at Mosfilm and first broadcast on New Year's Eve, Ryazanov's gentle comedy built its entire premise on a sly satire of Soviet urban uniformity — the mass-produced apartment blocks that made one city interchangeable with another. Warm, melancholy and song-filled, it captured a particular late-Soviet mood of private life and small wonders.",
     themes: ["chance", "love", "home"],
     watch: [
       {
@@ -473,11 +474,9 @@ export const films: SeedFilm[] = [
     runtime: 150, // TODO: two-part film (~150 min total); verify.
     subs: ["English", "Russian"],
     summary:
-      "Across two decades, three young women chase work and love in the capital, one rebuilding her life after early heartbreak.",
+      "Three young women share a Moscow workers' dormitory in the late 1950s, each chasing a different idea of happiness. Katerina, abandoned and pregnant after a brief affair with a self-absorbed cameraman, raises her daughter alone while quietly working her way up to become a factory director. Two decades later, settled but lonely, she meets Gosha, a confident, old-fashioned tradesman — and her hard-won independence is tested by love and wounded pride.",
     context:
-      "A hugely popular melodrama that won the Academy Award for Best Foreign Language Film.",
-    interpretation:
-      "It argues that dignity and happiness are built slowly, through work and self-respect rather than luck.",
+      "A hugely popular two-part melodrama made at Mosfilm, the film spans the Khrushchev 'Thaw' and the later Brezhnev years, using its heroine's rise to chart changing Soviet ideas about work, womanhood and success. Menshov framed it as a frank, sentimental crowd-pleaser rather than an art film, and its blend of social realism and romance struck a deep chord with domestic audiences.",
     themes: ["ambition", "resilience", "love"],
     watch: [
       {
@@ -504,11 +503,9 @@ export const films: SeedFilm[] = [
     runtime: 159, // TODO: two-part film (~159 min total); verify.
     subs: ["English", "Russian"],
     summary:
-      "A timid statistician is coached into courting his severe, lonely boss, and unexpected feeling grows between them.",
+      "Anatoly Novoseltsev, a meek, divorced statistician raising two sons, is urged by an ambitious old classmate to cozy up to their boss — the severe, joyless 'old maid' who runs their drab statistical bureau — to win a promotion. His clumsy, insincere campaign goes comically wrong, but as the brittle director slowly reveals a lonely, hopeful woman beneath the armor, mutual contempt thaws into genuine, awkward affection.",
     context:
-      "Ryazanov's workplace comedy gently satirizes Soviet bureaucracy and office life.",
-    interpretation:
-      "Beneath the farce is a tender case that warmth can thaw even the most armored person.",
+      "Adapted by Ryazanov from his own stage play and shot at Mosfilm, the comedy is set entirely within the grey routine of a Soviet office, gently satirising bureaucracy, careerism and the conformity of working life. Its humor is character-driven and bittersweet, and its evocation of late-1970s Moscow office culture made it one of the most quoted Soviet comedies.",
     themes: ["loneliness", "transformation", "love"],
     watch: [
       {
@@ -534,11 +531,9 @@ export const films: SeedFilm[] = [
     runtime: 100,
     subs: ["English", "Russian"],
     summary:
-      "An ordinary tourist is mistaken for a smuggler when jewels are hidden in his plaster cast, dragging him into a bumbling criminal scheme.",
+      "On a cruise abroad, mild-mannered family man Semyon Gorbunkov slips on a sidewalk and is mistaken by smugglers for their courier; they encase his arm in a plaster cast packed with gold and jewels. Back home, the smugglers — a smooth operator and his bumbling henchman — scheme to recover the loot, while Gorbunkov is recruited by the police to help catch them, leading to a cascade of slapstick, disguises and farce.",
     context:
-      "Gaidai's caper became one of the most-watched and most-quoted Soviet comedies.",
-    interpretation:
-      "Its slapstick hides sly mockery of respectability, vanity, and the everyday absurdities of Soviet life.",
+      "One of the most beloved comedies made at Mosfilm, Gaidai's caper paired broad physical comedy and elaborate set pieces with sly digs at consumerism, respectability and Soviet officialdom that slipped past the censors. Built around a trio of the era's most popular comic actors, it became one of the most-watched and most-quoted films in Soviet history.",
     themes: ["mistaken identity", "farce", "temptation"],
     watch: [
       {
@@ -571,11 +566,9 @@ export const films: SeedFilm[] = [
     runtime: 95,
     subs: ["English", "Russian"],
     summary:
-      "Three comic episodes follow the earnest student Shurik through a construction site, a frantic exam, and a foiled warehouse robbery.",
+      "Three self-contained comic stories follow Shurik, an earnest, bespectacled student who keeps stumbling into trouble. In the first he clashes with a loutish bully on a construction site; in the second he crams for an exam and accidentally shares a night of frantic studying with a fellow student; in the third, he is hired as a night watchman and foils a trio of inept crooks plotting a staged 'robbery' of a warehouse.",
     context:
-      "Gaidai's sketch-style comedy launched the beloved bespectacled everyman Shurik.",
-    interpretation:
-      "Each vignette turns small Soviet routines — study, work, security — into bright physical comedy.",
+      "A sketch-style comedy made at Mosfilm, the film introduced Gaidai's enduring everyman hero Shurik and the bungling criminal trio (the Coward, the Fool and the Pro) who would recur in his work. Its gentle, knockabout humor mined everyday Soviet life — exams, work brigades, petty corruption — for broad, affectionate laughs.",
     themes: ["everyday life", "mischief", "the underdog"],
     watch: [
       {
@@ -607,11 +600,11 @@ export const films: SeedFilm[] = [
     runtime: 135, // TODO: two-part film (~135 min total); verify.
     subs: ["English", "Russian"],
     summary:
-      "Two Muscovites are teleported to a desert planet ruled by absurd hierarchy, where matches are treasure and status is bought with a squat and a nonsense word.",
+      "A gruff Moscow foreman and a young Georgian student press a stranger's odd device and are instantly teleported to Pluke, a desert planet in the Kin-dza-dza galaxy. There society runs on absurd rituals and a near-empty vocabulary: matches ('KTs') are precious currency, a squat-and-utter-'ku' is the required mark of deference, and people are sorted into castes distinguished by who must grovel to whom. Stranded and broke, the pair scheme to get home through this dust-blown, bureaucratic cosmos.",
     context:
-      "Daneliya's cult science-fiction comedy built a whole shabby cosmos on a tiny budget.",
-    interpretation:
-      "Its ramshackle dystopia is a deadpan parody of status, scarcity, and social ritual.",
+      "Made at Mosfilm in the final years of the USSR, Daneliya's shabby, low-budget science-fiction comedy turned its threadbare production design into the point: Pluke is a wasteland of rust and sand, a deadpan parody of social hierarchy, scarcity and meaningless ritual that audiences readily read as a mirror of late-Soviet life. Its invented slang and gestures became instantly recognisable.",
+    impact:
+      "It became an enduring cult film whose nonsense language and imagery entered the post-Soviet cultural vocabulary; Daneliya later returned to the material with an animated feature reworking, Ku! Kin-dza-dza (2013).",
     themes: ["absurdity", "hierarchy", "humanity"],
     watch: [
       {
@@ -637,11 +630,11 @@ export const films: SeedFilm[] = [
     runtime: 78, // TODO: multiple cuts exist (~73–79 min); verify which version.
     subs: ["English", "Russian"],
     summary:
-      "The life of the poet Sayat-Nova told not as a story but as a series of living tableaux drawn from his verse and Armenian ritual.",
+      "Rather than narrating the life of the 18th-century Armenian poet-musician Sayat-Nova, the film evokes it through a series of nearly static, richly symbolic tableaux: childhood among dyers' vats and drying carpets, a monastery, a doomed love at court, the taking of holy orders, old age and death. Costumes, ritual objects, animals and the poet's own verse stand in for biography, so that a life is rendered as a sequence of living paintings.",
     context:
-      "Parajanov abandoned conventional narrative for a procession of symbolic images, and the film was later recut by the authorities.",
-    interpretation:
-      "Meaning arrives through emblem and texture rather than plot, making poetry visible as motion and color.",
+      "Made at the Armenian studio Armenfilm, Parajanov abandoned conventional storytelling for a hermetic, emblematic visual language rooted in Armenian, Georgian and Persian miniature art, religious iconography and folk ritual. Soviet authorities found it incomprehensible and politically suspect; the film was re-edited by another director, Sergei Yutkevich, for wider Soviet release, and Parajanov was later imprisoned, his career repeatedly suppressed.",
+    impact:
+      "Now celebrated as a singular masterpiece of poetic cinema, its tableau aesthetic has influenced filmmakers, photographers and music-video makers alike; it was restored under Martin Scorsese's World Cinema Project, which renewed global interest in Parajanov's work.",
     themes: ["poetry", "faith", "memory"],
     watch: [
       {
@@ -667,11 +660,11 @@ export const films: SeedFilm[] = [
     runtime: 64,
     subs: ["English", "Russian"],
     summary:
-      "A brave girl sets out across a frozen world to rescue her friend from the cold-hearted Snow Queen.",
+      "When a shard of a goblin's cursed mirror lodges in the boy Kai's eye and heart, he turns cold and cruel and is carried off by the icy Snow Queen to her frozen palace in the far north. His devoted friend Gerda sets out to find him, and her long journey — through enchanted gardens, royal courts, a band of robbers and the frozen wastes — is sustained by a warmth and loyalty strong enough to thaw the queen's spell.",
     context:
-      "Atamanov's hand-drawn Soyuzmultfilm feature adapts Hans Christian Andersen and influenced later animators.",
-    interpretation:
-      "It frames warmth and loyalty as the only forces strong enough to melt the queen's icy reason.",
+      "A hand-drawn feature from the Soyuzmultfilm studio adapting Hans Christian Andersen's tale, the film showcased the studio's lush, fluid 'realistic' animation, in places achieved with rotoscoping. Released in the Thaw years, it travelled internationally and was dubbed into many languages, becoming one of the best-known works of Soviet animation abroad.",
+    impact:
+      "It left a lasting mark on animators internationally; Hayao Miyazaki has spoken of the film as an inspiration that affirmed his commitment to a career in animation.",
     themes: ["friendship", "courage", "warmth vs. cold"],
     watch: [
       {
@@ -697,11 +690,11 @@ export const films: SeedFilm[] = [
     runtime: 83, // TODO: verify runtime.
     subs: ["English", "Russian"],
     summary:
-      "Slandered by jealous sisters, a banished tsaritsa and her son rise to rule a magical island and reunite their family.",
+      "Tsar Saltan marries the youngest of three sisters, but while he is away at war her jealous siblings forge letters and have the young tsaritsa and her newborn son sealed in a barrel and cast into the sea. Mother and son wash ashore on a deserted island, where the boy — grown miraculously to manhood — rescues a magical swan-princess and conjures a gleaming city. Through her enchantments he wins back his father and exposes the sisters' treachery.",
     context:
-      "Ptushko's lavish fantasy adapts Pushkin's verse fairy tale with elaborate sets and effects.",
-    interpretation:
-      "Its storybook spectacle celebrates wonder, justice, and the righting of envy's wrongs.",
+      "Adapted from Alexander Pushkin's verse fairy tale and made at Mosfilm by Aleksandr Ptushko, a master of Soviet fantasy filmmaking, the film renders the poem as lavish storybook spectacle: ornate costumes, painted sets, and elaborate practical special effects bring the swan-princess, the squirrel that cracks golden nuts, and the city-from-nothing to vivid life.",
+    impact:
+      "Ptushko was a pioneer of large-scale fantasy and special-effects cinema in the USSR, and his richly designed fairy-tale films — this among them — were widely seen abroad and helped shape the look of the fantasy genre in Soviet and Eastern European film.",
     themes: ["fairy tale", "justice", "wonder"],
     watch: [
       {

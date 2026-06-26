@@ -24,8 +24,8 @@ model Film {
   runtimeMinutes     Int?
   shortSummary       String
   historicalContext  String?
-  interpretation     String?
-  themes             String?  // JSON-encoded string[]
+  impact             String? // "Impact on Cinema" — set only when the film had a discernible influence
+  themes             String?  // JSON-encoded string[] (retained; no longer shown)
   starterClassic     Boolean  @default(false) // curated "start here" entry points
   draft              Boolean  @default(false) // ingested-but-unreviewed; hidden from the public catalogue
   wikidataId         String?  @unique // idempotency key for the ingestion pipeline

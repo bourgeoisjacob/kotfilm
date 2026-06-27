@@ -193,8 +193,6 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
           watchLinks={film.watchLinks}
           regionRestricted={region.restricted}
           intlLink={regionWatchLinks[film.slug]}
-          title={film.title}
-          year={film.year}
         />
       </Section>
 

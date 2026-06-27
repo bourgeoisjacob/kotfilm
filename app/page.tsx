@@ -78,7 +78,7 @@ export default async function Home() {
       </section>
 
       {/* Spotlight hero + Netflix-style browse rails */}
-      <HomeBrowser rails={rails} featured={featured} regionRestricted={region.restricted} />
+      <HomeBrowser rails={rails} featured={featured} />
     </main>
   );
 }

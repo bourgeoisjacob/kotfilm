@@ -1,6 +1,5 @@
 import { ExternalLink } from "lucide-react";
 import TrustBadge from "@/components/film/TrustBadge";
-import RegionWatchNote from "@/components/RegionWatchNote";
 import type { FilmDetail } from "@/lib/queries";
 
 // Most-trusted first.
@@ -16,14 +15,10 @@ export default function WatchLinks({
   watchLinks,
   regionRestricted = false,
   intlLink,
-  title,
-  year,
 }: {
   watchLinks: FilmDetail["watchLinks"];
   regionRestricted?: boolean;
   intlLink?: IntlLink;
-  title?: string;
-  year?: number;
 }) {
   if (watchLinks.length === 0) {
     return (
@@ -34,11 +29,9 @@ export default function WatchLinks({
   }
 
   const links = [...watchLinks].sort((a, b) => rank(a.sourceType) - rank(b.sourceType));
-  // Restricted viewers with a verified region copy get a direct link; without one
-  // they get the search fallback note.
+  // The curation pass verified every film's US availability, so we only surface a
+  // region link for the films actually geo-blocked outside Europe.
   const showIntl = regionRestricted && !!intlLink;
-  const showRegionNote =
-    regionRestricted && !intlLink && !!title && links.some((l) => l.platform === "YouTube");
 
   return (
     <ul className="flex flex-col gap-3">
@@ -106,11 +99,6 @@ export default function WatchLinks({
           )}
         </li>
       ))}
-      {showRegionNote && (
-        <li>
-          <RegionWatchNote title={title!} year={year ?? 0} />
-        </li>
-      )}
     </ul>
   );
 }

@@ -29,12 +29,9 @@ const MANUAL_PHOTOS: Record<string, string> = {
 // Existing images with no good replacement (envelopes, postal covers, or a
 // photo of a bust/monument): drop them. A clean initials avatar beats a postal
 // cover or a statue.
-const DROP = new Set([
-  "aleksandr-ptushko",
-  "maksim-shtraukh",
-  "elza-radzina",
-  "ivan-mykolaichuk", // only free images are a bust, a coin, and an envelope
-]);
+// Only envelopes / postal covers are dropped outright. Busts and statues are an
+// acceptable likeness and are handled by scripts/fetch-statues.ts.
+const DROP = new Set(["aleksandr-ptushko", "maksim-shtraukh", "elza-radzina"]);
 
 const REJECT =
   /envelope|cover|конверт|открытк|postcard|coin|монет|banknote|банкнот|signature|автограф|подпис|plaque|доск|таблиц|grave|tomb|cemeter|могил|надгроб|monument|памятник|bust|статуя|sculpture|vagankovo|novodevich/i;

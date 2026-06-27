@@ -738,12 +738,6 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Vahan Kochar / Own work"
   },
-  "aleksandr-ptushko": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Aleksandr_Ptushko_2025_postal_cover_of_Russia_cr.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Aleksandr_Ptushko_2025_postal_cover_of_Russia_cr.jpg",
-    "licenseName": "Public domain",
-    "attribution": "N. Karpova / [1]"
-  },
   "larisa-golubkina": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/%D0%9B%D0%B0%D1%80%D0%B8%D1%81%D0%B0_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%BA%D0%B8%D0%BD%D0%B0._%D0%A4%D0%BE%D1%82%D0%BE_%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D0%B8_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%BE.jpg",
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B0%D1%80%D0%B8%D1%81%D0%B0_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%BA%D0%B8%D0%BD%D0%B0._%D0%A4%D0%BE%D1%82%D0%BE_%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D0%B8_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%BE.jpg",
@@ -779,10 +773,10 @@ export const personImages: Record<string, ImageRecord> = {
     "attribution": "mos.ru / https://yakimanka.mos.ru/presscenter/news/detail/2729437.html"
   },
   "andrei-tarkovsky": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Andrei_tarkovsky_stamp_russia_2007.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Andrei_tarkovsky_stamp_russia_2007.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Andrej_Tarkovskij_mug_shot_at_Latina_Refugee_Camp_1985_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Andrej_Tarkovskij_mug_shot_at_Latina_Refugee_Camp_1985_(cropped).jpg",
     "licenseName": "Public domain",
-    "attribution": "Unknown authorUnknown author / Personal collection"
+    "attribution": "Ministery of Interior of Italy / File:Scheda personale di registrazione di Andrei Tarkowski 2.jpg"
   },
   "donatas-banionis": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Banionis.jpg",
@@ -1250,12 +1244,6 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
   },
-  "maksim-shtraukh": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Maksim_Shtraukh_2025_postal_cover_of_Russia_cr.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maksim_Shtraukh_2025_postal_cover_of_Russia_cr.jpg",
-    "licenseName": "Public domain",
-    "attribution": "A. Moskovets / [1]"
-  },
   "vsevolod-pudovkin": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Vsevolod_Pudovkin_1929.JPG",
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vsevolod_Pudovkin_1929.JPG",
@@ -1319,10 +1307,10 @@ export const personImages: Record<string, ImageRecord> = {
     "attribution": "Paul Munhoven / Own work"
   },
   "georgi-vasilyev": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2_%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_%28%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82%29.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2_%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_(%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D1%8B_%D0%B8_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B9%2C_1938_%D0%B3%D0%BE%D0%B4.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D1%8B_%D0%B8_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B9,_1938_%D0%B3%D0%BE%D0%B4.jpg",
     "licenseName": "Public domain",
-    "attribution": "Аникин А. / filpersona.ru"
+    "attribution": "ТАСС / [1]. See also: [2]"
   },
   "boris-babochkin": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Babochkin_Chapayev1.jpg",
@@ -1507,12 +1495,6 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "М.А. Трахман (Главархив Москвы) / https://www.mos.ru/news/item/158835073/"
   },
-  "elza-radzina": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Elza_Radzi%C5%86a_2017_envelope_of_Latvia_cr2.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Elza_Radzi%C5%86a_2017_envelope_of_Latvia_cr2.jpg",
-    "licenseName": "Public domain",
-    "attribution": "Latvia Post / https://www.flickr.com/photos/48113023@N03/32616481351"
-  },
   "oleg-dal": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Oleg_Dahl_in_Sovremennik_%28cropped%29.jpg",
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Oleg_Dahl_in_Sovremennik_(cropped).jpg",
@@ -1574,5 +1556,43 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "attribution": "Zimin.V.G. / Own work"
+  },
+  "liya-akhedzhakova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/AhedzhakovaRozel.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:AhedzhakovaRozel.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Alexander Khanin / Own work"
+  },
+  "fyodor-khitruk": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/13134_6402f3fee6a73_%283%29.png",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:13134_6402f3fee6a73_(3).png",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Unknown authorUnknown author / https://page.lfl.ru/club/13134"
+  },
+  "nikolai-popov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Nikolai_Popov%2C_1910s.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nikolai_Popov,_1910s.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Heinrich Riedel / http://ester.utlib.ee/record=b1706346~S1*est"
+  },
+  "leonid-utyosov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Leonid_Utesov_1934.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Leonid_Utesov_1934.jpg",
+    "licenseName": "Public domain",
+    "attribution": "w:Mosfilm / movie still"
+  },
+  "viktor-tsoi": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Victor_Tsoi_1986_cropped.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Victor_Tsoi_1986_cropped.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Igor Moukhin / Victor_Tsoi_1986.jpg"
+  },
+  "sergei-bugaev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%91%D1%83%D0%B3%D0%B0%D0%B5%D0%B2_2026-03-28_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%91%D1%83%D0%B3%D0%B0%D0%B5%D0%B2_2026-03-28_(cropped).jpg",
+    "licenseName": "Public domain",
+    "attribution": "GAndy / Self-photographed"
   }
 };

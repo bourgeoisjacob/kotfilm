@@ -25,6 +25,8 @@ export default async function DirectorsPage() {
           href: `/directors/${d.slug}`,
           title: d.name,
           subtitle: `${d._count.directed} ${d._count.directed === 1 ? "film" : "films"}`,
+          avatar: true,
+          imageUrl: d.imageAssets[0]?.url,
         }))}
       />
     </main>

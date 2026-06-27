@@ -25,6 +25,8 @@ export default async function ActorsPage() {
           href: `/actors/${a.slug}`,
           title: a.name,
           subtitle: `${a._count.castCredits} ${a._count.castCredits === 1 ? "film" : "films"}`,
+          avatar: true,
+          imageUrl: a.imageAssets[0]?.url,
         }))}
       />
     </main>

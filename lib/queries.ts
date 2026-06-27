@@ -285,7 +285,10 @@ export function listDirectorsWithCounts() {
   return prisma.person.findMany({
     where: { directed: { some: {} } },
     orderBy: { name: "asc" },
-    include: { _count: { select: { directed: true } } },
+    include: {
+      _count: { select: { directed: true } },
+      imageAssets: { select: { url: true }, take: 1 },
+    },
   });
 }
 
@@ -294,7 +297,10 @@ export function listActorsWithCounts() {
   return prisma.person.findMany({
     where: { castCredits: { some: {} } },
     orderBy: { name: "asc" },
-    include: { _count: { select: { castCredits: true } } },
+    include: {
+      _count: { select: { castCredits: true } },
+      imageAssets: { select: { url: true }, take: 1 },
+    },
   });
 }
 

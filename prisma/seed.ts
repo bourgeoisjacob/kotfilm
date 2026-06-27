@@ -2,6 +2,7 @@ import { films } from "../lib/films";
 import { createPrismaClient } from "../lib/prisma";
 import { filmImages, personImages } from "../lib/imageData";
 import { personBios } from "../lib/personBios";
+import { watchLinks } from "../lib/watchLinks";
 
 // This script runs via `tsx` (not the Prisma CLI), so load DATABASE_URL from
 // .env ourselves before creating the client. No-op if the file is absent.
@@ -146,17 +147,32 @@ async function main() {
       });
     }
 
-    for (const w of f.watch) {
+    const resolvedWatch = watchLinks[f.slug];
+    if (resolvedWatch) {
+      // A concrete, verified free/legal URL discovered for this film.
       await prisma.watchLink.create({
         data: {
           filmId: film.id,
-          platform: w.platform,
-          url: w.url ?? null,
-          label: w.label,
-          sourceType: w.sourceType,
-          rightsNote: w.rightsNote,
+          platform: resolvedWatch.platform,
+          url: resolvedWatch.url,
+          label: resolvedWatch.label,
+          sourceType: resolvedWatch.sourceType,
+          rightsNote: resolvedWatch.rightsNote,
         },
       });
+    } else {
+      for (const w of f.watch) {
+        await prisma.watchLink.create({
+          data: {
+            filmId: film.id,
+            platform: w.platform,
+            url: w.url ?? null,
+            label: w.label,
+            sourceType: w.sourceType,
+            rightsNote: w.rightsNote,
+          },
+        });
+      }
     }
 
     for (const s of f.subs) {

@@ -26,9 +26,15 @@ const MANUAL_PHOTOS: Record<string, string> = {
   "fyodor-khitruk": "13134 6402f3fee6a73 (3).png",
 };
 
-// Existing images that are envelopes/postal covers with no good replacement:
-// drop them (a clean initials avatar beats a postal cover).
-const DROP = new Set(["aleksandr-ptushko", "maksim-shtraukh", "elza-radzina"]);
+// Existing images with no good replacement (envelopes, postal covers, or a
+// photo of a bust/monument): drop them. A clean initials avatar beats a postal
+// cover or a statue.
+const DROP = new Set([
+  "aleksandr-ptushko",
+  "maksim-shtraukh",
+  "elza-radzina",
+  "ivan-mykolaichuk", // only free images are a bust, a coin, and an envelope
+]);
 
 const REJECT =
   /envelope|cover|конверт|открытк|postcard|coin|монет|banknote|банкнот|signature|автограф|подпис|plaque|доск|таблиц|grave|tomb|cemeter|могил|надгроб|monument|памятник|bust|статуя|sculpture|vagankovo|novodevich/i;

@@ -8,22 +8,14 @@ import type { PersonWithFilms } from "@/lib/queries";
 import { collaborations } from "@/lib/collaborations";
 import { getWatchlistContext } from "@/lib/userData";
 
-// Natural fallback when no curated biography exists, built from the person's
-// own filmography so the page never shows an empty placeholder.
+// Neutral fallback when no curated biography exists yet. Kept factual and free of
+// any reference to the website; the person's films are listed below regardless.
 function fallbackBio(
   name: string,
   role: "director" | "actor",
   directed: { title: string }[],
   actedIn: { title: string }[],
 ): string {
-  const credits = role === "director" ? directed : actedIn;
-  const titles = credits.slice(0, 3).map((f) => f.title);
-  const list =
-    titles.length === 0
-      ? ""
-      : titles.length === 1
-        ? titles[0]
-        : `${titles.slice(0, -1).join(", ")} and ${titles[titles.length - 1]}`;
   const craft = role === "director" ? "film director" : "actor";
   const other =
     role === "director" && actedIn.length > 0
@@ -31,10 +23,7 @@ function fallbackBio(
       : role === "actor" && directed.length > 0
         ? " who also directed"
         : "";
-  if (!list) {
-    return `${name} is a Soviet ${craft}${other} featured in the Kotfilm collection.`;
-  }
-  return `${name} is a Soviet ${craft}${other}. On Kotfilm you can explore their work in ${list}.`;
+  return `${name} is a Soviet ${craft}${other}.`;
 }
 
 export default async function PersonProfile({

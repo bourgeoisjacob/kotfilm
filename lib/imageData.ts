@@ -543,7 +543,7 @@ export const filmImages: Record<string, ImageRecord> = {
     "attribution": "Channel Five / Lenfilm (official YouTube)"
   },
   "shadows-of-forgotten-ancestors": {
-    "url": "https://i.ytimg.com/vi/1EpSSmcusUI/hqdefault.jpg",
+    "url": "https://i.ytimg.com/vi/1EpSSmcusUI/hq1.jpg",
     "descriptionUrl": "https://www.youtube.com/watch?v=1EpSSmcusUI",
     "licenseName": "Official YouTube upload",
     "attribution": "Dovzhenko Centre (official YouTube)"
@@ -1044,13 +1044,6 @@ export const personImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D0%BB%D0%B3%D0%B0-%D0%92%D0%BE%D0%BB%D0%B3%D0%B0-%D0%BA%D0%B0%D0%B4%D1%80-2.jpg",
     "licenseName": "Public domain",
     "attribution": "Киностудия «Мосфильм» / http://www.rosculture.ru/movies_list/search/show/?id=5912"
-  },
-  "ivan-mykolaichuk": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/%D0%91%D1%8E%D1%81%D1%82_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D1%87%D1%83%D0%BA%D0%B0_%D0%B2_%D0%A7%D0%B5%D1%80%D1%82%D0%BE%D1%80%D0%B8%D0%B8.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%8E%D1%81%D1%82_%D0%98%D0%B2%D0%B0%D0%BD%D0%B0_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D1%87%D1%83%D0%BA%D0%B0_%D0%B2_%D0%A7%D0%B5%D1%80%D1%82%D0%BE%D1%80%D0%B8%D0%B8.jpg",
-    "licenseName": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "attribution": "Melnikov v n / Own work"
   },
   "larisa-kadochnikova": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Larysa_Kadochnikova.jpg",

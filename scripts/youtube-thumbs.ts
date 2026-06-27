@@ -22,7 +22,7 @@ try {
 // episode for Nu, Pogodi!. Verified by hand from the official channels.
 const MANUAL: Record<
   string,
-  { videoId: string; attribution: string; licenseName: string }
+  { videoId: string; attribution: string; licenseName: string; thumb?: string }
 > = {
   "nu-pogodi": {
     videoId: "jlyzTjzseOk",
@@ -43,6 +43,8 @@ const MANUAL: Record<
     videoId: "1EpSSmcusUI",
     attribution: "Dovzhenko Centre (official YouTube)",
     licenseName: "Official YouTube upload",
+    // The custom thumbnail is a double-feature collage; use an in-film frame.
+    thumb: "hq1",
   },
   // Licensed third-party uploads (not the studio's own channel), labelled as such.
   repentance: {
@@ -194,7 +196,7 @@ async function main() {
   // Apply hand-picked official uploads first (overrides any earlier auto-match).
   for (const [slug, m] of Object.entries(MANUAL)) {
     filmImages[slug] = {
-      url: `https://i.ytimg.com/vi/${m.videoId}/hqdefault.jpg`,
+      url: `https://i.ytimg.com/vi/${m.videoId}/${m.thumb ?? "hqdefault"}.jpg`,
       descriptionUrl: `https://www.youtube.com/watch?v=${m.videoId}`,
       licenseName: m.licenseName,
       attribution: m.attribution,

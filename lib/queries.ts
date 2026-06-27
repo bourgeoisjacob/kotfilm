@@ -45,6 +45,115 @@ export type FilmDetail = Prisma.FilmGetPayload<{
 }>;
 
 // ---------------------------------------------------------------------------
+// Home page: category rails ("Netflix"-style browse)
+// ---------------------------------------------------------------------------
+
+export type HomePoster = {
+  slug: string;
+  title: string;
+  originalTitle: string | null;
+  year: number;
+  director: string | null;
+  posterUrl: string | null;
+  summary: string;
+  watchUrl: string | null;
+  watchSourceType: string | null;
+  watchPlatform: string | null;
+  watchLabel: string | null;
+};
+
+export type HomeRail = { key: string; title: string; films: HomePoster[] };
+
+/** Buckets the catalogue into category rows for the home page. One DB query;
+ *  films may appear in several rails. Rows with fewer than 4 films are dropped. */
+export async function getHomeRails(): Promise<HomeRail[]> {
+  const films = await prisma.film.findMany({
+    where: { draft: false },
+    orderBy: [{ starterClassic: "desc" }, { year: "asc" }],
+    select: {
+      slug: true,
+      title: true,
+      originalTitle: true,
+      year: true,
+      shortSummary: true,
+      starterClassic: true,
+      director: { select: { name: true, slug: true } },
+      genres: { select: { genre: { select: { slug: true } } } },
+      imageAssets: { select: { url: true }, take: 1 },
+      watchLinks: {
+        select: { url: true, sourceType: true, platform: true, label: true },
+        take: 1,
+      },
+    },
+  });
+  type Row = (typeof films)[number];
+
+  const toPoster = (f: Row): HomePoster => ({
+    slug: f.slug,
+    title: f.title,
+    originalTitle: f.originalTitle,
+    year: f.year,
+    director: f.director?.name ?? null,
+    posterUrl: f.imageAssets[0]?.url ?? null,
+    summary: f.shortSummary,
+    watchUrl: f.watchLinks[0]?.url ?? null,
+    watchSourceType: f.watchLinks[0]?.sourceType ?? null,
+    watchPlatform: f.watchLinks[0]?.platform ?? null,
+    watchLabel: f.watchLinks[0]?.label ?? null,
+  });
+  const hasGenre = (f: Row, slug: string) =>
+    f.genres.some((g) => g.genre.slug === slug);
+  const source = (f: Row) => f.watchLinks[0]?.sourceType;
+
+  const rails: HomeRail[] = [];
+  const push = (key: string, title: string, list: Row[]) => {
+    if (list.length >= 4) rails.push({ key, title, films: list.slice(0, 30).map(toPoster) });
+  };
+
+  push("start-here", "Start here", films.filter((f) => f.starterClassic));
+  push("watch-free", "Watch free now", films.filter((f) => source(f) === "OFFICIAL"));
+
+  const genreRows: [string, string][] = [
+    ["comedy", "Comedies"],
+    ["drama", "Drama"],
+    ["war", "War"],
+    ["science-fiction", "Science fiction"],
+    ["animation", "Animation"],
+    ["fairy-tale", "Fairy tales"],
+    ["historical-epic", "Historical epics"],
+    ["romance", "Romance"],
+  ];
+  for (const [slug, label] of genreRows)
+    push(`genre-${slug}`, label, films.filter((f) => hasGenre(f, slug)));
+
+  push("era-silent", "The silent era", films.filter((f) => f.year <= 1935));
+  push("era-1960s", "The Thaw and the 1960s", films.filter((f) => f.year >= 1956 && f.year <= 1969));
+  push("era-1970s", "The 1970s", films.filter((f) => f.year >= 1970 && f.year <= 1979));
+  push("era-1980s", "The 1980s", films.filter((f) => f.year >= 1980 && f.year <= 1991));
+
+  const byDir = new Map<string, { name: string; films: Row[] }>();
+  for (const f of films) {
+    if (!f.director) continue;
+    const e = byDir.get(f.director.slug) ?? { name: f.director.name, films: [] };
+    e.films.push(f);
+    byDir.set(f.director.slug, e);
+  }
+  [...byDir.values()]
+    .filter((d) => d.films.length >= 4)
+    .sort((a, b) => b.films.length - a.films.length)
+    .slice(0, 6)
+    .forEach((d) => push(`dir-${d.name}`, `Directed by ${d.name}`, d.films));
+
+  push(
+    "archive",
+    "Public domain on the Internet Archive",
+    films.filter((f) => source(f) === "PUBLIC_REPOSITORY"),
+  );
+
+  return rails;
+}
+
+// ---------------------------------------------------------------------------
 // Filters & sorting for the catalogue
 // ---------------------------------------------------------------------------
 

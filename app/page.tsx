@@ -10,6 +10,17 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   const rails = await getHomeRails();
 
+  // Spotlight: strong, embeddable picks (Start here, then other official films).
+  const pool = [
+    ...(rails.find((r) => r.key === "start-here")?.films ?? []),
+    ...(rails.find((r) => r.key === "watch-free")?.films ?? []),
+  ];
+  const seen = new Set<string>();
+  const featured = pool
+    .filter((f) => f.posterUrl && f.watchSourceType === "OFFICIAL")
+    .filter((f) => !seen.has(f.slug) && seen.add(f.slug))
+    .slice(0, 6);
+
   return (
     <main>
       {/* Slim brand hero */}
@@ -64,8 +75,8 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Netflix-style browse rails */}
-      <HomeBrowser rails={rails} />
+      {/* Spotlight hero + Netflix-style browse rails */}
+      <HomeBrowser rails={rails} featured={featured} />
     </main>
   );
 }

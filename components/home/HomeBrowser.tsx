@@ -1,10 +1,105 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight, Play, Info } from "lucide-react";
 import type { HomePoster, HomeRail } from "@/lib/queries";
 import FilmPlayerModal from "@/components/home/FilmPlayerModal";
+
+function Spotlight({
+  films,
+  onOpen,
+}: {
+  films: HomePoster[];
+  onOpen: (f: HomePoster) => void;
+}) {
+  const [i, setI] = useState(0);
+  const paused = useRef(false);
+
+  useEffect(() => {
+    if (films.length < 2) return;
+    const t = setInterval(() => {
+      if (!paused.current) setI((n) => (n + 1) % films.length);
+    }, 7000);
+    return () => clearInterval(t);
+  }, [films.length]);
+
+  if (films.length === 0) return null;
+  const film = films[i];
+
+  return (
+    <section
+      onMouseEnter={() => (paused.current = true)}
+      onMouseLeave={() => (paused.current = false)}
+      className="relative h-[380px] w-full overflow-hidden border-b border-kot-line bg-kot-ink sm:h-[460px]"
+    >
+      {film.posterUrl && (
+        <Image
+          key={film.slug}
+          src={film.posterUrl}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      )}
+      {/* Legibility gradients */}
+      <div className="absolute inset-0 bg-gradient-to-t from-kot-ink via-kot-ink/55 to-kot-ink/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-kot-ink/85 via-kot-ink/30 to-transparent" />
+
+      <div className="absolute inset-0 flex items-end">
+        <div className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 sm:pb-12">
+          <p className="font-display text-xs uppercase tracking-[0.25em] text-kot-gold">
+            Featured film
+          </p>
+          <h2 className="mt-2 max-w-2xl font-display text-3xl font-bold leading-tight tracking-wide text-kot-creamHi sm:text-5xl">
+            {film.title}
+          </h2>
+          <p className="mt-1 text-sm text-kot-cream/80">
+            {film.year}
+            {film.director && <> · {film.director}</>}
+          </p>
+          <p className="mt-3 hidden max-w-xl text-sm leading-relaxed text-kot-cream/85 sm:line-clamp-3">
+            {film.summary}
+          </p>
+          <div className="mt-5 flex items-center gap-3">
+            <button
+              onClick={() => onOpen(film)}
+              className="inline-flex items-center gap-2 rounded-full bg-kot-red px-6 py-2.5 font-display text-sm uppercase tracking-wider text-kot-creamHi transition-colors hover:bg-kot-redDeep"
+            >
+              <Play aria-hidden className="h-4 w-4 fill-current" />
+              Play
+            </button>
+            <Link
+              href={`/films/${film.slug}`}
+              className="inline-flex items-center gap-2 rounded-full border border-kot-cream/40 bg-kot-ink/30 px-5 py-2.5 font-display text-sm uppercase tracking-wider text-kot-creamHi backdrop-blur-sm transition-colors hover:border-kot-cream"
+            >
+              <Info aria-hidden className="h-4 w-4" />
+              More info
+            </Link>
+          </div>
+
+          {films.length > 1 && (
+            <div className="mt-5 flex gap-2">
+              {films.map((f, n) => (
+                <button
+                  key={f.slug}
+                  aria-label={`Show ${f.title}`}
+                  onClick={() => setI(n)}
+                  className={`h-1.5 rounded-full transition-all ${
+                    n === i ? "w-6 bg-kot-red" : "w-3 bg-kot-cream/40 hover:bg-kot-cream/70"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function PosterCard({
   film,
@@ -93,14 +188,23 @@ function Rail({
   );
 }
 
-export default function HomeBrowser({ rails }: { rails: HomeRail[] }) {
+export default function HomeBrowser({
+  rails,
+  featured = [],
+}: {
+  rails: HomeRail[];
+  featured?: HomePoster[];
+}) {
   const [selected, setSelected] = useState<HomePoster | null>(null);
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-9 px-4 py-10 sm:px-6">
-      {rails.map((rail) => (
-        <Rail key={rail.key} rail={rail} onOpen={setSelected} />
-      ))}
+    <>
+      <Spotlight films={featured} onOpen={setSelected} />
+      <div className="mx-auto flex max-w-6xl flex-col gap-9 px-4 py-10 sm:px-6">
+        {rails.map((rail) => (
+          <Rail key={rail.key} rail={rail} onOpen={setSelected} />
+        ))}
+      </div>
       <FilmPlayerModal film={selected} onClose={() => setSelected(null)} />
-    </div>
+    </>
   );
 }

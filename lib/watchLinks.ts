@@ -361,35 +361,35 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "earth": {
-    "url": "https://archive.org/details/two-hours-of-russian-special-military-operation-ukraine-war-music",
+    "url": "https://archive.org/details/1930-earth",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "arsenal": {
-    "url": "https://archive.org/details/BELARUSTV_20251123_113000",
+    "url": "https://archive.org/details/arsenal-eng-sub",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "strike": {
-    "url": "https://archive.org/details/filmography-sergei-eisenstein",
+    "url": "https://archive.org/details/strike-eisenstein-1925-english-intertitles-hd-quality",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "october-ten-days-that-shook-the-world": {
-    "url": "https://archive.org/details/fra.video._skCEmnjDyc",
+    "url": "https://archive.org/details/october1928",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "mother": {
-    "url": "https://archive.org/details/RUSSIA1_20260107_213000_Krugi_na_vode",
+    "url": "https://archive.org/details/mother-1926",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
@@ -403,7 +403,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "aelita": {
-    "url": "https://archive.org/details/BELARUSTV_20220924_160500",
+    "url": "https://archive.org/details/aelita-queen-of-mars-1924_202506",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",

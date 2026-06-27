@@ -117,6 +117,13 @@ const MANUAL: Record<string, Out> = {
     sourceType: "OFFICIAL",
     rightsNote: "Free to watch on the studio's official channel.",
   },
+  "that-same-munchausen": {
+    url: "https://www.youtube.com/watch?v=OWB4k-YXJUM",
+    platform: "YouTube",
+    label: "Mosfilm official channel",
+    sourceType: "OFFICIAL",
+    rightsNote: "Free to watch on the studio's official channel.",
+  },
   "storm-over-asia": {
     url: "https://www.youtube.com/watch?v=VjbHu-yubKY",
     platform: "YouTube",
@@ -125,6 +132,19 @@ const MANUAL: Record<string, Out> = {
     rightsNote:
       "Unofficial upload, provided as a convenience; not the rights holder's own channel.",
   },
+};
+
+// Hand-verified Internet Archive identifiers for the public-domain silents
+// (the generic-title search picked wrong items, e.g. "Earth" -> unrelated video).
+const ARCHIVE_IDS: Record<string, string> = {
+  earth: "1930-earth",
+  arsenal: "arsenal-eng-sub",
+  strike: "strike-eisenstein-1925-english-intertitles-hd-quality",
+  "october-ten-days-that-shook-the-world": "october1928",
+  mother: "mother-1926",
+  aelita: "aelita-queen-of-mars-1924_202506",
+  "the-end-of-st-petersburg": "VsevolodPudovkinTheEndOfSt.Petersburg1927",
+  "bed-and-sofa": "bed-and-sofa-tretya-meshchanskaya-1927",
 };
 
 const NOTE_OFFICIAL = "Free to watch on the studio's official channel.";
@@ -151,7 +171,16 @@ async function main() {
 
     let out: Out | null = null;
 
-    if (ytId) {
+    if (ARCHIVE_IDS[f.slug]) {
+      // Curated public-domain copy on the Internet Archive.
+      out = {
+        url: `https://archive.org/details/${ARCHIVE_IDS[f.slug]}`,
+        platform: "Internet Archive",
+        label: "Internet Archive",
+        sourceType: "PUBLIC_REPOSITORY",
+        rightsNote: NOTE_ARCHIVE,
+      };
+    } else if (ytId) {
       // Reuse the verified video we already found for the image.
       const official = img.licenseName === "Official YouTube upload";
       out = {

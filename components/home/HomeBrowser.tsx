@@ -191,9 +191,11 @@ function Rail({
 export default function HomeBrowser({
   rails,
   featured = [],
+  regionRestricted = false,
 }: {
   rails: HomeRail[];
   featured?: HomePoster[];
+  regionRestricted?: boolean;
 }) {
   const [selected, setSelected] = useState<HomePoster | null>(null);
   return (
@@ -204,7 +206,11 @@ export default function HomeBrowser({
           <Rail key={rail.key} rail={rail} onOpen={setSelected} />
         ))}
       </div>
-      <FilmPlayerModal film={selected} onClose={() => setSelected(null)} />
+      <FilmPlayerModal
+        film={selected}
+        onClose={() => setSelected(null)}
+        regionRestricted={regionRestricted}
+      />
     </>
   );
 }

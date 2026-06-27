@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import TrustBadge from "@/components/film/TrustBadge";
+import RegionWatchNote from "@/components/RegionWatchNote";
 import type { FilmDetail } from "@/lib/queries";
 
 // Most-trusted first.
@@ -11,8 +12,14 @@ const rank = (sourceType: string) => {
 
 export default function WatchLinks({
   watchLinks,
+  regionRestricted = false,
+  title,
+  year,
 }: {
   watchLinks: FilmDetail["watchLinks"];
+  regionRestricted?: boolean;
+  title?: string;
+  year?: number;
 }) {
   if (watchLinks.length === 0) {
     return (
@@ -23,6 +30,8 @@ export default function WatchLinks({
   }
 
   const links = [...watchLinks].sort((a, b) => rank(a.sourceType) - rank(b.sourceType));
+  const showRegionNote =
+    regionRestricted && !!title && links.some((l) => l.platform === "YouTube");
 
   return (
     <ul className="flex flex-col gap-3">
@@ -64,6 +73,11 @@ export default function WatchLinks({
           )}
         </li>
       ))}
+      {showRegionNote && (
+        <li>
+          <RegionWatchNote title={title!} year={year ?? 0} />
+        </li>
+      )}
     </ul>
   );
 }

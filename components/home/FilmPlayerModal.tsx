@@ -5,15 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { X, ExternalLink, Info } from "lucide-react";
 import TrustBadge from "@/components/film/TrustBadge";
+import RegionWatchNote from "@/components/RegionWatchNote";
 import type { HomePoster } from "@/lib/queries";
 import { getEmbed } from "@/components/home/embed";
 
 export default function FilmPlayerModal({
   film,
   onClose,
+  regionRestricted = false,
 }: {
   film: HomePoster | null;
   onClose: () => void;
+  regionRestricted?: boolean;
 }) {
   useEffect(() => {
     if (!film) return;
@@ -112,6 +115,10 @@ export default function FilmPlayerModal({
           </div>
 
           <p className="text-sm leading-relaxed text-kot-ink">{film.summary}</p>
+
+          {regionRestricted && film.watchPlatform === "YouTube" && (
+            <RegionWatchNote title={film.title} year={film.year} compact />
+          )}
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
             <Link

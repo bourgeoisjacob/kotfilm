@@ -3,12 +3,13 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 import HomeBrowser from "@/components/home/HomeBrowser";
 import { getHomeRails } from "@/lib/queries";
+import { getViewerRegion } from "@/lib/region";
 
 // Browse rails read the live catalogue, so render at request time.
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const rails = await getHomeRails();
+  const [rails, region] = await Promise.all([getHomeRails(), getViewerRegion()]);
 
   // Spotlight: strong, embeddable picks (Start here, then other official films).
   const pool = [
@@ -76,7 +77,7 @@ export default async function Home() {
       </section>
 
       {/* Spotlight hero + Netflix-style browse rails */}
-      <HomeBrowser rails={rails} featured={featured} />
+      <HomeBrowser rails={rails} featured={featured} regionRestricted={region.restricted} />
     </main>
   );
 }

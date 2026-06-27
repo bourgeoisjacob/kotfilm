@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import AuthNav from "@/components/auth/AuthNav";
+import RegionSelector from "@/components/RegionSelector";
+import { getViewerRegion } from "@/lib/region";
 
 // Routes are wired to their intended Phase 3+ paths; they will 404 until those
 // pages are built.
@@ -12,7 +14,8 @@ const navItems = [
   { href: "/watchlist", label: "Watchlist" },
 ];
 
-export default function SiteHeader() {
+export default async function SiteHeader() {
+  const region = await getViewerRegion();
   return (
     <header className="border-b border-kot-line bg-kot-cream">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6">
@@ -49,6 +52,12 @@ export default function SiteHeader() {
             ))}
             <li>
               <AuthNav />
+            </li>
+            <li>
+              <RegionSelector
+                detectedCountry={region.detectedCountry}
+                override={region.override}
+              />
             </li>
           </ul>
         </nav>

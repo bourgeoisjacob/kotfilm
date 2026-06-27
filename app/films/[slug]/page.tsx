@@ -11,6 +11,7 @@ import WatchlistButton from "@/components/watchlist/WatchlistButton";
 import PersonalControls from "@/components/film/PersonalControls";
 import { getFilmBySlug, listRelatedFilms } from "@/lib/queries";
 import { getFilmUserState, getWatchlistContext } from "@/lib/userData";
+import { getViewerRegion } from "@/lib/region";
 
 type Params = Promise<{ slug: string }>;
 
@@ -50,10 +51,11 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
   const film = await getFilmBySlug(slug);
   if (!film) notFound();
 
-  const [related, userState, watchlist] = await Promise.all([
+  const [related, userState, watchlist, region] = await Promise.all([
     listRelatedFilms(film),
     getFilmUserState(film.id),
     getWatchlistContext(),
+    getViewerRegion(),
   ]);
   const genres = film.genres.map((g) => g.genre);
   const signedIn = watchlist.signedIn;
@@ -186,7 +188,12 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
       </header>
 
       <Section title="Where to watch">
-        <WatchLinks watchLinks={film.watchLinks} />
+        <WatchLinks
+          watchLinks={film.watchLinks}
+          regionRestricted={region.restricted}
+          title={film.title}
+          year={film.year}
+        />
       </Section>
 
       <Section title="Your activity">

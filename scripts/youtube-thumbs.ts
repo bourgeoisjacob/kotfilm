@@ -20,10 +20,41 @@ try {
 // Hand-picked official uploads for films the automatic channel match misses
 // (different studios / rights-holder broadcasters), plus a corrected classic
 // episode for Nu, Pogodi!. Verified by hand from the official channels.
-const MANUAL: Record<string, { videoId: string; owner: string }> = {
-  "nu-pogodi": { videoId: "jlyzTjzseOk", owner: "Мультики студии Союзмультфильм" },
-  "brief-encounters": { videoId: "Qaj3RRFNP5c", owner: "Odesa Film Studio" },
-  "heart-of-a-dog": { videoId: "FeGuBXYLbug", owner: "Channel Five / Lenfilm" },
+const MANUAL: Record<
+  string,
+  { videoId: string; attribution: string; licenseName: string }
+> = {
+  "nu-pogodi": {
+    videoId: "jlyzTjzseOk",
+    attribution: "Мультики студии Союзмультфильм (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  "brief-encounters": {
+    videoId: "Qaj3RRFNP5c",
+    attribution: "Odesa Film Studio (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  "heart-of-a-dog": {
+    videoId: "FeGuBXYLbug",
+    attribution: "Channel Five / Lenfilm (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  "shadows-of-forgotten-ancestors": {
+    videoId: "1EpSSmcusUI",
+    attribution: "Dovzhenko Centre (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  // Licensed third-party uploads (not the studio's own channel), labelled as such.
+  repentance: {
+    videoId: "bIIb5wUzjdc",
+    attribution: "RVISION (licensed distributor)",
+    licenseName: "Licensed distributor upload",
+  },
+  "the-needle": {
+    videoId: "UFEMle60E-4",
+    attribution: "UNESCO Almaty (licensed)",
+    licenseName: "Licensed upload",
+  },
 };
 
 // Map a studio to its official channel name fragments (lowercase, Latin+Cyrillic).
@@ -138,10 +169,10 @@ async function main() {
     filmImages[slug] = {
       url: `https://i.ytimg.com/vi/${m.videoId}/hqdefault.jpg`,
       descriptionUrl: `https://www.youtube.com/watch?v=${m.videoId}`,
-      licenseName: "Official YouTube upload",
-      attribution: `${m.owner} (official YouTube)`,
+      licenseName: m.licenseName,
+      attribution: m.attribution,
     };
-    console.log(`  ★ ${slug} (manual) [${m.owner}]`);
+    console.log(`  ★ ${slug} (manual) [${m.attribution}]`);
   }
 
   const todo = films.filter(

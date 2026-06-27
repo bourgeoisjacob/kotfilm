@@ -541,6 +541,24 @@ export const filmImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://www.youtube.com/watch?v=FeGuBXYLbug",
     "licenseName": "Official YouTube upload",
     "attribution": "Channel Five / Lenfilm (official YouTube)"
+  },
+  "shadows-of-forgotten-ancestors": {
+    "url": "https://i.ytimg.com/vi/1EpSSmcusUI/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=1EpSSmcusUI",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Dovzhenko Centre (official YouTube)"
+  },
+  "repentance": {
+    "url": "https://i.ytimg.com/vi/bIIb5wUzjdc/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=bIIb5wUzjdc",
+    "licenseName": "Licensed distributor upload",
+    "attribution": "RVISION (licensed distributor)"
+  },
+  "the-needle": {
+    "url": "https://i.ytimg.com/vi/UFEMle60E-4/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=UFEMle60E-4",
+    "licenseName": "Licensed upload",
+    "attribution": "UNESCO Almaty (licensed)"
   }
 };
 

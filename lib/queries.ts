@@ -389,28 +389,79 @@ export function listDirectors() {
 // Library index pages (with film counts)
 // ---------------------------------------------------------------------------
 
-/** All directors with how many films they directed. */
-export function listDirectorsWithCounts() {
-  return prisma.person.findMany({
-    where: { directed: { some: {} } },
-    orderBy: { name: "asc" },
+// People (directors/actors) can be filtered by the same film attributes as the
+// catalogue, and are organised by surname rather than first name.
+export type PeopleFilters = {
+  q?: string;
+  decade?: number;
+  genre?: string; // genre slug
+  studio?: string; // studio slug
+};
+export type PeopleSort = "surname" | "films";
+
+const surnameOf = (name: string) => name.trim().split(/\s+/).pop()!.toLowerCase();
+
+/** Film-attribute constraints reused for both directors and actors. */
+function peopleFilmWhere(f: PeopleFilters): Prisma.FilmWhereInput {
+  const where: Prisma.FilmWhereInput = { draft: false };
+  if (f.decade) where.year = { gte: f.decade, lte: f.decade + 9 };
+  if (f.genre) where.genres = { some: { genre: { slug: f.genre } } };
+  if (f.studio) where.studio = { slug: f.studio };
+  return where;
+}
+
+function sortPeople<T extends { name: string }>(
+  rows: T[],
+  sort: PeopleSort,
+  count: (r: T) => number,
+): T[] {
+  if (sort === "films") {
+    return rows.sort(
+      (a, b) => count(b) - count(a) || surnameOf(a.name).localeCompare(surnameOf(b.name)),
+    );
+  }
+  return rows.sort(
+    (a, b) =>
+      surnameOf(a.name).localeCompare(surnameOf(b.name)) || a.name.localeCompare(b.name),
+  );
+}
+
+/** All directors with how many films they directed, filtered and sorted by surname. */
+export async function listDirectorsWithCounts(
+  f: PeopleFilters = {},
+  sort: PeopleSort = "surname",
+) {
+  const filmWhere = peopleFilmWhere(f);
+  const rows = await prisma.person.findMany({
+    where: {
+      directed: { some: filmWhere },
+      ...(f.q ? { name: { contains: f.q, mode: "insensitive" } } : {}),
+    },
     include: {
       _count: { select: { directed: true } },
       imageAssets: { select: { url: true }, take: 1 },
     },
   });
+  return sortPeople(rows, sort, (r) => r._count.directed);
 }
 
-/** All actors with how many films they appear in. */
-export function listActorsWithCounts() {
-  return prisma.person.findMany({
-    where: { castCredits: { some: {} } },
-    orderBy: { name: "asc" },
+/** All actors with how many films they appear in, filtered and sorted by surname. */
+export async function listActorsWithCounts(
+  f: PeopleFilters = {},
+  sort: PeopleSort = "surname",
+) {
+  const filmWhere = peopleFilmWhere(f);
+  const rows = await prisma.person.findMany({
+    where: {
+      castCredits: { some: { film: filmWhere } },
+      ...(f.q ? { name: { contains: f.q, mode: "insensitive" } } : {}),
+    },
     include: {
       _count: { select: { castCredits: true } },
       imageAssets: { select: { url: true }, take: 1 },
     },
   });
+  return sortPeople(rows, sort, (r) => r._count.castCredits);
 }
 
 /** All genres with how many films belong to each. */

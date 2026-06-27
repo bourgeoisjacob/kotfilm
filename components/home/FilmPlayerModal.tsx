@@ -116,7 +116,7 @@ export default function FilmPlayerModal({
 
           <p className="text-sm leading-relaxed text-kot-ink">{film.summary}</p>
 
-          {regionRestricted && film.watchPlatform === "YouTube" && (
+          {regionRestricted && film.watchPlatform === "YouTube" && !film.watchResolved && (
             <RegionWatchNote title={film.title} year={film.year} compact />
           )}
 

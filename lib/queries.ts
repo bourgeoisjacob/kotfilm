@@ -1,5 +1,6 @@
 import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
+import { regionWatchLinks } from "@/lib/regionWatchLinks";
 
 // ---------------------------------------------------------------------------
 // Shared shapes
@@ -60,13 +61,17 @@ export type HomePoster = {
   watchSourceType: string | null;
   watchPlatform: string | null;
   watchLabel: string | null;
+  /** True when the watch link was swapped to a region-appropriate copy. */
+  watchResolved?: boolean;
 };
 
 export type HomeRail = { key: string; title: string; films: HomePoster[] };
 
 /** Buckets the catalogue into category rows for the home page. One DB query;
- *  films may appear in several rails. Rows with fewer than 4 films are dropped. */
-export async function getHomeRails(): Promise<HomeRail[]> {
+ *  films may appear in several rails. Rows with fewer than 4 films are dropped.
+ *  When `restricted`, films whose primary upload is geo-blocked are swapped to a
+ *  verified region-appropriate copy (see lib/regionWatchLinks). */
+export async function getHomeRails(restricted = false): Promise<HomeRail[]> {
   const films = await prisma.film.findMany({
     where: { draft: false },
     orderBy: [{ starterClassic: "desc" }, { year: "asc" }],
@@ -88,19 +93,24 @@ export async function getHomeRails(): Promise<HomeRail[]> {
   });
   type Row = (typeof films)[number];
 
-  const toPoster = (f: Row): HomePoster => ({
-    slug: f.slug,
-    title: f.title,
-    originalTitle: f.originalTitle,
-    year: f.year,
-    director: f.director?.name ?? null,
-    posterUrl: f.imageAssets[0]?.url ?? null,
-    summary: f.shortSummary,
-    watchUrl: f.watchLinks[0]?.url ?? null,
-    watchSourceType: f.watchLinks[0]?.sourceType ?? null,
-    watchPlatform: f.watchLinks[0]?.platform ?? null,
-    watchLabel: f.watchLinks[0]?.label ?? null,
-  });
+  const toPoster = (f: Row): HomePoster => {
+    const intl = restricted ? regionWatchLinks[f.slug] : undefined;
+    const w = f.watchLinks[0];
+    return {
+      slug: f.slug,
+      title: f.title,
+      originalTitle: f.originalTitle,
+      year: f.year,
+      director: f.director?.name ?? null,
+      posterUrl: f.imageAssets[0]?.url ?? null,
+      summary: f.shortSummary,
+      watchUrl: intl?.url ?? w?.url ?? null,
+      watchSourceType: intl?.sourceType ?? w?.sourceType ?? null,
+      watchPlatform: intl?.platform ?? w?.platform ?? null,
+      watchLabel: intl?.label ?? w?.label ?? null,
+      watchResolved: !!intl,
+    };
+  };
   const hasGenre = (f: Row, slug: string) =>
     f.genres.some((g) => g.genre.slug === slug);
   const source = (f: Row) => f.watchLinks[0]?.sourceType;

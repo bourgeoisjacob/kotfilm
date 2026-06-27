@@ -12,6 +12,7 @@ import PersonalControls from "@/components/film/PersonalControls";
 import { getFilmBySlug, listRelatedFilms } from "@/lib/queries";
 import { getFilmUserState, getWatchlistContext } from "@/lib/userData";
 import { getViewerRegion } from "@/lib/region";
+import { regionWatchLinks } from "@/lib/regionWatchLinks";
 
 type Params = Promise<{ slug: string }>;
 
@@ -191,6 +192,7 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
         <WatchLinks
           watchLinks={film.watchLinks}
           regionRestricted={region.restricted}
+          intlLink={regionWatchLinks[film.slug]}
           title={film.title}
           year={film.year}
         />

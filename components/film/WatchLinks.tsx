@@ -10,14 +10,18 @@ const rank = (sourceType: string) => {
   return i === -1 ? TRUST_ORDER.length : i;
 };
 
+type IntlLink = { url: string; sourceType: string; platform: string; label: string };
+
 export default function WatchLinks({
   watchLinks,
   regionRestricted = false,
+  intlLink,
   title,
   year,
 }: {
   watchLinks: FilmDetail["watchLinks"];
   regionRestricted?: boolean;
+  intlLink?: IntlLink;
   title?: string;
   year?: number;
 }) {
@@ -30,11 +34,40 @@ export default function WatchLinks({
   }
 
   const links = [...watchLinks].sort((a, b) => rank(a.sourceType) - rank(b.sourceType));
+  // Restricted viewers with a verified region copy get a direct link; without one
+  // they get the search fallback note.
+  const showIntl = regionRestricted && !!intlLink;
   const showRegionNote =
-    regionRestricted && !!title && links.some((l) => l.platform === "YouTube");
+    regionRestricted && !intlLink && !!title && links.some((l) => l.platform === "YouTube");
 
   return (
     <ul className="flex flex-col gap-3">
+      {showIntl && (
+        <li className="flex flex-col gap-2 rounded-lg border border-kot-red/40 bg-kot-cream p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="font-display font-semibold tracking-wide text-kot-ink">
+              Available in your region
+              <span className="ml-2 text-sm font-normal text-kot-char/75">
+                on {intlLink!.platform}
+              </span>
+            </span>
+            <TrustBadge sourceType={intlLink!.sourceType} />
+          </div>
+          <p className="text-sm text-kot-char">
+            The primary upload below may be geo-blocked outside Europe; this copy
+            ({intlLink!.label}) plays in your region.
+          </p>
+          <a
+            href={intlLink!.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-kot-red underline-offset-4 hover:underline"
+          >
+            <ExternalLink aria-hidden className="h-4 w-4" />
+            Open link
+          </a>
+        </li>
+      )}
       {links.map((link) => (
         <li
           key={link.id}

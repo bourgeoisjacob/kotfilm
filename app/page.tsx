@@ -9,7 +9,8 @@ import { getViewerRegion } from "@/lib/region";
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const [rails, region] = await Promise.all([getHomeRails(), getViewerRegion()]);
+  const region = await getViewerRegion();
+  const rails = await getHomeRails(region.restricted);
 
   // Spotlight: strong, embeddable picks (Start here, then other official films).
   const pool = [

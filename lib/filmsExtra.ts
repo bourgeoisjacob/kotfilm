@@ -2338,7 +2338,7 @@ export const extraFilms: SeedFilm[] = [
   {
     "slug": "king-lear",
     "title": "King Lear",
-    "original": "King Lear",
+    "original": "Король Лир",
     "year": 1971,
     "country": "United Kingdom",
     "studio": "Lenfilm",

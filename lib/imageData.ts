@@ -483,10 +483,10 @@ export const filmImages: Record<string, ImageRecord> = {
     "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
   },
   "nu-pogodi": {
-    "url": "https://i.ytimg.com/vi/zE_FQAnhAMs/hqdefault.jpg",
-    "descriptionUrl": "https://www.youtube.com/watch?v=zE_FQAnhAMs",
+    "url": "https://i.ytimg.com/vi/jlyzTjzseOk/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=jlyzTjzseOk",
     "licenseName": "Official YouTube upload",
-    "attribution": "Союзмультфильм (official YouTube)"
+    "attribution": "Мультики студии Союзмультфильм (official YouTube)"
   },
   "the-scarlet-flower": {
     "url": "https://i.ytimg.com/vi/1FtcZy6fow0/hqdefault.jpg",
@@ -529,6 +529,18 @@ export const filmImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://www.youtube.com/watch?v=6P5Nf7xzXS0",
     "licenseName": "Official YouTube upload",
     "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "brief-encounters": {
+    "url": "https://i.ytimg.com/vi/Qaj3RRFNP5c/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=Qaj3RRFNP5c",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Odesa Film Studio (official YouTube)"
+  },
+  "heart-of-a-dog": {
+    "url": "https://i.ytimg.com/vi/FeGuBXYLbug/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=FeGuBXYLbug",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Channel Five / Lenfilm (official YouTube)"
   }
 };
 

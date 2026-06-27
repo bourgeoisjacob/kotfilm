@@ -17,6 +17,15 @@ try {
   /* env optional */
 }
 
+// Hand-picked official uploads for films the automatic channel match misses
+// (different studios / rights-holder broadcasters), plus a corrected classic
+// episode for Nu, Pogodi!. Verified by hand from the official channels.
+const MANUAL: Record<string, { videoId: string; owner: string }> = {
+  "nu-pogodi": { videoId: "jlyzTjzseOk", owner: "Мультики студии Союзмультфильм" },
+  "brief-encounters": { videoId: "Qaj3RRFNP5c", owner: "Odesa Film Studio" },
+  "heart-of-a-dog": { videoId: "FeGuBXYLbug", owner: "Channel Five / Lenfilm" },
+};
+
 // Map a studio to its official channel name fragments (lowercase, Latin+Cyrillic).
 function channelFragments(studio: string | null): string[] | null {
   const s = (studio ?? "").toLowerCase();
@@ -123,6 +132,18 @@ async function main() {
   }));
 
   const filmImages: Record<string, Rec> = { ...existingFilmImages };
+
+  // Apply hand-picked official uploads first (overrides any earlier auto-match).
+  for (const [slug, m] of Object.entries(MANUAL)) {
+    filmImages[slug] = {
+      url: `https://i.ytimg.com/vi/${m.videoId}/hqdefault.jpg`,
+      descriptionUrl: `https://www.youtube.com/watch?v=${m.videoId}`,
+      licenseName: "Official YouTube upload",
+      attribution: `${m.owner} (official YouTube)`,
+    };
+    console.log(`  ★ ${slug} (manual) [${m.owner}]`);
+  }
+
   const todo = films.filter(
     (f) => !filmImages[f.slug] && channelFragments(f.studio),
   );

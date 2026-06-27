@@ -465,4 +465,12 @@ export const personBios: Record<string, string> = {
     "Vladimir Zamansky was a Soviet actor who gave a quietly shattering central performance as the redeemed prisoner in Aleksei German's Trial on the Road.",
   "vasily-livanov":
     "Vasily Livanov is a Soviet and Russian actor, writer and voice artist, beloved both as the definitive Russian Sherlock Holmes and as the voice of many animated characters. He appears here in The Star of Captivating Happiness.",
+  "boris-rytsarev":
+    "Boris Rytsarev was a Soviet director who specialised in children's and fantasy films at the Gorky Film Studio, best known for the fairy-tale spectacle The Magic Lamp of Aladdin.",
+  "boris-bystrov":
+    "Boris Bystrov is a Soviet and Russian actor who, as a young man, played the title role in The Magic Lamp of Aladdin. He went on to a long career, becoming especially prolific as a voice and dubbing artist.",
+  "dodo-chogovadze":
+    "Dodo Chogovadze is a Georgian actress who, while still a teenager, played Princess Budur in The Magic Lamp of Aladdin, her best-known screen role.",
+  "andrei-fayt":
+    "Andrei Fayt was a Soviet character actor with a long career stretching back to the silent era, renowned for playing villains and a familiar menacing presence in Soviet fairy-tale films.",
 };

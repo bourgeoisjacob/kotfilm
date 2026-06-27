@@ -130,7 +130,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "operation-y-and-shuriks-other-adventures": {
-    "url": "https://www.youtube.com/watch?v=7ICl3sPny94",
+    "url": "https://www.youtube.com/watch?v=m3n4LptYWNo",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -172,7 +172,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "alexander-nevsky": {
-    "url": "https://www.youtube.com/watch?v=Gq4PaJfod4w",
+    "url": "https://www.youtube.com/watch?v=IKskdbazW7w",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -270,7 +270,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "a-cruel-romance": {
-    "url": "https://www.youtube.com/watch?v=4naOrjRiTnc",
+    "url": "https://www.youtube.com/watch?v=_394TmF4DKY",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -291,7 +291,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-garage": {
-    "url": "https://www.youtube.com/watch?v=VahEhy4HJu4",
+    "url": "https://www.youtube.com/watch?v=Xqsa4u00GXM",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -354,21 +354,21 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "winnie-the-pooh": {
-    "url": "https://www.youtube.com/watch?v=L2D0zr_P0Ps",
+    "url": "https://www.youtube.com/watch?v=5GE1DmY-qdI",
     "platform": "YouTube",
     "label": "Soyuzmultfilm official channel",
     "sourceType": "OFFICIAL",
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "earth": {
-    "url": "https://archive.org/details/youtube-xpP31AV9Sps",
+    "url": "https://archive.org/details/two-hours-of-russian-special-military-operation-ukraine-war-music",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "arsenal": {
-    "url": "https://archive.org/details/BELARUSTV_20260517_130500",
+    "url": "https://archive.org/details/BELARUSTV_20251123_113000",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
@@ -382,14 +382,14 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "october-ten-days-that-shook-the-world": {
-    "url": "https://archive.org/details/youtube-NUKGhdNXR3A",
+    "url": "https://archive.org/details/fra.video._skCEmnjDyc",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "mother": {
-    "url": "https://archive.org/details/RUSSIA1_20260211_183000_Polyubi_menya_snova",
+    "url": "https://archive.org/details/RUSSIA1_20260107_213000_Krugi_na_vode",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
@@ -557,9 +557,9 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-lady-with-the-dog": {
-    "url": "https://www.youtube.com/watch?v=T_RXd_Vhc-U",
+    "url": "https://www.youtube.com/watch?v=qtIzBPAbCyg",
     "platform": "YouTube",
-    "label": "Наше доброе, старое ТВ",
+    "label": "Gevorg Vardanyan",
     "sourceType": "UNVERIFIED",
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },
@@ -800,6 +800,13 @@ export const watchLinks: Record<string, WatchLink> = {
     "label": "КиноАрхив",
     "sourceType": "UNVERIFIED",
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+  },
+  "the-magic-lamp-of-aladdin": {
+    "url": "https://www.youtube.com/watch?v=y_Oy9MHrEMI",
+    "platform": "YouTube",
+    "label": "Gorky Film Studio official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
   },
   "storm-over-asia": {
     "url": "https://www.youtube.com/watch?v=VjbHu-yubKY",

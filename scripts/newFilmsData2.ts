@@ -314,4 +314,19 @@ export const newFilms2: NewFilm[] = [
     context:
       "Savva Kulish's restrained spy thriller, loosely inspired by real intelligence operations and introduced on screen by the famous spy Rudolf Abel, was a major popular success and a more thoughtful, melancholy answer to Western spy films. Donatas Banionis, later the lead of Tarkovsky's Solaris, gives the agent a quiet, weary humanity.",
   },
+  {
+    slug: "the-magic-lamp-of-aladdin",
+    title: "The Magic Lamp of Aladdin",
+    year: 1966,
+    director: "Boris Rytsarev",
+    studio: "Gorky Film Studio",
+    source: "gorky",
+    genres: ["Fantasy", "Fairy tale", "Family"],
+    themes: ["wishes", "humility", "good versus evil"],
+    cast: ["Boris Bystrov", "Dodo Chogovadze", "Andrei Fayt"],
+    summary:
+      "In a fairy-tale Baghdad, the poor but good-hearted youth Aladdin is singled out by a sinister visiting magician who tricks him into fetching an old lamp from an enchanted cave. Trapped underground, Aladdin discovers that the lamp summons a mighty genie able to grant any wish, and with its help he wins the hand of the Sultan's daughter, Princess Budur. When the magician steals the lamp and carries off the princess, Aladdin must use his wits rather than magic to win back both his love and his fortune.",
+    context:
+      "Boris Rytsarev's colourful adaptation of the tale from the Thousand and One Nights was made at the Gorky Film Studio, long the home of Soviet children's and fairy-tale cinema. Shot in a stylised Arabian setting with bright costumes, magic effects and a gentle moral about humility and kindness, it became a perennial favourite for young audiences across the Soviet Union.",
+  },
 ];

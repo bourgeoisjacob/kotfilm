@@ -709,6 +709,12 @@ export const filmImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://www.youtube.com/watch?v=Lz0neaJrk8E",
     "licenseName": "Unverified source",
     "attribution": "КиноАрхив (unverified source)"
+  },
+  "the-magic-lamp-of-aladdin": {
+    "url": "https://i.ytimg.com/vi/y_Oy9MHrEMI/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=y_Oy9MHrEMI",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киностудия Горького (official YouTube)"
   }
 };
 
@@ -1813,5 +1819,11 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "attribution": "Alex 45 ORP / Own work"
+  },
+  "andrei-fayt": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Fajt.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Fajt.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / https://www.kino-teatr.ru/kino/movie/sov/3968/foto/a4459/132483/"
   }
 };

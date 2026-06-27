@@ -6,6 +6,7 @@ import {
   listDecades,
   listGenres,
   listStudios,
+  listSubtitleLanguages,
   type PeopleFilters as PF,
   type PeopleSort,
 } from "@/lib/queries";
@@ -30,14 +31,17 @@ export default async function DirectorsPage({
     decade: Number.isNaN(decade) ? undefined : decade,
     genre: first(params.genre) || undefined,
     studio: first(params.studio) || undefined,
+    subtitle: first(params.subtitle) || undefined,
+    availableToWatch: first(params.watch) === "1" || undefined,
   };
   const sort: PeopleSort = first(params.sort) === "films" ? "films" : "surname";
 
-  const [directors, decades, genres, studios] = await Promise.all([
+  const [directors, decades, genres, studios, subtitles] = await Promise.all([
     listDirectorsWithCounts(filters, sort),
     listDecades(),
     listGenres(),
     listStudios(),
+    listSubtitleLanguages(),
   ]);
 
   return (
@@ -58,6 +62,7 @@ export default async function DirectorsPage({
           decades={decades}
           genres={genres.map((g) => ({ value: g.slug, label: g.name }))}
           studios={studios.map((s) => ({ value: s.slug, label: s.name }))}
+          subtitles={subtitles.map((s) => ({ value: s.code, label: s.name }))}
         />
       </div>
 

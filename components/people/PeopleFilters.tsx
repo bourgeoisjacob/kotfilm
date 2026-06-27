@@ -14,11 +14,13 @@ export default function PeopleFilters({
   decades,
   genres,
   studios,
+  subtitles,
 }: {
   kind: "directors" | "actors";
   decades: number[];
   genres: FilterOption[];
   studios: FilterOption[];
+  subtitles: FilterOption[];
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -106,6 +108,22 @@ export default function PeopleFilters({
           onChange={(v) => setParam("studio", v)}
           options={studios}
         />
+        <Dropdown
+          label="Subtitles"
+          value={current("subtitle")}
+          onChange={(v) => setParam("subtitle", v)}
+          options={subtitles}
+        />
+
+        <label className="flex items-center gap-2 text-sm text-kot-ink">
+          <input
+            type="checkbox"
+            className="h-4 w-4 accent-kot-red"
+            checked={current("watch") === "1"}
+            onChange={(e) => setParam("watch", e.target.checked ? "1" : "")}
+          />
+          Available to watch
+        </label>
 
         {hasFilters && (
           <button

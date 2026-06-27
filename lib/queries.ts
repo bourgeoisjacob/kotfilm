@@ -396,6 +396,8 @@ export type PeopleFilters = {
   decade?: number;
   genre?: string; // genre slug
   studio?: string; // studio slug
+  subtitle?: string; // subtitle language code
+  availableToWatch?: boolean;
 };
 export type PeopleSort = "surname" | "films";
 
@@ -407,6 +409,8 @@ function peopleFilmWhere(f: PeopleFilters): Prisma.FilmWhereInput {
   if (f.decade) where.year = { gte: f.decade, lte: f.decade + 9 };
   if (f.genre) where.genres = { some: { genre: { slug: f.genre } } };
   if (f.studio) where.studio = { slug: f.studio };
+  if (f.subtitle) where.subtitleLanguages = { some: { language: { code: f.subtitle } } };
+  if (f.availableToWatch) where.watchLinks = { some: { url: { not: null } } };
   return where;
 }
 

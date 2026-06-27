@@ -84,6 +84,7 @@ const SEARCH_HINTS: Record<string, string> = {
   "don-quixote": "Дон Кихот",
   "trial-on-the-road": "Проверка на дорогах",
   "the-star-of-captivating-happiness": "Звезда пленительного счастья",
+  "the-magic-lamp-of-aladdin": "Волшебная лампа Аладдина",
 };
 
 type WdFacts = {

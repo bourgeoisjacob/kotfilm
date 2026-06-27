@@ -185,6 +185,10 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
         </div>
       </header>
 
+      <Section title="Where to watch">
+        <WatchLinks watchLinks={film.watchLinks} />
+      </Section>
+
       <Section title="Your activity">
         {signedIn && userState ? (
           <PersonalControls filmId={film.id} initial={userState} />
@@ -240,10 +244,6 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
             </li>
           ))}
         </ul>
-      </Section>
-
-      <Section title="Where to watch">
-        <WatchLinks watchLinks={film.watchLinks} />
       </Section>
 
       {related.length > 0 && (

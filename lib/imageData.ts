@@ -559,6 +559,36 @@ export const filmImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://www.youtube.com/watch?v=UFEMle60E-4",
     "licenseName": "Licensed upload",
     "attribution": "UNESCO Almaty (licensed)"
+  },
+  "twenty-days-without-war": {
+    "url": "https://i.ytimg.com/vi/Xd8cptrLhm8/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=Xd8cptrLhm8",
+    "licenseName": "Unverified source",
+    "attribution": "Первый канал ЦТ СССР (unverified source)"
+  },
+  "king-lear": {
+    "url": "https://i.ytimg.com/vi/BqS1V41MjFQ/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=BqS1V41MjFQ",
+    "licenseName": "Unverified source",
+    "attribution": "Кино Советской Эпохи (unverified source)"
+  },
+  "my-friend-ivan-lapshin": {
+    "url": "https://i.ytimg.com/vi/SnS5xz_XniI/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=SnS5xz_XniI",
+    "licenseName": "Unverified source",
+    "attribution": "Кино Советской Эпохи (unverified source)"
+  },
+  "the-color-of-pomegranates": {
+    "url": "https://i.ytimg.com/vi/9XN3vgj2za4/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=9XN3vgj2za4",
+    "licenseName": "Unverified source",
+    "attribution": "parajanovtv (unverified source)"
+  },
+  "planet-of-storms": {
+    "url": "https://i.ytimg.com/vi/IC1J_ZprwJs/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=IC1J_ZprwJs",
+    "licenseName": "Unverified source",
+    "attribution": "WonderLife (unverified source)"
   }
 };
 

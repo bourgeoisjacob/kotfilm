@@ -55,6 +55,33 @@ const MANUAL: Record<
     attribution: "UNESCO Almaty (licensed)",
     licenseName: "Licensed upload",
   },
+  // Best available enthusiast uploads where no official/licensed source exists.
+  // Labelled "unverified source" so they are never presented as official.
+  "twenty-days-without-war": {
+    videoId: "Xd8cptrLhm8",
+    attribution: "Первый канал ЦТ СССР (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "king-lear": {
+    videoId: "BqS1V41MjFQ",
+    attribution: "Кино Советской Эпохи (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "my-friend-ivan-lapshin": {
+    videoId: "SnS5xz_XniI",
+    attribution: "Кино Советской Эпохи (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "the-color-of-pomegranates": {
+    videoId: "9XN3vgj2za4",
+    attribution: "parajanovtv (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "planet-of-storms": {
+    videoId: "IC1J_ZprwJs",
+    attribution: "WonderLife (unverified source)",
+    licenseName: "Unverified source",
+  },
 };
 
 // Map a studio to its official channel name fragments (lowercase, Latin+Cyrillic).

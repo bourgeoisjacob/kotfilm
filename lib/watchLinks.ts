@@ -172,7 +172,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "alexander-nevsky": {
-    "url": "https://www.youtube.com/watch?v=IKskdbazW7w",
+    "url": "https://www.youtube.com/watch?v=Gq4PaJfod4w",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -256,9 +256,9 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "hamlet": {
-    "url": "https://www.youtube.com/watch?v=eQ9hWxJVXgw",
+    "url": "https://www.youtube.com/watch?v=OzN1isLYc_A",
     "platform": "YouTube",
-    "label": "Добрый BorisAV",
+    "label": "Shakespeare Network",
     "sourceType": "UNVERIFIED",
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },
@@ -277,7 +277,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "a-railway-station-for-two": {
-    "url": "https://www.youtube.com/watch?v=bUya5DBvw_g",
+    "url": "https://www.youtube.com/watch?v=3g-p1d8H02o",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -291,7 +291,7 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-garage": {
-    "url": "https://www.youtube.com/watch?v=Xqsa4u00GXM",
+    "url": "https://www.youtube.com/watch?v=VahEhy4HJu4",
     "platform": "YouTube",
     "label": "Mosfilm official channel",
     "sourceType": "OFFICIAL",
@@ -354,42 +354,42 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "winnie-the-pooh": {
-    "url": "https://www.youtube.com/watch?v=MYcmEVJIVoo",
+    "url": "https://www.youtube.com/watch?v=L2D0zr_P0Ps",
     "platform": "YouTube",
     "label": "Soyuzmultfilm official channel",
     "sourceType": "OFFICIAL",
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "earth": {
-    "url": "https://archive.org/details/two-hours-of-russian-special-military-operation-ukraine-war-music",
+    "url": "https://archive.org/details/youtube-xpP31AV9Sps",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "arsenal": {
-    "url": "https://archive.org/details/BELARUSTV_20251123_113000",
+    "url": "https://archive.org/details/BELARUSTV_20260517_130500",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "strike": {
-    "url": "https://archive.org/details/stachka",
+    "url": "https://archive.org/details/filmography-sergei-eisenstein",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "october-ten-days-that-shook-the-world": {
-    "url": "https://archive.org/details/fra.video._skCEmnjDyc",
+    "url": "https://archive.org/details/youtube-NUKGhdNXR3A",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "mother": {
-    "url": "https://archive.org/details/RUSSIA1_20260107_213000_Krugi_na_vode",
+    "url": "https://archive.org/details/RUSSIA1_20260211_183000_Polyubi_menya_snova",
     "platform": "Internet Archive",
     "label": "Internet Archive",
     "sourceType": "PUBLIC_REPOSITORY",
@@ -557,9 +557,9 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-lady-with-the-dog": {
-    "url": "https://www.youtube.com/watch?v=qtIzBPAbCyg",
+    "url": "https://www.youtube.com/watch?v=T_RXd_Vhc-U",
     "platform": "YouTube",
-    "label": "Gevorg Vardanyan",
+    "label": "Наше доброе, старое ТВ",
     "sourceType": "UNVERIFIED",
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },
@@ -658,6 +658,146 @@ export const watchLinks: Record<string, WatchLink> = {
     "url": "https://www.youtube.com/watch?v=IC1J_ZprwJs",
     "platform": "YouTube",
     "label": "WonderLife",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+  },
+  "beware-of-the-car": {
+    "url": "https://www.youtube.com/watch?v=PGr-NddVue0",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "the-forty-first": {
+    "url": "https://www.youtube.com/watch?v=USSRE6d6qcA",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "clear-sky": {
+    "url": "https://www.youtube.com/watch?v=rTx1o8tTgJk",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "agony": {
+    "url": "https://www.youtube.com/watch?v=Ll1Wdob2P1E",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "uncle-vanya": {
+    "url": "https://www.youtube.com/watch?v=0V2EZqQy99I",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "nine-days-of-one-year": {
+    "url": "https://www.youtube.com/watch?v=hekubUPUdy4",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "five-evenings": {
+    "url": "https://www.youtube.com/watch?v=p9mC85IOkDc",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "kinfolk": {
+    "url": "https://www.youtube.com/watch?v=du-1H8aLtj8",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "dont-grieve": {
+    "url": "https://www.youtube.com/watch?v=M6KxVntypo4",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "the-stone-flower": {
+    "url": "https://www.youtube.com/watch?v=k6QNtZRtsjM",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "white-bim-black-ear": {
+    "url": "https://www.youtube.com/watch?v=tItkWn6bLlg",
+    "platform": "YouTube",
+    "label": "Gorky Film Studio official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "well-live-till-monday": {
+    "url": "https://www.youtube.com/watch?v=TpTCCF9sEFA",
+    "platform": "YouTube",
+    "label": "Gorky Film Studio official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "kingdom-of-crooked-mirrors": {
+    "url": "https://www.youtube.com/watch?v=bWvdNYJfxHM",
+    "platform": "YouTube",
+    "label": "Gorky Film Studio official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "fire-water-and-brass-pipes": {
+    "url": "https://www.youtube.com/watch?v=d1L8NEdYLKU",
+    "platform": "YouTube",
+    "label": "Soviet and Russian Cinema",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+  },
+  "the-golden-antelope": {
+    "url": "https://www.youtube.com/watch?v=qHe46Ry69rQ",
+    "platform": "YouTube",
+    "label": "Soviet animation collection",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+  },
+  "to-kill-a-dragon": {
+    "url": "https://www.youtube.com/watch?v=qGbN7cUgJlo",
+    "platform": "YouTube",
+    "label": "Mosfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "don-quixote": {
+    "url": "https://www.youtube.com/watch?v=bpnXtvhkThg",
+    "platform": "YouTube",
+    "label": "Lenfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "trial-on-the-road": {
+    "url": "https://www.youtube.com/watch?v=2rHFVO87TyY",
+    "platform": "YouTube",
+    "label": "Кино Советской Эпохи",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+  },
+  "the-star-of-captivating-happiness": {
+    "url": "https://www.youtube.com/watch?v=lBQVWKVXR70",
+    "platform": "YouTube",
+    "label": "Lenfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel."
+  },
+  "dead-season": {
+    "url": "https://www.youtube.com/watch?v=Lz0neaJrk8E",
+    "platform": "YouTube",
+    "label": "КиноАрхив",
     "sourceType": "UNVERIFIED",
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },

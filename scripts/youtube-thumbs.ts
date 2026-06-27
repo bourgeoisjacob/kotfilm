@@ -57,6 +57,42 @@ const MANUAL: Record<
     attribution: "UNESCO Almaty (licensed)",
     licenseName: "Licensed upload",
   },
+  // Tranche 2 corrections / additions
+  "dont-grieve": {
+    videoId: "M6KxVntypo4",
+    attribution: "Mosfilm official channel (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  "don-quixote": {
+    videoId: "bpnXtvhkThg",
+    attribution: "Channel Five / Lenfilm (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  "the-star-of-captivating-happiness": {
+    videoId: "lBQVWKVXR70",
+    attribution: "Channel Five / Lenfilm (official YouTube)",
+    licenseName: "Official YouTube upload",
+  },
+  "the-golden-antelope": {
+    videoId: "qHe46Ry69rQ",
+    attribution: "Soviet animation collection (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "trial-on-the-road": {
+    videoId: "2rHFVO87TyY",
+    attribution: "Кино Советской Эпохи (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "dead-season": {
+    videoId: "Lz0neaJrk8E",
+    attribution: "КиноАрхив (unverified source)",
+    licenseName: "Unverified source",
+  },
+  "fire-water-and-brass-pipes": {
+    videoId: "d1L8NEdYLKU",
+    attribution: "Soviet and Russian Cinema (unverified source)",
+    licenseName: "Unverified source",
+  },
   // Best available enthusiast uploads where no official/licensed source exists.
   // Labelled "unverified source" so they are never presented as official.
   "twenty-days-without-war": {

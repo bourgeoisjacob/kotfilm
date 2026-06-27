@@ -589,6 +589,126 @@ export const filmImages: Record<string, ImageRecord> = {
     "descriptionUrl": "https://www.youtube.com/watch?v=IC1J_ZprwJs",
     "licenseName": "Unverified source",
     "attribution": "WonderLife (unverified source)"
+  },
+  "five-evenings": {
+    "url": "https://i.ytimg.com/vi/p9mC85IOkDc/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=p9mC85IOkDc",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "beware-of-the-car": {
+    "url": "https://i.ytimg.com/vi/PGr-NddVue0/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=PGr-NddVue0",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "the-forty-first": {
+    "url": "https://i.ytimg.com/vi/USSRE6d6qcA/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=USSRE6d6qcA",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Mosfilm (official YouTube)"
+  },
+  "clear-sky": {
+    "url": "https://i.ytimg.com/vi/rTx1o8tTgJk/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=rTx1o8tTgJk",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Mosfilm (official YouTube)"
+  },
+  "agony": {
+    "url": "https://i.ytimg.com/vi/Ll1Wdob2P1E/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=Ll1Wdob2P1E",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "uncle-vanya": {
+    "url": "https://i.ytimg.com/vi/0V2EZqQy99I/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=0V2EZqQy99I",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "nine-days-of-one-year": {
+    "url": "https://i.ytimg.com/vi/hekubUPUdy4/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=hekubUPUdy4",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "kinfolk": {
+    "url": "https://i.ytimg.com/vi/du-1H8aLtj8/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=du-1H8aLtj8",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "dont-grieve": {
+    "url": "https://i.ytimg.com/vi/M6KxVntypo4/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=M6KxVntypo4",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Mosfilm official channel (official YouTube)"
+  },
+  "the-stone-flower": {
+    "url": "https://i.ytimg.com/vi/k6QNtZRtsjM/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=k6QNtZRtsjM",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "white-bim-black-ear": {
+    "url": "https://i.ytimg.com/vi/tItkWn6bLlg/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=tItkWn6bLlg",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киностудия Горького (official YouTube)"
+  },
+  "well-live-till-monday": {
+    "url": "https://i.ytimg.com/vi/TpTCCF9sEFA/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=TpTCCF9sEFA",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киностудия Горького (official YouTube)"
+  },
+  "kingdom-of-crooked-mirrors": {
+    "url": "https://i.ytimg.com/vi/bWvdNYJfxHM/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=bWvdNYJfxHM",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киностудия Горького (official YouTube)"
+  },
+  "fire-water-and-brass-pipes": {
+    "url": "https://i.ytimg.com/vi/d1L8NEdYLKU/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=d1L8NEdYLKU",
+    "licenseName": "Unverified source",
+    "attribution": "Soviet and Russian Cinema (unverified source)"
+  },
+  "to-kill-a-dragon": {
+    "url": "https://i.ytimg.com/vi/qGbN7cUgJlo/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=qGbN7cUgJlo",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киноконцерн \"Мосфильм\" (official YouTube)"
+  },
+  "don-quixote": {
+    "url": "https://i.ytimg.com/vi/bpnXtvhkThg/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=bpnXtvhkThg",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Channel Five / Lenfilm (official YouTube)"
+  },
+  "the-star-of-captivating-happiness": {
+    "url": "https://i.ytimg.com/vi/lBQVWKVXR70/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=lBQVWKVXR70",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Channel Five / Lenfilm (official YouTube)"
+  },
+  "the-golden-antelope": {
+    "url": "https://i.ytimg.com/vi/qHe46Ry69rQ/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=qHe46Ry69rQ",
+    "licenseName": "Unverified source",
+    "attribution": "Soviet animation collection (unverified source)"
+  },
+  "trial-on-the-road": {
+    "url": "https://i.ytimg.com/vi/2rHFVO87TyY/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=2rHFVO87TyY",
+    "licenseName": "Unverified source",
+    "attribution": "Кино Советской Эпохи (unverified source)"
+  },
+  "dead-season": {
+    "url": "https://i.ytimg.com/vi/Lz0neaJrk8E/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=Lz0neaJrk8E",
+    "licenseName": "Unverified source",
+    "attribution": "КиноАрхив (unverified source)"
   }
 };
 
@@ -1594,5 +1714,104 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Melnikov v n / Own work"
+  },
+  "oleg-yefremov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Yefremov.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Yefremov.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
+  },
+  "oleg-strizhenov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Oleg_Strizhenov_%28duma.gov.ru%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Oleg_Strizhenov_(duma.gov.ru).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "duma.gov.ru / http://duma.gov.ru/news/60864/"
+  },
+  "anatoly-romashin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/%D0%90%D0%BA%D1%82%D1%91%D1%80_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%A0%D0%BE%D0%BC%D0%B0%D1%88%D0%B8%D0%BD_%D0%B2_1991_%D0%B3%D0%BE%D0%B4%D1%83.jpeg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%BA%D1%82%D1%91%D1%80_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%A0%D0%BE%D0%BC%D0%B0%D1%88%D0%B8%D0%BD_%D0%B2_1991_%D0%B3%D0%BE%D0%B4%D1%83.jpeg",
+    "licenseName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution": "Leonrid / Own work"
+  },
+  "irina-kupchenko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/%D0%98%D1%80%D0%B8%D0%BD%D0%B0_%D0%9A%D1%83%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%98%D1%80%D0%B8%D0%BD%D0%B0_%D0%9A%D1%83%D0%BF%D1%87%D0%B5%D0%BD%D0%BA%D0%BE.jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Zimin.V.G. / Own work"
+  },
+  "nonna-mordyukova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Nonna_Mordyukova_1948.JPG",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nonna_Mordyukova_1948.JPG",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "svetlana-kryuchkova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/%22The_Ghosts%22_Genrik_Ibsen_BDT_Director_Roman_Markholia-12_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%22The_Ghosts%22_Genrik_Ibsen_BDT_Director_Roman_Markholia-12_(cropped).jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Роман Мархолиа / Own work"
+  },
+  "sergo-zakariadze": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Sergo_Zakariadze.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Sergo_Zakariadze.jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Игорь Кошельков / https://www.mos.ru/news/item/144520073/"
+  },
+  "vladimir-druzhnikov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Vladimir_Druzhnikov_1953.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Vladimir_Druzhnikov_1953.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / https://www.kino-teatr.ru/kino/movie/sov/8971/foto/a1347/914373/"
+  },
+  "tamara-makarova": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Tamara_Makarova_%28actress%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tamara_Makarova_(actress).jpg",
+    "licenseName": "Public domain",
+    "attribution": "«Ленфильм» / http://sovsekretno.ru/magazines/article/854"
+  },
+  "mikhail-troyanovsky": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Soviet_actor_Mikhail_Troyanovskiy.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Soviet_actor_Mikhail_Troyanovskiy.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Василий Журавлёв / http://www.kino-teatr.ru/kino/acter/m/sov/4372/foto/223285/"
+  },
+  "georgy-millyar": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Georgy_Millyar_01.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Georgy_Millyar_01.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Unknown authorUnknown author / http://sfw.so/1148949638-georgiy-francevich-millyar.html"
+  },
+  "aleksandr-abdulov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Alexander_Abdulov_1988_%28cropped%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alexander_Abdulov_1988_(cropped).jpg",
+    "licenseName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "attribution": "Igor Gnevashev / https://www.mos.ru/news/item/62905073/"
+  },
+  "yuri-tolubeyev": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Tolubeev.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tolubeev.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Film screenshot / [1]"
+  },
+  "rolan-bykov": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Rolan_Bykov_%281%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Rolan_Bykov_(1).jpg",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Игорь Верещагин / Own work"
+  },
+  "svetlana-korkoshko": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D0%B0_%D0%9A%D0%BE%D1%80%D0%BA%D0%BE%D1%88%D0%BA%D0%BE.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D0%B0_%D0%9A%D0%BE%D1%80%D0%BA%D0%BE%D1%88%D0%BA%D0%BE.jpg",
+    "licenseName": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "attribution": "Alex 45 ORP / Own work"
   }
 };

@@ -1,4 +1,5 @@
 import { extraFilms } from "./filmsExtra";
+import { extraFilms2 } from "./filmsExtra2";
 
 export type Watch = {
   platform: string;
@@ -713,4 +714,7 @@ export const films: SeedFilm[] = [
   // Tier 1–4 catalogue expansion (72 films); see scripts/newFilmsData.ts and
   // lib/filmsExtra.ts. Editorial text is ORIGINAL; metadata enriched from Wikidata.
   ...extraFilms,
+  // Second expansion tranche (20 films); see scripts/newFilmsData2.ts and
+  // lib/filmsExtra2.ts.
+  ...extraFilms2,
 ];

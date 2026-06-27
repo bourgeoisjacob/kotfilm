@@ -421,4 +421,48 @@ export const personBios: Record<string, string> = {
     "Aleksandr Khvylya was a Soviet actor of Ukrainian origin who became the definitive Father Frost of Soviet fairy-tale cinema, notably in Rou's Morozko.",
   "andrei-sokolov":
     "Andrei Sokolov made a striking screen debut as the restless young man at the centre of the glasnost-era drama Little Vera, and went on to a busy stage and film career.",
+
+  // ── Second tranche: directors and actors ───────────────────
+  "mikhail-romm":
+    "Mikhail Romm was a major Soviet director and one of the most influential teachers in the history of film. After acclaimed early work he made the spare, modern Nine Days of One Year and the essay-documentary Ordinary Fascism, and as a professor at VGIK he mentored a remarkable generation that included Tarkovsky, Shukshin and Konchalovsky.",
+  "savva-kulish":
+    "Savva Kulish was a Soviet director who made his name with the intelligent, melancholy spy thriller Dead Season. He worked across fiction and documentary and was admired for the seriousness he brought to popular genres.",
+  "oleg-yefremov":
+    "Oleg Yefremov was a towering figure of the Soviet stage, founder of the Sovremennik Theatre and later head of the Moscow Art Theatre, as well as a fine screen actor. His naturalistic style helped renew Russian acting in the Thaw years.",
+  "izolda-izvitskaya":
+    "Izolda Izvitskaya was a Soviet actress who became famous overnight as the Red sniper Maryutka in Chukhrai's The Forty-First, a role that brought her international attention before a career cut short by personal hardship.",
+  "oleg-strizhenov":
+    "Oleg Strizhenov was a romantic leading man of Soviet cinema, dashing as the captured White officer in The Forty-First and later among the Decembrist heroes of The Star of Captivating Happiness.",
+  "nina-drobysheva":
+    "Nina Drobysheva was a Soviet stage and film actress best known on screen for the devoted heroine of Chukhrai's Thaw drama Clear Sky.",
+  "anatoly-romashin":
+    "Anatoly Romashin was a Soviet and Russian actor, a People's Artist, remembered among many roles for his Tsar Nicholas II in Elem Klimov's Agony.",
+  "irina-kupchenko":
+    "Irina Kupchenko is a refined Soviet and Russian actress who debuted in Konchalovsky's A Nest of Gentry and went on to roles in Uncle Vanya and The Star of Captivating Happiness. She is married to the actor Vasily Lanovoy.",
+  "tatyana-lavrova":
+    "Tatyana Lavrova was a Soviet actress of stage and screen, memorable as the physicist caught between two scientists in Romm's Nine Days of One Year.",
+  "nonna-mordyukova":
+    "Nonna Mordyukova was one of the greatest actresses of Soviet cinema, a People's Artist of the USSR whose earthy power lit up films from The Commissar to Mikhalkov's Kinfolk. She remains a byword for raw, unaffected screen presence.",
+  "svetlana-kryuchkova":
+    "Svetlana Kryuchkova is a Soviet and Russian actress of great range, a People's Artist, known for roles such as the daughter in Mikhalkov's Kinfolk and for her long career at Saint Petersburg's Bolshoi Drama Theatre.",
+  "sergo-zakariadze":
+    "Sergo Zakariadze was a leading Georgian actor, a People's Artist of the USSR, internationally honoured for the title role in Father of a Soldier and a warm presence in Daneliya's Don't Grieve!",
+  "vladimir-druzhnikov":
+    "Vladimir Druzhnikov was a Soviet actor and prolific voice artist, the romantic lead of Ptushko's first colour fairy tale, The Stone Flower.",
+  "tamara-makarova":
+    "Tamara Makarova was a star actress of Soviet cinema and a celebrated acting teacher, the wife and frequent collaborator of director Sergei Gerasimov, seen here as the Mistress of the Copper Mountain in The Stone Flower.",
+  "nina-menshikova":
+    "Nina Menshikova was a Soviet actress, a People's Artist, best remembered as the stern headmistress in We'll Live Till Monday, a film made by her husband, director Stanislav Rostotsky.",
+  "georgy-millyar":
+    "Georgy Millyar was a beloved Soviet character actor, the unmistakable face of Russian fairy-tale villainy who played Baba Yaga and Kashchei the Deathless again and again in the films of Aleksandr Rou.",
+  "aleksandr-abdulov":
+    "Aleksandr Abdulov was one of the most popular Soviet and Russian actors of his generation, a charismatic star of Moscow's Lenkom Theatre and of Mark Zakharov's films, including To Kill a Dragon and An Ordinary Miracle.",
+  "yuri-tolubeyev":
+    "Yuri Tolubeyev was a powerful Soviet stage and film actor and a People's Artist of the USSR, indelible as the earthy squire Sancho Panza in Kozintsev's Don Quixote.",
+  "rolan-bykov":
+    "Rolan Bykov was a gifted Soviet actor and director, equally at home as the jester in Andrei Rublev and the haunted hero of German's Trial on the Road. As a director he made the searing schoolyard drama Scarecrow.",
+  "vladimir-zamansky":
+    "Vladimir Zamansky was a Soviet actor who gave a quietly shattering central performance as the redeemed prisoner in Aleksei German's Trial on the Road.",
+  "vasily-livanov":
+    "Vasily Livanov is a Soviet and Russian actor, writer and voice artist, beloved both as the definitive Russian Sherlock Holmes and as the voice of many animated characters. He appears here in The Star of Captivating Happiness.",
 };

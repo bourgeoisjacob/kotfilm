@@ -11,12 +11,12 @@ const sources = [
   {
     icon: Database,
     name: "Wikidata",
-    use: "Structured metadata — titles, years, people, studios, and identifiers used to link records together.",
+    use: "Structured metadata: titles, years, people, studios, and identifiers used to link records together.",
   },
   {
     icon: BookOpen,
     name: "Wikipedia",
-    use: "Background reading only. We read it to understand a film, then write our own concise, original summaries — we never copy its text.",
+    use: "Background reading only. We read it to understand a film, then write our own concise, original summaries, and we never copy its text.",
   },
   {
     icon: ImageIcon,
@@ -26,7 +26,7 @@ const sources = [
   {
     icon: Clapperboard,
     name: "Official studio channels",
-    use: "Free, legal places to watch — e.g. Mosfilm and Soyuzmultfilm releasing their own films. We link to these; we never host video ourselves.",
+    use: "Free, legal places to watch, e.g. Mosfilm and Soyuzmultfilm releasing their own films. We link to these; we never host video ourselves.",
   },
 ];
 

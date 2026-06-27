@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, Clock, Globe, Star } from "lucide-react";
 import FilmCard from "@/components/catalogue/FilmCard";
 import PersonCard from "@/components/film/PersonCard";
-import SourcesPanel from "@/components/film/SourcesPanel";
+import ImageCredit from "@/components/ImageCredit";
 import WatchLinks from "@/components/film/WatchLinks";
 import WatchlistButton from "@/components/watchlist/WatchlistButton";
 import PersonalControls from "@/components/film/PersonalControls";
@@ -70,27 +70,30 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
 
       {/* Hero */}
       <header className="mt-4 grid gap-6 sm:grid-cols-[220px_1fr]">
-        <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-lg bg-kot-char sm:aspect-[3/4]">
-          {film.imageAssets[0]?.url ? (
-            <Image
-              src={film.imageAssets[0].url}
-              alt={`Still or poster from ${film.title}`}
-              fill
-              sizes="220px"
-              className="object-cover"
-              priority
-            />
-          ) : (
-            <span className="font-display text-5xl font-bold tracking-widest text-kot-cream/25">
-              {film.year}
-            </span>
-          )}
-          {film.starterClassic && (
-            <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-kot-red px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-kot-creamHi">
-              <Star aria-hidden className="h-3 w-3 fill-current" />
-              Start here
-            </span>
-          )}
+        <div>
+          <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-lg bg-kot-char sm:aspect-[3/4]">
+            {film.imageAssets[0]?.url ? (
+              <Image
+                src={film.imageAssets[0].url}
+                alt={`Still or poster from ${film.title}`}
+                fill
+                sizes="220px"
+                className="object-cover"
+                priority
+              />
+            ) : (
+              <span className="font-display text-5xl font-bold tracking-widest text-kot-cream/25">
+                {film.year}
+              </span>
+            )}
+            {film.starterClassic && (
+              <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-kot-red px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-kot-creamHi">
+                <Star aria-hidden className="h-3 w-3 fill-current" />
+                Start here
+              </span>
+            )}
+          </div>
+          <ImageCredit asset={film.imageAssets[0]} />
         </div>
 
         <div>
@@ -258,10 +261,6 @@ export default async function FilmDetailPage({ params }: { params: Params }) {
           </ul>
         </Section>
       )}
-
-      <Section title="Sources & attribution">
-        <SourcesPanel film={film} />
-      </Section>
     </main>
   );
 }

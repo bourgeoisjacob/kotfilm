@@ -61,7 +61,7 @@ export default async function ProfilePage() {
       <Section title="Favourites" count={favorites.length}>
         {favorites.length === 0 ? (
           <EmptyState>
-            Mark films you love with the heart on a film page — they&rsquo;ll
+            Mark films you love with the heart on a film page. They&rsquo;ll
             gather here.
           </EmptyState>
         ) : (

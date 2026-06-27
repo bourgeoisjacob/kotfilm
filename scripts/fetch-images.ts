@@ -71,7 +71,11 @@ async function main() {
   const filmImages: Record<string, ImageRecord> = { ...existingFilmImages };
   const personImages: Record<string, ImageRecord> = { ...existingPersonImages };
 
-  const filmsTodo = films.filter((f) => !filmImages[f.slug]);
+  // Films whose Wikidata P18 is not a usable still (e.g. a commemorative coin).
+  const FILM_IMAGE_SKIP = new Set(["the-bremen-town-musicians"]);
+  const filmsTodo = films.filter(
+    (f) => !filmImages[f.slug] && !FILM_IMAGE_SKIP.has(f.slug),
+  );
   const peopleTodo = people.filter((p) => !personImages[p.slug]);
   console.log(
     `Films: ${films.length} (${filmsTodo.length} to fetch), ` +

@@ -16,7 +16,7 @@ const features = [
   {
     icon: PlayCircle,
     title: "Watch legally",
-    body: "Free, official, clearly-labelled links — never pirated, never hosted here.",
+    body: "Free, official, clearly-labelled links, never pirated, never hosted here.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-16 text-center sm:py-20">
           <Image
             src="/kotfilm-icon.png"
-            alt="Kotfilm — a cat gazing up beside a Soviet film reel and a red star"
+            alt="Kotfilm, a cat gazing up beside a Soviet film reel and a red star"
             width={156}
             height={156}
             priority
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           <p className="max-w-xl text-base leading-relaxed text-kot-ink/85">
-            A curated guide to Soviet cinema — discover films, read original
+            A curated guide to Soviet cinema. Discover films, read original
             summaries and historical context, and find free, legal ways to watch.
           </p>
 

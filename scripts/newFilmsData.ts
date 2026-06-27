@@ -2,8 +2,10 @@
 // I author the editorial fields (summary/context/impact/themes/genres) and the
 // principal cast here; scripts/buildExtraFilms.ts enriches each entry with
 // verified Wikidata facts (original title, runtime, Q-id, Wikipedia URL) and
-// emits lib/filmsExtra.ts. All prose is ORIGINAL, written for Kotfilm.
+// emits lib/filmsExtra.ts. scripts/mergeEditorial.ts re-applies just the
+// editorial text to lib/filmsExtra.ts without re-querying Wikidata.
 //
+// All prose is ORIGINAL, written for Kotfilm. Editorial note: no em dashes.
 // `source` selects the free & legal watch link + default subtitle set; no exact
 // video URLs are ever fabricated (links are confirmed at production time).
 
@@ -51,11 +53,11 @@ export const newFilms: NewFilm[] = [
     themes: ["faith and doubt", "the artist under power", "violence and grace"],
     cast: ["Anatoly Solonitsyn", "Ivan Lapikov", "Nikolai Grinko", "Nikolai Sergeyev"],
     summary:
-      "In a series of loosely linked chapters spanning the brutal early-fifteenth century, the icon painter Andrei Rublev wanders a Russia torn by Tatar raids, famine, and princely cruelty. Witnessing cruelty and despair, he falls silent and renounces his art, until a boy's reckless casting of a great bronze bell restores his faith in creation. The film closes by bursting into color to reveal Rublev's surviving icons.",
+      "Loosely structured as a series of episodes set across the brutal early fifteenth century, the film follows the icon painter Andrei Rublev as he travels a Russia torn by Tatar raids, famine, and the cruelty of feuding princes. A monk and an artist, he wrestles with whether beauty has any place in such a world, and after witnessing a massacre and killing a man to save another, he takes a vow of silence and abandons his art. Years pass before a final episode, in which a young boy bluffs his way into casting an enormous bronze bell, rekindles Rublev's belief that creation is worth the risk. Only at the very end does the film break from black and white into colour, lingering on the actual surviving icons Rublev painted.",
     context:
-      "Tarkovsky's second feature was shelved and cut by Soviet authorities for years over its bleakness and its frank depiction of cruelty and faith, reaching Western audiences before a full domestic release. It reimagines the historical-biographical film as a meditation on the artist's place in a violent world rather than a tidy life story.",
+      "Made when Tarkovsky was still in his early thirties, his second feature was completed in 1966 but held back and trimmed by the authorities, who were uneasy with its bleakness, its violence, and its frank treatment of religious faith. It reached audiences abroad before it was properly released at home. Rather than a tidy biography, Tarkovsky built a meditation on the place of the artist in a violent age, shooting in long, searching takes and filling the frame with mud, rain, fire, and the textures of medieval life. The famous bell-casting episode, in which neither the boy nor the viewer knows whether the bell will ring, becomes a parable for the act of creation itself.",
     impact:
-      "Widely regarded as one of the greatest films ever made, it reshaped how cinema could treat history, faith, and the creative act, and influenced generations of filmmakers drawn to its long, contemplative takes and tactile sense of the medieval past.",
+      "Widely ranked among the greatest films ever made, it expanded what cinema could do with history, faith, and the creative act. Its contemplative long takes and tactile sense of the past influenced generations of filmmakers who looked to Tarkovsky as a model of cinema as serious art.",
   },
   {
     slug: "alexander-nevsky",
@@ -69,11 +71,11 @@ export const newFilms: NewFilm[] = [
     themes: ["national defense", "leadership", "myth-making"],
     cast: ["Nikolai Cherkasov", "Nikolai Okhlopkov", "Andrei Abrikosov"],
     summary:
-      "In 1242, the prince Alexander Nevsky rallies the people of Novgorod to repel an invading force of Teutonic Knights. The film builds to the famous Battle on the Ice, where the armoured crusaders are lured onto the cracking surface of a frozen lake.",
+      "In the year 1242, the prince Alexander Nevsky is called on to defend the Russian lands against an invading army of Teutonic Knights pushing in from the west. Refusing to bow to the heavily armoured crusaders, he rallies the merchants and common people of Novgorod into a citizen army. The film builds toward the celebrated Battle on the Ice, in which Nevsky lures the German knights onto the frozen surface of Lake Peipus, where the ice gives way beneath their weight. Victory affirms a simple, ringing warning to any future invader.",
     context:
-      "Made as the threat of Nazi Germany loomed, Eisenstein's first sound film is openly patriotic, pairing stylized medieval pageantry with a stirring Sergei Prokofiev score. It was briefly suppressed during the 1939 Soviet–German pact, then revived as wartime propaganda after the 1941 invasion.",
+      "This was Eisenstein's first completed sound film, made after years in which his projects had been blocked or abandoned, and it marked his return to official favour. It was produced as the threat of Nazi Germany grew, and its story of repelling Teutonic invaders carried an unmistakable contemporary message. When the Soviet Union and Germany signed their non-aggression pact in 1939 the film was quietly withdrawn, then rushed back into circulation after the German invasion of 1941. Sergei Prokofiev composed the score in unusually close partnership with Eisenstein, the music and images shaped to fit one another.",
     impact:
-      "Its fusion of music and image — especially Prokofiev's score cut to the visuals of the ice battle — became a textbook model of audiovisual counterpoint, studied and imitated in film schools and epic cinema ever since.",
+      "The collaboration between Eisenstein and Prokofiev, above all in the Battle on the Ice, became a textbook example of how music and image can be composed together. It is studied in film schools to this day and stands as a foundational work of the historical epic.",
   },
   {
     slug: "ivan-the-terrible-part-i",
@@ -86,11 +88,11 @@ export const newFilms: NewFilm[] = [
     themes: ["power and paranoia", "statecraft", "isolation"],
     cast: ["Nikolai Cherkasov", "Lyudmila Tselikovskaya", "Serafima Birman"],
     summary:
-      "The first part of Eisenstein's unfinished trilogy follows the young Tsar Ivan IV as he is crowned, consolidates power against scheming boyars, and is hardened by betrayal and the death of his wife into the autocrat who would unify — and terrorize — Russia.",
+      "The first part of Eisenstein's planned trilogy opens with the young Ivan IV crowned as the first Tsar of all Russia, determined to unite the country and break the power of the scheming boyar nobility. Surrounded by intrigue, poisoned in spirit by the murder of his wife, and tested by war and betrayal, he hardens into the autocrat history would remember as Ivan the Terrible. When his authority falters he withdraws from Moscow and waits, gambling that the people will beg him to return with absolute power. The film ends with that triumphant, ominous return.",
     context:
-      "Commissioned under Stalin and shot during the war, the film turns history into operatic theatre — chiaroscuro lighting, looming shadows, and stylized, almost frozen performances. Part I won a Stalin Prize; the more critical Part II would be banned.",
+      "Commissioned under Stalin and filmed during the Second World War after the studios were evacuated east to Alma-Ata, the project was conceived as a flattering portrait of a strong ruler unifying the nation. Eisenstein staged it less as realism than as operatic theatre, with towering shadows, stylised gestures, and faces held in extreme close-up. Part I pleased the authorities and won a Stalin Prize. The more critical second part, which followed Ivan into tyranny and terror, would be banned.",
     impact:
-      "Its expressionist staging and graphic, painterly compositions remain a high-water mark of stylized historical cinema and a key reference for directors exploring the visual language of power.",
+      "Its expressionist lighting and graphic, almost frozen compositions remain a high point of stylised historical cinema. The film is a standard reference in studies of how images can convey the psychology of power.",
   },
   {
     slug: "i-am-cuba",
@@ -104,11 +106,11 @@ export const newFilms: NewFilm[] = [
     themes: ["revolution", "inequality", "national awakening"],
     cast: ["Sergio Corrieri", "Luz María Collazo", "José Gallardo"],
     summary:
-      "Four loosely connected stories trace Cuba on the eve of and during its revolution: a sex worker in decadent Havana, a peasant burning his own cane field, a radicalized student, and a farmer drawn into the uprising.",
+      "Told in four loosely linked stories, the film traces Cuba on the eve of and during its revolution. A young woman is forced into sex work amid the casinos and tourists of decadent Havana; a tenant farmer burns his own sugar-cane field rather than hand it to a landowner; a student is radicalised by police violence; and a peasant is drawn into the armed uprising. A narrating voice, the island itself, binds the episodes together.",
     context:
-      "A Soviet–Cuban co-production reuniting Kalatozov with cinematographer Sergei Urusevsky after The Cranes Are Flying, it underperformed in both countries and was nearly forgotten. Its astonishing, gravity-defying long takes — cameras descending buildings and floating through crowds — were decades ahead of their time.",
+      "A Soviet and Cuban co-production made soon after the revolution, it reunited director Mikhail Kalatozov with the cinematographer Sergei Urusevsky, his partner on The Cranes Are Flying. Conceived as revolutionary propaganda, it satisfied neither government on release and was largely forgotten for thirty years. What makes it extraordinary is its camerawork, including astonishing unbroken takes that descend the side of a building, plunge into a swimming pool, and float above a funeral procession through a crowd. Such shots were decades ahead of the technology usually associated with them.",
     impact:
-      "Rediscovered and championed by Martin Scorsese and Francis Ford Coppola in the 1990s, its bravura camerawork directly influenced filmmakers like Paul Thomas Anderson and a wave of ambitious long-take cinema.",
+      "Rediscovered in the 1990s and championed by Martin Scorsese and Francis Ford Coppola, it found the audience it never had on release. Its bravura long takes directly influenced later filmmakers drawn to ambitious, gravity-defying camerawork.",
   },
   {
     slug: "white-sun-of-the-desert",
@@ -122,11 +124,11 @@ export const newFilms: NewFilm[] = [
     themes: ["duty", "loyalty", "the lone hero"],
     cast: ["Anatoly Kuznetsov", "Pavel Luspekayev", "Spartak Mishulin"],
     summary:
-      "A weary Red Army soldier crossing the Central Asian desert on his way home is saddled with protecting a harem abandoned by a fleeing warlord. With a grizzled customs officer and a doomed local fighter, he makes a stand against the bandit Abdullah.",
+      "A weary Red Army soldier named Sukhov is crossing the Central Asian desert on his long way home from the Civil War when he is handed an unwanted duty: protecting a harem of women abandoned by a fleeing local warlord. Saddled with this strange family, and joined by a grizzled old customs officer and a doomed young fighter, he digs in for a stand against the bandit Abdullah and his men. Sukhov longs only for his wife and home, but his stubborn decency will not let him walk away.",
     context:
-      "Often called the original Soviet 'Eastern' — a Western transplanted to the deserts of the Civil War — it blends action, deadpan humour, and a beloved Bulat Okudzhava song. It became one of the most quoted films in Russian culture.",
+      "Often described as the original Soviet 'Eastern,' it transplants the shape of an American Western to the deserts of Soviet Central Asia in the early 1920s. The production was troubled and nearly shut down more than once, and it owes much of its texture to improvisation, a wry script, and a famous song by Bulat Okudzhava. Released in 1970, it became one of the most quoted and rewatched films in the culture. Pavel Luspekayev played the beloved customs officer Vereshchagin while gravely ill, completing the role not long before his death.",
     impact:
-      "By tradition, Soviet and later Russian cosmonauts watch it before every launch — a ritual that has made the film a durable cultural touchstone far beyond the cinema.",
+      "By long-standing tradition, Soviet and later Russian cosmonauts watch the film together before every launch, a ritual that has carried it far beyond the cinema and made it a permanent part of the culture.",
   },
   {
     slug: "ivan-vasilievich-changes-profession",
@@ -140,9 +142,9 @@ export const newFilms: NewFilm[] = [
     themes: ["mistaken identity", "bureaucracy", "time travel"],
     cast: ["Yuri Yakovlev", "Leonid Kuravlyov", "Aleksandr Demyanenko"],
     summary:
-      "An eccentric inventor's time machine swaps a bumbling building superintendent and a petty burglar with Tsar Ivan the Terrible. While the Tsar blunders through 1970s Moscow, the superintendent must impersonate him in the sixteenth-century Kremlin.",
+      "An eccentric Moscow inventor switches on his homemade time machine and accidentally swaps two men from the present, a timid apartment-building superintendent and a small-time burglar, with Tsar Ivan the Terrible from the sixteenth century. While the bewildered Tsar blunders through 1970s Moscow, the meek superintendent, who happens to be the Tsar's double, must sit on the throne and rule the Kremlin without giving himself away. The misunderstandings pile up on both sides of the centuries before everyone is restored to their proper time.",
     context:
-      "Adapted by Gaidai from a Mikhail Bulgakov play, it is among the most beloved Soviet comedies, endlessly rewatched and quoted. Its farce gently satirized both Soviet daily life and the trappings of absolute power.",
+      "Gaidai adapted the film from a comic play by Mikhail Bulgakov that had gone unperformed for decades, updating its setting to the present day. It arrived at the height of Gaidai's popularity and became one of the most rewatched comedies in Soviet history. Beneath the farce sits a gentle double satire, poking fun both at the petty frustrations of Soviet daily life and at the pretensions of absolute power. Its lines are quoted constantly in Russian to this day.",
   },
   {
     slug: "gentlemen-of-fortune",
@@ -156,9 +158,9 @@ export const newFilms: NewFilm[] = [
     themes: ["mistaken identity", "redemption", "second chances"],
     cast: ["Yevgeny Leonov", "Georgy Vitsin", "Saveli Kramarov"],
     summary:
-      "A mild-mannered kindergarten director happens to be the double of a hardened gangster, so police recruit him to pose as the criminal and infiltrate his gang to recover a stolen artefact. The gentle impostor slowly civilizes his thuggish charges.",
+      "A gentle kindergarten director happens to be the exact double of a hardened gangster known as Docent, so the police persuade him to impersonate the criminal, get himself locked up, and coax three fellow crooks into revealing where they hid a stolen artefact. Posing as the fearsome boss, the mild-mannered teacher finds himself leading a jailbreak and a treasure hunt. Almost without meaning to, he begins to civilise his thuggish charges along the way.",
     context:
-      "Co-written by Georgiy Daneliya and Viktoriya Tokareva, it pairs slapstick with surprising warmth, and its prison-slang one-liners entered everyday Russian speech. It was one of the top box-office hits of its year.",
+      "Co-written by Georgiy Daneliya and Viktoriya Tokareva, the comedy pairs slapstick with surprising warmth and a streak of real tenderness. Its dialogue, including a string of prison-slang lines, passed straight into everyday speech. It was among the biggest box-office successes of its year and remains a fixture of Russian television, its central performance by Yevgeny Leonov beloved by audiences of every generation.",
   },
   {
     slug: "mimino",
@@ -171,9 +173,9 @@ export const newFilms: NewFilm[] = [
     themes: ["home and belonging", "friendship", "ambition"],
     cast: ["Vakhtang Kikabidze", "Frunzik Mkrtchyan", "Yelena Proklova"],
     summary:
-      "A Georgian helicopter pilot from a mountain village dreams of flying international jets. His pursuit of the big city and the wider world leads to comic culture-clash misadventures in Moscow — and a growing homesickness for the life he left behind.",
+      "A Georgian helicopter pilot nicknamed Mimino, who ferries passengers and cargo between remote mountain villages, dreams of flying big international jets out of Moscow. He chases that dream to the capital, where he shares a hotel room with a good-natured Armenian truck driver and stumbles through a string of culture-clash misadventures. As he edges closer to the wider world, a growing homesickness for his mountains and his old life begins to tug him back.",
     context:
-      "A signature Daneliya tragicomedy, its affectionate portrait of friendship across Soviet nationalities — Georgian and Armenian leads bickering and bonding — gave it an enduring, gently melancholic charm.",
+      "A signature Daneliya tragicomedy, the film is built on the warmth and bickering between its Georgian and Armenian leads, a portrait of friendship across the Soviet Union's many nationalities. Daneliya, himself Georgian, gave it an affectionate, gently melancholy tone beneath the comedy. It was a major popular success and won a top prize at the Moscow International Film Festival, and its songs and lines remain widely loved.",
   },
   {
     slug: "autumn-marathon",
@@ -186,9 +188,9 @@ export const newFilms: NewFilm[] = [
     themes: ["indecision", "midlife", "kindness as a trap"],
     cast: ["Oleg Basilashvili", "Natalya Gundareva", "Yevgeny Leonov"],
     summary:
-      "A kind, chronically indecisive Leningrad translator can commit neither to his patient wife nor to his younger mistress, and his inability to say no to anyone leaves everyone — including himself — exhausted and unhappy.",
+      "A kind, talented, and hopelessly indecisive Leningrad translator cannot bring himself to choose between the patient wife he no longer loves and the younger mistress who is tired of waiting. Unable to say no to anyone, he is pulled in every direction by colleagues, neighbours, and visitors, forever running late and forever apologising. His decency, which he imagines as a virtue, slowly exhausts everyone around him and traps him most of all.",
     context:
-      "A wry, bittersweet 'sad comedy,' it captures the quiet drift of late-Soviet middle age. Its precise observation of a decent man undone by his own conflict-avoidance made it a critical favourite and an arthouse export.",
+      "Daneliya called the film a 'sad comedy,' and it captures the quiet drift of late-Soviet middle age with rueful precision. There are no villains, only a good man undone by his inability to cause anyone disappointment. Praised for its honesty and its finely observed performances, it won prizes at Venice and elsewhere and became one of the most admired Soviet films abroad, where its melancholy comedy translated easily.",
   },
   {
     slug: "carnival-night",
@@ -201,9 +203,9 @@ export const newFilms: NewFilm[] = [
     themes: ["youth vs. bureaucracy", "joy", "satire"],
     cast: ["Lyudmila Gurchenko", "Igor Ilyinsky", "Yuri Belov"],
     summary:
-      "Young staff at a House of Culture scheme to put on a lively, festive New Year's Eve show, dodging a pompous, killjoy acting director who wants to replace fun with dreary lectures.",
+      "The young staff at a House of Culture are determined to throw a lively, music-filled New Year's Eve celebration, but a pompous, newly installed acting director wants to replace the fun with earnest lectures and dreary approved programming. As the clock ticks toward midnight, the youngsters scheme to outwit him and smuggle their joyful show past his nose. The result is a battle between officious gloom and irrepressible high spirits.",
     context:
-      "Ryazanov's debut feature was a sensation of the Thaw, its lightness and mockery of stuffy officialdom feeling like a breath of fresh air. It made a star of Lyudmila Gurchenko and established the warm satirical comedy Ryazanov would perfect.",
+      "Eldar Ryazanov's debut feature became a sensation of the cultural Thaw that followed Stalin's death, its lightness and its mockery of stuffy officialdom feeling like fresh air. It made an instant star of the young Lyudmila Gurchenko, whose songs from the film were sung across the country. The picture established the brand of warm, satirical comedy that Ryazanov would refine over the following decades, and it remains a New Year viewing tradition.",
   },
   {
     slug: "shadows-of-forgotten-ancestors",
@@ -217,11 +219,11 @@ export const newFilms: NewFilm[] = [
     themes: ["fate", "grief", "folk ritual"],
     cast: ["Ivan Mykolaichuk", "Larisa Kadochnikova"],
     summary:
-      "In the Carpathian highlands, a young Hutsul man loves a girl from a rival family. After tragedy parts them, he marries another but cannot escape his grief, sliding toward a fate steeped in folk belief and the rhythms of the mountains.",
+      "In a Hutsul village high in the Carpathian mountains, a young man named Ivan falls in love with Marichka, a girl from the family that killed his father. When she drowns, his grief is bottomless. He eventually marries another woman, but he cannot free himself from the memory of his lost love or from the pull of the folk world around him, and he drifts toward a fate steeped in mountain belief and ritual.",
     context:
-      "Parajanov's breakthrough abandoned conventional storytelling for an intoxicating swirl of colour, ethnographic ritual, swirling camerawork, and folk music. It signalled the arrival of one of cinema's great visual poets.",
+      "This was Sergei Parajanov's breakthrough, the film in which he abandoned conventional storytelling for an intoxicating swirl of colour, folk music, ethnographic ritual, and restless, spinning camerawork. Shot in the Carpathians with local Hutsul customs woven throughout, it announced the arrival of one of cinema's great visual poets. Its boldness drew official suspicion, an early sign of the conflicts with the authorities that would shadow Parajanov for the rest of his life.",
     impact:
-      "A landmark of 'poetic cinema,' it influenced filmmakers across the Soviet republics and abroad, and its sensuous, ritualistic style anticipated Parajanov's own The Color of Pomegranates.",
+      "A landmark of the 'poetic cinema' movement, it influenced filmmakers across the Soviet republics and beyond, and its sensuous, ritualistic style pointed the way to Parajanov's later The Color of Pomegranates.",
   },
   {
     slug: "tale-of-tales",
@@ -235,11 +237,11 @@ export const newFilms: NewFilm[] = [
     themes: ["memory", "wartime loss", "childhood"],
     cast: [],
     summary:
-      "A wistful, non-linear animated reverie drifts between images of postwar Soviet life, a poet's blank page, and a little grey wolf cub from a Russian lullaby, weaving private memory and collective wartime grief into a poem without words.",
+      "There is no plot in the ordinary sense. Instead the film drifts, like memory itself, between recurring images: a poet facing a blank page, couples dancing before the men vanish to war, a child and an apple in the snow, and a small grey wolf cub drawn from an old Russian lullaby. These fragments of postwar Soviet life and private recollection gather into a wordless poem about what is remembered and what is lost.",
     context:
-      "Made by Norstein with painstaking multi-plane and cutout techniques, it distils the texture of memory itself. It circulated quietly before being widely recognized as a masterpiece.",
+      "Yuri Norstein made the film over years using painstaking cutout and multi-plane techniques, moving paper figures under glass to achieve its soft, layered, almost breathing surfaces. It distils the texture of memory and the long shadow of the Second World War, which took so many of the men of his parents' generation. The film circulated quietly at first before its reputation grew steadily around the world.",
     impact:
-      "Repeatedly voted the greatest animated film of all time in international polls of animators and critics, it set a benchmark for animation as serious, poetic art.",
+      "In repeated international polls of animators and critics it has been voted the greatest animated film ever made. It stands as the clearest proof that animation can be a vehicle for serious, personal, poetic art.",
   },
   {
     slug: "the-mystery-of-the-third-planet",
@@ -252,9 +254,9 @@ export const newFilms: NewFilm[] = [
     themes: ["curiosity", "exploration", "wonder"],
     cast: [],
     summary:
-      "The girl Alisa, her professor father, and a bumbling captain set off across the galaxy to collect rare creatures for a Moscow zoo, uncovering a mystery involving space pirates and a vanished crew along the way.",
+      "The bright, fearless girl Alisa, her scientist father Professor Seleznyov, and a nervous, accident-prone spaceship captain set off across the galaxy to collect rare and wonderful creatures for a Moscow zoo. Their journey from planet to planet turns into a mystery when they cross the trail of space pirates and a missing crew. Alisa's curiosity steadily uncovers the truth behind the disappearances.",
     context:
-      "Adapted from Kir Bulychov's children's books, this feature-length animation is cherished for its inventive alien designs, psychedelic colour, and gentle humour — a high point of Soviet science-fiction animation.",
+      "Adapted from the popular children's science-fiction books of Kir Bulychov, this feature-length animation is treasured for its inventive alien worlds, its psychedelic colour palette, and its gentle humour. It represents a high point of Soviet science-fiction animation, imagining a future of curiosity and exploration rather than conflict. Generations of children grew up on it, and its imagery and music remain instantly familiar in Russia.",
   },
   {
     slug: "hamlet",
@@ -267,11 +269,11 @@ export const newFilms: NewFilm[] = [
     themes: ["doubt", "corruption", "conscience"],
     cast: ["Innokenty Smoktunovsky", "Mikhail Nazvanov", "Anastasiya Vertinskaya"],
     summary:
-      "Shakespeare's prince, played with brooding interiority, returns to a cold stone Elsinore to find his father dead, his mother remarried to his uncle, and the kingdom rotten — and is drawn toward revenge and ruin.",
+      "Shakespeare's prince returns to a cold, stone Elsinore to find his father dead, his mother hastily remarried to his uncle, and the kingdom rotten beneath its ceremonies. Played with brooding inwardness, this Hamlet is a thinking man crushed between his conscience and the corrupt court around him. Drawn toward revenge, he moves through doubt and feigned madness to a ruin that takes nearly everyone down with him.",
     context:
-      "Using Boris Pasternak's celebrated Russian translation and a thunderous Dmitri Shostakovich score, Kozintsev set the tragedy amid crashing seas and oppressive fortress stone, reading it as a study of an individual conscience crushed by a tyrannical state.",
+      "Grigori Kozintsev built the film on Boris Pasternak's celebrated Russian translation and a thunderous score by Dmitri Shostakovich, setting the tragedy against crashing seas and oppressive fortress walls. He read the play as the story of a sensitive individual conscience crushed by a tyrannical state, a reading that carried quiet weight in the Soviet 1960s. The result is conceived as cinema rather than filmed theatre, with the landscape and the elements doing much of the dramatic work.",
     impact:
-      "Internationally acclaimed — admired by Laurence Olivier among others — it remains one of the most respected screen Shakespeares and a model for treating the plays as cinema rather than filmed theatre.",
+      "Internationally acclaimed and admired by figures such as Laurence Olivier, it remains one of the most respected screen versions of Shakespeare and a model for treating the plays as fully cinematic works.",
   },
 
   // ─────────────────────────── TIER 2 ───────────────────────────
@@ -286,11 +288,11 @@ export const newFilms: NewFilm[] = [
     themes: ["tyranny", "paranoia", "betrayal"],
     cast: ["Nikolai Cherkasov", "Pavel Kadochnikov", "Serafima Birman"],
     summary:
-      "Ivan, now ruthless, builds his personal guard and moves against the boyars who plot his downfall, descending into vengeance and a deadly banquet — the latter rendered in startling bursts of colour.",
+      "The second part follows Ivan as he builds his own loyal guard, the oprichnina, and turns it against the boyars who plot to unseat him. Haunted by memories of his childhood and the murder of his mother, the Tsar slides from defending his crown into outright vengeance and terror. The intrigue tightens toward a deadly banquet, staged in startling bursts of colour, where a planned assassination is turned back on the plotters.",
     context:
-      "Completed in 1946 but banned by Stalin, who saw an unflattering mirror in its portrait of a paranoid ruler and his secret police, it was only released in 1958 after both men were dead. It contains some of the earliest colour footage in Soviet narrative cinema.",
+      "Eisenstein completed Part II in 1946, but Stalin saw an unflattering reflection in its portrait of a ruler consumed by suspicion and protected by a brutal secret police, and the film was banned. It was released only in 1958, after both Eisenstein and Stalin were dead. Its sudden shift into colour for the banquet sequence is among the earliest uses of colour in Soviet narrative cinema, deployed for shock and symbolism rather than realism.",
     impact:
-      "Its expressionist excess and the famous colour banquet sequence are landmarks of stylized filmmaking, endlessly cited in studies of cinema and political art.",
+      "Its expressionist excess and the celebrated colour banquet are landmarks of stylised filmmaking, endlessly cited in studies of cinema and of the relationship between artists and political power.",
   },
   {
     slug: "a-cruel-romance",
@@ -303,9 +305,9 @@ export const newFilms: NewFilm[] = [
     themes: ["class and money", "betrayal", "doomed love"],
     cast: ["Larisa Guzeyeva", "Nikita Mikhalkov", "Andrei Myagkov", "Alisa Freindlich"],
     summary:
-      "A poor but spirited young woman, courted for her charm and sung over by suitors, is treated as a prize by wealthier men who toy with her affections, leading to heartbreak and tragedy on a Volga steamer.",
+      "A poor but spirited young woman without a dowry is courted, flattered, and sung over by a circle of wealthier men who treat her as a prize to be won rather than a person to be loved. Caught between a dashing, careless gentleman and a dull but respectable suitor, she is toyed with, compromised, and ultimately betrayed. A pleasure cruise on the Volga carries the romance to its tragic end.",
     context:
-      "Ryazanov's lavish adaptation of Ostrovsky's play 'Without a Dowry' traded his usual comedy for romantic melodrama, with lush period detail and popular songs. It was a huge hit and named the year's best film by Soviet audiences.",
+      "Eldar Ryazanov stepped away from his usual comedy for this lavish adaptation of Alexander Ostrovsky's play 'Without a Dowry,' set among the merchant class of the late nineteenth century. He filled it with period detail, riverboats, and popular songs, several of which became hits in their own right. The film was a huge success and was voted the best film of its year by Soviet audiences, with Nikita Mikhalkov memorable as the charming, faithless gentleman.",
   },
   {
     slug: "a-railway-station-for-two",
@@ -318,9 +320,9 @@ export const newFilms: NewFilm[] = [
     themes: ["chance", "sacrifice", "second chances"],
     cast: ["Lyudmila Gurchenko", "Oleg Basilashvili", "Nikita Mikhalkov"],
     summary:
-      "A pianist stranded at a provincial railway station, awaiting trial for a crime he didn't commit, strikes up a prickly, then tender, romance with a brash station waitress as their separate troubles draw them together.",
+      "A mild pianist, stranded at a provincial railway station while awaiting trial for a crime he did not commit, crosses paths with a brash, quick-tempered station waitress. Their first encounters are all friction, but over a series of missed trains and small kindnesses the antagonism turns to tenderness. When he must report to a labour camp, the depth of what has grown between them is tested on a frozen road.",
     context:
-      "A characteristic Ryazanov tragicomedy, it balances bustling station farce with real pathos and ends on a bleakly hopeful note in the camps. Gurchenko and Basilashvili anchor it with a beloved central pairing.",
+      "A characteristic Ryazanov tragicomedy, the film moves between bustling, farcical station life and genuine pathos, ending on a bleak yet hopeful note in the camps of the north. Lyudmila Gurchenko and Oleg Basilashvili anchor it as a mismatched pair the audience comes to love. It was one of the most popular films of its year and confirmed Ryazanov's gift for finding warmth and sorrow in ordinary lives.",
   },
   {
     slug: "hussar-ballad",
@@ -333,9 +335,9 @@ export const newFilms: NewFilm[] = [
     themes: ["disguise", "patriotism", "gender play"],
     cast: ["Larisa Golubkina", "Yuri Yakovlev", "Igor Ilyinsky"],
     summary:
-      "During the 1812 war against Napoleon, a spirited young noblewoman disguises herself as a cavalry officer to fight the French, complicating a romance with the officer she had been betrothed to.",
+      "On the eve of the 1812 war against Napoleon, a spirited young noblewoman disguises herself as a cavalry officer and rides off to fight the French invaders. Her masquerade leads to a tangle of comic confusions, not least with the officer to whom she had been betrothed, who fails to recognise her in uniform. Courage, mistaken identity, and romance carry the story to a happy resolution.",
     context:
-      "A buoyant verse-and-song operetta on film, released for the 150th anniversary of the 1812 campaign, it became a perennial holiday favourite for its wit, music, and cross-dressing comedy of manners.",
+      "Eldar Ryazanov made this buoyant verse-and-song operetta on film for the hundred and fiftieth anniversary of the campaign against Napoleon. Loosely inspired by the real cavalry-maiden Nadezhda Durova, it blends patriotic spectacle with light comedy and a playful game of disguise. Its wit, music, and cross-dressing humour made it a perennial holiday favourite that has never left the screen.",
   },
   {
     slug: "the-garage",
@@ -348,9 +350,9 @@ export const newFilms: NewFilm[] = [
     themes: ["bureaucracy", "conformity", "self-interest"],
     cast: ["Liya Akhedzhakova", "Valentin Gaft", "Iya Savvina"],
     summary:
-      "Members of a garage cooperative are locked in an all-night meeting to decide which four of them will lose their promised parking spaces, and the polite façade collapses into a savage comedy of self-interest, cowardice, and revolt.",
+      "The members of a garage cooperative gather for what should be a routine evening meeting, only to learn that four of them must lose the parking spaces they were promised. Locked in the room overnight, the polite façade of the collective collapses into a savage comedy of cowardice, favouritism, and bare self-interest, until the meekest members stage a small revolt against the well-connected.",
     context:
-      "Set almost entirely in one room, Ryazanov's chamber satire skewers Soviet committee culture and petty privilege with unusual bite — a sharp, claustrophobic farce about how quickly civility dissolves under pressure.",
+      "Set almost entirely in a single room, Ryazanov's chamber satire turns a petty dispute over parking into a sharp dissection of Soviet committee culture and quiet privilege. The biting humour was unusually pointed for its time, and the ensemble cast plays out a recognisable drama of how fast civility dissolves under pressure. It became one of the most quoted of all Ryazanov's films.",
   },
   {
     slug: "wings",
@@ -363,9 +365,9 @@ export const newFilms: NewFilm[] = [
     themes: ["aging", "purpose", "the cost of heroism"],
     cast: ["Maya Bulgakova", "Zhanna Bolotova"],
     summary:
-      "A celebrated former fighter pilot, now a school headmistress, struggles to find meaning in peacetime. Estranged from her daughter and out of step with a younger generation, she aches for the freedom of the sky she has lost.",
+      "A celebrated former fighter pilot, decorated for her service in the war, now runs a vocational school and struggles to find meaning in peacetime. Stiff and out of step with a younger generation that does not share her sense of duty, and estranged from the daughter she adopted, she aches for the freedom and purpose she knew in the sky. Small humiliations of ordinary life press in on a woman built for something larger.",
     context:
-      "Shepitko's early feature is a quietly radical portrait of a woman whose wartime heroism has left her stranded in ordinary life. Its sympathetic, unsentimental study of a difficult heroine pairs naturally with her later The Ascent.",
+      "Larisa Shepitko's early feature is a quietly radical study of a heroine whose wartime valour has left her stranded in the present. Rather than celebrate her as a monument, the film looks honestly at her loneliness and rigidity, a sympathetic but unsentimental portrait of a difficult woman. Anchored by Maya Bulgakova's superb performance, it pairs naturally with Shepitko's later masterpiece The Ascent.",
   },
   {
     slug: "welcome-or-no-trespassing",
@@ -378,9 +380,9 @@ export const newFilms: NewFilm[] = [
     themes: ["authority", "childhood", "rebellion"],
     cast: ["Yevgeny Yevstigneev", "Arina Aleynikova"],
     summary:
-      "At a regimented Young Pioneer summer camp run by a self-important director, a boy expelled for a minor infraction secretly sneaks back in, and the children's small rebellions expose the absurdity of the rules imposed on them.",
+      "At a strictly regimented Young Pioneer summer camp run by a self-important director, a boy is expelled over a trivial rule about swimming. Rather than go home and disappoint his grandmother, he sneaks back in and hides, and the children's small conspiracies and rebellions steadily expose the absurdity of the rules imposed on them. The camp's pompous order edges toward delightful chaos.",
     context:
-      "Klimov's debut is a sharp, affectionate satire of Soviet officiousness disguised as a children's comedy. Its mockery of petty authority nearly got it shelved before it found an audience.",
+      "Elem Klimov's debut feature is a sharp, affectionate satire of Soviet officiousness dressed up as a children's comedy. Its mockery of petty authority and empty ceremony was pointed enough that the film nearly went unreleased before reportedly winning favour at the top. It marked the arrival of a major directorial talent who would go on to make Come and See.",
   },
   {
     slug: "fate-of-a-man",
@@ -393,9 +395,9 @@ export const newFilms: NewFilm[] = [
     themes: ["endurance", "loss", "dignity"],
     cast: ["Sergei Bondarchuk", "Pavel Boriskin", "Zinaida Kiriyenko"],
     summary:
-      "A Soviet driver recounts how the war took everything from him — capture, a brutal POW camp, the deaths of his wife and children — and how, broken but unbowed, he chooses to adopt an orphaned boy and begin again.",
+      "A Soviet driver recounts how the war stripped everything from him. Taken prisoner, he survives the brutality of a German camp and a desperate escape, only to learn that his wife and daughters were killed in a bombing and his son fell on the last day of fighting. Broken but unbowed, he meets an orphaned boy and, on an impulse of grace, tells the child he is his father, choosing to begin life again.",
     context:
-      "Bondarchuk's directorial debut, adapted from Sholokhov, was among the first Soviet films to portray a former prisoner of war sympathetically rather than as a suspect — a notable softening in the Thaw's treatment of the war.",
+      "Sergei Bondarchuk's directorial debut, adapted from a story by Mikhail Sholokhov, was among the first Soviet films to treat a former prisoner of war with sympathy rather than suspicion, a notable shift in the Thaw's handling of the war. Bondarchuk himself played the lead with weathered restraint. The film was widely honoured at home and abroad and launched the directing career that would lead to War and Peace.",
   },
   {
     slug: "the-dawns-here-are-quiet",
@@ -408,9 +410,9 @@ export const newFilms: NewFilm[] = [
     themes: ["sacrifice", "women at war", "innocence lost"],
     cast: ["Andrei Martynov", "Olga Ostroumova", "Yelena Drapeko"],
     summary:
-      "In 1942, a gruff sergeant commands a remote anti-aircraft post staffed by young women. When they discover German paratroopers in the forest, the small unit makes a desperate, costly stand.",
+      "In 1942, a gruff sergeant commands a quiet anti-aircraft post in the northern forests, staffed entirely by young women soldiers. When they discover a party of German paratroopers moving through the woods, the small, outmatched unit sets out to stop them, and one by one the women fall in a desperate fight. The film cuts between the harsh present and tender, colour-drenched memories of the peacetime lives the war is destroying.",
     context:
-      "Adapted from Boris Vasilyev's novella, it intercuts the women's peacetime dreams — in colour — with the grim monochrome of the fighting. One of the most beloved Soviet war films, it was nominated for an Academy Award.",
+      "Stanislav Rostotsky, himself a wounded veteran, adapted Boris Vasilyev's novella as a tribute to those lost in the war, dedicating it in part to a nurse who had saved his life. The contrast between monochrome combat and colour flashbacks underlines everything the young women will never have. One of the most beloved of all Soviet war films, it was nominated for an Academy Award and remains a fixture of remembrance.",
   },
   {
     slug: "sadko",
@@ -423,9 +425,9 @@ export const newFilms: NewFilm[] = [
     themes: ["the quest", "homeland", "wonder"],
     cast: ["Sergei Stolyarov", "Alla Larionova"],
     summary:
-      "The minstrel-hero Sadko of old Novgorod sets sail across the world in search of happiness for his people, braving foreign lands and the underwater kingdom of the Sea Tsar before realizing the treasure he sought lay at home.",
+      "The minstrel and merchant-adventurer Sadko of old Novgorod sets out to find happiness for his people, sailing across the world in search of a fabled bird of joy. His voyage takes him through distant lands and down into the glittering underwater kingdom of the Sea Tsar, where his music wins him favour and danger alike. In the end he learns that the happiness he sought was waiting at home all along.",
     context:
-      "A spectacular fairy-tale epic drawing on Russian bylina legend and Rimsky-Korsakov's music, Ptushko's film showcased lavish sets and effects. It won a major prize at Venice and was later dubbed and re-edited for the West.",
+      "Aleksandr Ptushko built this spectacular fairy-tale epic from Russian bylina legend and the music of Rimsky-Korsakov's opera, filling it with lavish sets, costumes, and effects. It won a major prize at the Venice Film Festival, and a re-edited, dubbed version later circulated in the West. The film exemplifies Ptushko's lifelong project of bringing Russian folklore to the screen on a grand scale.",
   },
   {
     slug: "ilya-muromets",
@@ -438,9 +440,9 @@ export const newFilms: NewFilm[] = [
     themes: ["heroism", "defending the land", "legend"],
     cast: ["Boris Andreyev", "Andrei Abrikosov", "Shukur Burkhanov"],
     summary:
-      "The legendary bogatyr Ilya Muromets rises from a crippled peasant to Russia's mightiest warrior, defending the land of Rus against the Tugar horde and a three-headed dragon.",
+      "Healed of a lifelong paralysis by wandering pilgrims, the peasant Ilya Muromets rises to become the mightiest of the bogatyrs, the legendary warrior-heroes of old Rus. He devotes his enormous strength to defending the land against the invading Tugar horde and the monsters that serve it, including a fearsome multi-headed dragon. Folk legend and patriotic spectacle combine in his battles.",
     context:
-      "Adapted from Russian epic folklore, it was the Soviet Union's first widescreen film with stereophonic sound, and its huge battle scenes and creature effects pushed the era's spectacle to new scale.",
+      "Drawn from the epic poems of Russian folklore, the film was a milestone of Soviet technical ambition, the country's first feature shot in widescreen with stereophonic sound. Ptushko mounted enormous battle scenes with thousands of extras and elaborate creature effects, pushing the spectacle of the era to a new scale. It stands as one of the grand showcases of Soviet fantasy cinema.",
   },
   {
     slug: "viy",
@@ -453,9 +455,9 @@ export const newFilms: NewFilm[] = [
     themes: ["fear", "the supernatural", "temptation"],
     cast: ["Leonid Kuravlyov", "Natalya Varley"],
     summary:
-      "A young seminarian is forced to stand watch over the corpse of a beautiful witch for three nights in a remote church, where each night summons ever more terrifying demons — culminating in the monstrous Viy.",
+      "A young seminarian, after a deadly nighttime encounter with a witch, is summoned to a remote village and ordered to read prayers over the corpse of a beautiful young woman for three nights alone in a country church. Each night the dead woman rises and calls up ever more terrifying spirits, and on the third night she summons Viy, a monstrous demon whose gaze the seminarian has been warned never to meet.",
     context:
-      "Adapted from Gogol's horror tale, it is essentially the only outright horror film of the Soviet era, its imaginative practical effects and folk-gothic atmosphere giving it lasting cult status.",
+      "Adapted from a horror story by Nikolai Gogol, Viy is essentially the only outright horror film of the entire Soviet era, a rare excursion into the supernatural for a cinema that usually avoided it. Its imaginative practical effects, flying coffin, and folk-gothic atmosphere have given it lasting cult status. The former circus performer Natalya Varley brought an eerie physicality to the risen witch.",
   },
   {
     slug: "cheburashka-and-gena-the-crocodile",
@@ -468,9 +470,9 @@ export const newFilms: NewFilm[] = [
     themes: ["friendship", "loneliness", "community"],
     cast: [],
     summary:
-      "A small, big-eared creature of unknown species and a gentle, accordion-playing crocodile named Gena set out to build a 'house of friendship' for the lonely, gathering an unlikely community along the way.",
+      "A small, soft, big-eared creature of no known species is discovered in a crate of oranges and given the name Cheburashka. Lonely and looking for friends, he meets Gena, a gentle crocodile who works at the zoo and plays the accordion, and together they set out to build a house where the friendless can come together. Their kindness gathers an unlikely little community, despite the meddling of the cranky old Shapoklyak.",
     context:
-      "Roman Kachanov's stop-motion shorts, written with Eduard Uspensky, introduced one of the most cherished characters in Soviet culture. Cheburashka became a national mascot, later embraced internationally.",
+      "Roman Kachanov's stop-motion shorts, written with the children's author Eduard Uspensky, introduced one of the most cherished characters in all of Soviet culture. Cheburashka, with his huge eyes and gentle bewilderment, became a national mascot, later embraced internationally and even adopted as a beloved figure in Japan. The films' warmth and craft set a high standard for Soviet puppet animation.",
   },
   {
     slug: "winnie-the-pooh",
@@ -483,9 +485,9 @@ export const newFilms: NewFilm[] = [
     themes: ["friendship", "play", "appetite"],
     cast: [],
     summary:
-      "A round, philosophical brown bear with a fondness for honey ambles through a series of small adventures with his anxious friend Piglet, composing little songs and getting comically stuck.",
+      "A round, philosophical brown bear with an endless fondness for honey ambles through small adventures with his anxious friend Piglet, composing little hums and grumbles as he goes. He floats up to a beehive under a balloon, gets comically stuck in a rabbit's burrow after eating too much, and ponders the puzzles of his small wooded world. Each misadventure is gentle, funny, and quietly wise.",
     context:
-      "Khitruk's distinctive, flat-graphic interpretation of A. A. Milne's bear, with Yevgeny Leonov's gruff, beloved voice, became the definitive version for Russian audiences — quite distinct from the Disney design.",
+      "Fyodor Khitruk's interpretation of A. A. Milne's bear is strikingly different from the Disney version, with a flat, graphic design and a gruff, beloved voice provided by Yevgeny Leonov. Made without reference to the American films, it became the definitive Winnie-the-Pooh for Russian audiences. Khitruk's modern, expressive style helped renew the art of Soviet animation.",
   },
 
   // ─────────────────────────── TIER 3 ───────────────────────────
@@ -502,11 +504,11 @@ export const newFilms: NewFilm[] = [
     themes: ["life and death", "the land", "modernity"],
     cast: ["Stepan Shkurat", "Semyon Svashenko", "Yuliya Solntseva"],
     summary:
-      "In a Ukrainian village, the arrival of a tractor and the push for collective farming set the young against the old and the poor against the kulaks. When a young activist is murdered, the community answers with a defiant, life-affirming funeral.",
+      "In a Ukrainian village, the arrival of the first tractor and the push toward collective farming sets the young against the old and the poor against the prosperous kulaks. When a young activist who has championed the new ways is shot dead, the grief and anger of the community answer the killing with a defiant, life-affirming funeral. Around this slender story the film unfolds images of fields, fruit, rain, and faces that turn it into a meditation on the cycles of nature.",
     context:
-      "The final part of Dovzhenko's 'Ukraine Trilogy,' it was attacked at home as politically ambiguous even as it was hailed abroad as a masterpiece. Its rhapsodic images of fields, faces, and fruit elevate a collectivization story into a meditation on nature's cycles.",
+      "The final part of Aleksandr Dovzhenko's so-called Ukraine Trilogy, Earth was attacked at home as politically ambiguous and even defeatist, while critics abroad hailed it as a masterpiece. Dovzhenko cared less for the collectivisation plot than for the rhythms of birth, death, and the soil, which he rendered in some of the most rapturous imagery of the silent era. It survives as a high point of poetic, associative montage.",
     impact:
-      "A landmark of poetic, associative montage, it is regularly named among the greatest films ever made and shaped the lyrical strain of cinema that later filmmakers, including Tarkovsky and Parajanov, would draw on.",
+      "Regularly named among the greatest films ever made, it shaped the lyrical, image-driven strain of cinema that later filmmakers such as Tarkovsky and Parajanov would carry forward.",
   },
   {
     slug: "arsenal",
@@ -521,11 +523,11 @@ export const newFilms: NewFilm[] = [
     themes: ["revolution", "war's futility", "national identity"],
     cast: ["Semyon Svashenko", "Amvrosii Buchma"],
     summary:
-      "Against the chaos of World War I and the Ukrainian struggles that followed, the film follows a soldier-turned-worker through the 1918 Bolshevik uprising at the Arsenal factory in Kyiv.",
+      "Against the chaos of the First World War and the upheavals that followed in Ukraine, the film follows a soldier who returns home and is drawn into the 1918 Bolshevik uprising at the Arsenal munitions factory in Kyiv. Chronology fractures into bold, symbolic images of suffering, futility, and revolt. The hero emerges as an almost mythic figure who cannot be killed.",
     context:
-      "The second of Dovzhenko's Ukraine films fractures chronology into bold, symbolic images. Its anti-war passages and surreal flourishes mark it as one of the most formally daring works of the Soviet silent avant-garde.",
+      "The second of Dovzhenko's Ukraine films, Arsenal abandons straightforward narrative for a montage of charged, poetic images, from a gas attack at the front to a runaway troop train. Its anti-war passages and surreal flourishes mark it as one of the most formally daring works of the Soviet silent avant-garde. The film confirmed Dovzhenko as a major voice alongside Eisenstein and Pudovkin.",
     impact:
-      "Its associative editing and poetic symbolism were widely influential on montage cinema and confirmed Dovzhenko as a major voice alongside Eisenstein and Pudovkin.",
+      "Its associative editing and dense symbolism were widely influential on montage cinema and helped establish the distinctive poetic tradition of Ukrainian film.",
   },
   {
     slug: "strike",
@@ -539,11 +541,11 @@ export const newFilms: NewFilm[] = [
     themes: ["labor and capital", "collective action", "repression"],
     cast: ["Grigori Aleksandrov", "Maksim Shtraukh"],
     summary:
-      "Workers at a Tsarist-era factory walk out after a comrade's suicide, organizing against brutal management and police spies until the strike is crushed in a savage crackdown.",
+      "Workers at a Tsarist-era factory walk off the job after a comrade, wrongly accused of theft, takes his own life. They organise against brutal managers, informers, and police spies, holding out as conditions worsen, until the authorities answer the strike with a savage crackdown. There is no single hero; the mass of workers is the protagonist.",
     context:
-      "Eisenstein's feature debut introduced his theory of montage and the idea of the masses, rather than an individual, as the hero. Its agitational energy and inventive cutting announced a new kind of revolutionary cinema.",
+      "Strike was Sergei Eisenstein's first feature, the film in which he introduced his theory of montage and the idea of the collective as the central character. Its agitational energy and inventive cutting announced a new kind of revolutionary cinema. The most famous sequence intercuts the massacre of the strikers with footage from a slaughterhouse, a jolting juxtaposition meant to force a connection in the viewer's mind.",
     impact:
-      "It pioneered the 'montage of attractions,' juxtaposing shocking images — most famously intercutting a massacre with slaughterhouse footage — a technique foundational to film editing theory.",
+      "It pioneered what Eisenstein called the 'montage of attractions,' building meaning through the shock of juxtaposed images, a technique that became foundational to the theory of film editing.",
   },
   {
     slug: "october-ten-days-that-shook-the-world",
@@ -557,11 +559,11 @@ export const newFilms: NewFilm[] = [
     themes: ["revolution", "history as spectacle", "the masses"],
     cast: ["Vasili Nikandrov", "Nikolai Popov"],
     summary:
-      "A dramatized reconstruction of the 1917 October Revolution in Petrograd, from the fall of the Provisional Government to the storming of the Winter Palace, staged on a vast scale with crowds of extras.",
+      "A dramatized reconstruction of the 1917 October Revolution in Petrograd, the film moves from the fall of the Provisional Government to the storming of the Winter Palace, staged on an enormous scale with crowds of extras at the actual locations. Rather than follow individuals, it presents history as a vast collective event, punctuated by sequences in which images are cut together to convey abstract ideas.",
     context:
-      "Commissioned for the revolution's tenth anniversary, Eisenstein restaged events at the actual locations. Its experiments with 'intellectual montage' — cutting to convey abstract ideas — proved divisive even among his peers.",
+      "Commissioned for the tenth anniversary of the revolution, October gave Eisenstein the resources to restage the events where they had happened, a decade earlier. His experiments with 'intellectual montage,' cutting between unrelated images to suggest a concept, proved divisive even among his contemporaries, and the film was re-edited under political pressure. It remains a daring, demanding work of the silent avant-garde.",
     impact:
-      "Its reconstruction of the Winter Palace assault became so iconic it is often mistaken for documentary footage, and its montage experiments remain central to film theory.",
+      "Its staged assault on the Winter Palace became so iconic that it is often mistaken for documentary footage of the real event, and its montage experiments remain central to film theory.",
   },
   {
     slug: "mother",
@@ -575,11 +577,11 @@ export const newFilms: NewFilm[] = [
     themes: ["awakening", "family and politics", "sacrifice"],
     cast: ["Vera Baranovskaya", "Nikolai Batalov"],
     summary:
-      "A downtrodden mother inadvertently betrays her revolutionary son to the authorities, then is transformed by his imprisonment into a committed participant in the 1905 workers' uprising.",
+      "During the failed revolution of 1905, a worn-down mother unwittingly betrays her revolutionary son to the police, believing she is protecting him. His arrest and imprisonment transform her, and grief turns to commitment as she takes up his cause and joins the workers' uprising herself. Her political awakening is the emotional heart of the film.",
     context:
-      "Adapted from Gorky's novel, Pudovkin's film offered a more emotional, character-driven counterpoint to Eisenstein's mass-hero montage, building feeling through accumulation of detail and human faces.",
+      "Adapted from Maxim Gorky's novel, Vsevolod Pudovkin's film offered a warmer, more character-driven counterpoint to Eisenstein's mass-hero montage. Where Eisenstein favoured collision, Pudovkin built feeling through the patient accumulation of human detail and expressive faces, an approach he called linkage. The film became a cornerstone of Soviet silent cinema.",
     impact:
-      "A model of Soviet montage built on emotional 'linkage' rather than collision, it became a key reference text in the development of editing theory.",
+      "A model of montage built on emotional linkage rather than shock, Mother became a key reference text in the development of editing theory and influenced political filmmaking for decades.",
   },
   {
     slug: "the-end-of-st-petersburg",
@@ -593,9 +595,9 @@ export const newFilms: NewFilm[] = [
     themes: ["exploitation", "war", "revolution"],
     cast: ["Ivan Chuvelyov", "Vera Baranovskaya", "Aleksandr Chistyakov"],
     summary:
-      "A peasant lad arriving in the capital to find work is drawn through strike-breaking, the trenches of World War I, and finally the revolution that topples the old order.",
+      "A poor peasant lad arrives in the imperial capital looking for work and is pulled, bewildered, through the machinery of the old order: strike-breaking, the stock exchange, and the trenches of the First World War. His slow education in injustice carries him at last into the revolution that topples the regime and renames the city. The nameless young man stands in for a whole generation.",
     context:
-      "Made, like October, for the revolution's tenth anniversary, Pudovkin's epic personalizes history through one bewildered young man, contrasting stock-market greed with the misery of the front.",
+      "Made, like Eisenstein's October, for the tenth anniversary of the revolution, Pudovkin's epic personalises history through one confused young protagonist. It pointedly cuts between the greed of the wartime stock exchange and the misery of soldiers at the front, drawing the connection between profit and slaughter. The film confirmed Pudovkin's mastery of montage on a grand historical canvas.",
   },
   {
     slug: "storm-over-asia",
@@ -609,9 +611,9 @@ export const newFilms: NewFilm[] = [
     themes: ["colonialism", "identity", "uprising"],
     cast: ["Valéry Inkijinoff", "Aleksandr Chistyakov"],
     summary:
-      "A Mongol trapper, cheated by a European fur merchant, joins Soviet partisans against occupying forces. Captured and nearly executed, he is propped up by the occupiers as a puppet 'descendant of Genghis Khan' — until he rises in fury.",
+      "A young Mongol trapper, cheated of a valuable fur by a European merchant, drifts into the orbit of Soviet partisans fighting the occupying forces in Central Asia. Captured and nearly executed, he is found to carry a document suggesting he descends from Genghis Khan, and the occupiers prop him up as a puppet ruler. The indignity finally drives him to rise against them in a sweeping storm of revolt.",
     context:
-      "Shot largely in Buryat-Mongolia, Pudovkin's anti-imperialist epic blends ethnographic spectacle with montage. Its visionary final 'storm' sweeping away the occupiers is among silent cinema's most striking endings.",
+      "Shot largely in Buryat-Mongolia, Pudovkin's anti-imperialist epic combines ethnographic spectacle with the montage techniques he had perfected. Its visionary final sequence, in which a literal and figurative storm sweeps the occupiers away, is among the most striking endings in silent cinema. The film extended Soviet montage into a story of colonial subjugation and national awakening.",
   },
   {
     slug: "aelita",
@@ -625,11 +627,11 @@ export const newFilms: NewFilm[] = [
     themes: ["fantasy vs. reality", "revolution", "longing"],
     cast: ["Yuliya Solntseva", "Nikolai Tsereteli", "Igor Ilyinsky"],
     summary:
-      "A daydreaming Moscow engineer, imagining a journey to Mars and a romance with its queen Aelita, fantasizes leading a revolution among the planet's oppressed workers — a reverie entangled with his troubled life on Earth.",
+      "A restless Moscow engineer, dissatisfied with his ordinary life after the revolution, becomes obsessed with the idea of Mars and its queen, Aelita. In his daydreams he travels to the red planet, romances its ruler, and leads its oppressed workers in revolt. The Martian fantasy, with its angular sets and exotic court, gradually gives way to the more pressing dramas of his life back on Earth.",
     context:
-      "One of the first feature-length science-fiction films, it is famous for its angular Constructivist Martian sets and costumes. Its real subject, though, is post-revolutionary Moscow, with the Mars story revealed as escapist fantasy.",
+      "One of the first feature-length science-fiction films, Aelita is famous for the Constructivist costumes and geometric sets that defined its vision of Mars. Yet its real subject is post-revolutionary Moscow, and the Martian adventure is finally revealed as escapist fantasy, a dream the hero must wake from to face his real responsibilities. The film was a notable popular success on release.",
     impact:
-      "Its avant-garde production design influenced the visual imagination of science fiction, and the film is a touchstone in the genre's early history.",
+      "Its avant-garde production design left a lasting imprint on the visual imagination of science fiction, and it occupies an important place in the genre's early history.",
   },
   {
     slug: "bed-and-sofa",
@@ -643,9 +645,9 @@ export const newFilms: NewFilm[] = [
     themes: ["the housing crisis", "marriage", "women's autonomy"],
     cast: ["Lyudmila Semyonova", "Nikolai Batalov", "Vladimir Fogel"],
     summary:
-      "In cramped Moscow housing, a married couple takes in the husband's old army friend, and the wife — neglected by both men — drifts into an affair, then must decide her own fate when she becomes pregnant.",
+      "In a cramped single room in overcrowded Moscow, a married couple takes in the husband's old army friend, who must sleep on the sofa. Neglected and ordered about by both men, the wife drifts into an affair with the lodger, and the household settles into an uneasy arrangement. When she becomes pregnant and neither man is sure he wants the responsibility, she finally claims the right to decide her own life.",
     context:
-      "A startlingly frank domestic drama for its time, Room's film tackled the Soviet housing shortage, casual male chauvinism, and abortion. Its sympathy for the woman's independence made it controversial and ahead of its era.",
+      "Abram Room's drama was startlingly frank for its time, taking on the Soviet housing shortage, casual male chauvinism, and the question of abortion with unusual directness. Its sympathy for the woman's independence, and its refusal of easy moralising, made it controversial. The film remains one of the most quietly daring works of the silent Soviet cinema.",
   },
   {
     slug: "chapaev",
@@ -658,11 +660,11 @@ export const newFilms: NewFilm[] = [
     themes: ["leadership", "revolution", "loyalty"],
     cast: ["Boris Babochkin", "Leonid Kmit", "Varvara Myasnikova"],
     summary:
-      "During the Civil War, the charismatic, untutored Red commander Vasily Chapaev leads his division against White forces, his rough instinct tempered by a Bolshevik commissar, in a partnership that ends in tragedy.",
+      "During the Civil War, the charismatic and untutored Red commander Vasily Chapaev leads his division against the White armies on the eastern front. Brave and quick-witted but undisciplined, he is steadied by a level-headed Bolshevik commissar, and the friction and respect between the two men drive the story. Their partnership ends in tragedy, but the legend of Chapaev endures.",
     context:
-      "Directed by the unrelated 'Vasilyev brothers,' it was one of the first major Soviet sound films and a colossal popular hit, watched repeatedly by millions. Stalin reportedly screened it dozens of times.",
+      "Directed by the unrelated colleagues known as the Vasilyev brothers, Chapaev was one of the first major Soviet sound films and an enormous popular success, watched again and again by millions. Stalin is said to have screened it dozens of times. Accessible, heroic, and emotionally direct, it became the template that countless Soviet films would follow.",
     impact:
-      "It became the model of Socialist Realist cinema — accessible, heroic, emotionally direct — and set the template that countless Soviet films would follow for decades.",
+      "Chapaev set the model for Socialist Realist cinema and shaped Soviet popular storytelling for decades, its hero so familiar that he became the subject of an entire genre of folk jokes.",
   },
   {
     slug: "jolly-fellows",
@@ -675,11 +677,11 @@ export const newFilms: NewFilm[] = [
     themes: ["talent and luck", "joy", "self-invention"],
     cast: ["Leonid Utyosov", "Lyubov Orlova"],
     summary:
-      "A cheerful shepherd with a gift for music is mistaken for a famous conductor, setting off a chain of slapstick mix-ups that carry him and a talented housemaid from the countryside to the concert stage.",
+      "A cheerful village shepherd with a natural gift for music is mistaken for a famous foreign conductor, and the confusion launches a chain of slapstick mishaps, including a herd of animals running amok at a smart party. Through luck, talent, and persistence, he and a hard-working housemaid with a fine voice make their way from the countryside to the concert stage.",
     context:
-      "The Soviet Union's first true musical comedy, made by Aleksandrov after studying Hollywood, it launched the stardom of Lyubov Orlova and a wave of upbeat song-and-dance films sanctioned as wholesome mass entertainment.",
+      "Made by Grigori Aleksandrov after a study trip to Hollywood, Jolly Fellows was the Soviet Union's first true musical comedy. It launched the stardom of Lyubov Orlova and the bandleader Leonid Utyosov, and it set off a wave of upbeat song-and-dance films officially encouraged as wholesome mass entertainment. Its breezy energy made it a defining popular film of the 1930s.",
     impact:
-      "It established the Soviet musical-comedy genre and the Aleksandrov–Orlova partnership that would dominate it through the 1930s and 40s.",
+      "It established the Soviet musical-comedy genre and the long, successful partnership between Aleksandrov and Orlova that would dominate it for years to come.",
   },
   {
     slug: "brief-encounters",
@@ -692,9 +694,9 @@ export const newFilms: NewFilm[] = [
     themes: ["longing", "domestic life", "the wandering man"],
     cast: ["Kira Muratova", "Vladimir Vysotsky", "Nina Ruslanova"],
     summary:
-      "A busy municipal official and the young woman who becomes her housekeeper are both, in different ways, in love with the same restless, guitar-playing geologist who drifts in and out of their lives.",
+      "A busy municipal official and the young country woman who comes to work as her housekeeper are both, in their different ways, bound to the same man, a restless, guitar-playing geologist who keeps leaving to roam the wider world. Through fractured flashbacks the film pieces together the two women's longing and the spaces left by his absence. Little is resolved, and that irresolution is the point.",
     context:
-      "Muratova's early feature, in which she also stars, is a delicate, fragmented study of female longing built from flashbacks. Quietly suppressed for years, it later gained recognition as an early work by one of the most original post-Soviet auteurs.",
+      "Kira Muratova's early feature, in which she also plays the leading role, is a delicate and unconventional study of female desire built from non-linear fragments. Its rough texture and refusal of tidy storytelling made the authorities uneasy, and it was quietly kept from wide release for years. It later gained recognition as the early work of one of the most original and uncompromising directors of the post-Soviet era, with Vladimir Vysotsky memorable as the wanderer.",
   },
 
   // ─────────────────────────── TIER 4 ───────────────────────────
@@ -710,9 +712,9 @@ export const newFilms: NewFilm[] = [
     themes: ["tradition vs. modernity", "farce", "romance"],
     cast: ["Aleksandr Demyanenko", "Natalya Varley", "Yuri Nikulin"],
     summary:
-      "A naïve student collecting folklore in the Caucasus is duped into helping a corrupt official 'kidnap a bride' — the spirited young woman the official wants to marry off — before realizing the scheme and turning the tables.",
+      "Shurik, an earnest young student collecting folklore in the Caucasus, is tricked into helping a corrupt local official carry out a 'bride kidnapping,' the abduction of a spirited young woman the official intends to marry against her will. Believing he is taking part in a quaint old custom, Shurik only slowly realises the scheme. Once he does, he sets out to rescue her and turn the tables on the plotters.",
     context:
-      "The third of Gaidai's hugely popular 'Shurik' comedies, it deployed his bumbling-trio comic villains and brisk slapstick. Endlessly quoted, it remains one of the best-loved Soviet comedies.",
+      "This was the third of Gaidai's wildly popular comedies featuring the bumbling student Shurik, and it again deployed his trio of comic crooks, played by Vitsin, Morgunov, and Nikulin. The brisk slapstick and quotable lines made it one of the best-loved films in the country. Its playful treatment of an old custom and modern manners struck a chord that has never faded.",
   },
   {
     slug: "the-twelve-chairs",
@@ -725,9 +727,9 @@ export const newFilms: NewFilm[] = [
     themes: ["greed", "the hunt", "satire of the NEP era"],
     cast: ["Archil Gomiashvili", "Sergei Filippov", "Mikhail Pugovkin"],
     summary:
-      "A smooth con man and a former nobleman chase a set of twelve dining chairs across the 1920s Soviet Union, one of which is rumoured to hide a fortune in jewels sewn into its upholstery.",
+      "The smooth-talking con man Ostap Bender teams up with a ruined former nobleman to chase a set of twelve dining chairs scattered across the early Soviet Union, one of which is rumoured to hide a fortune in jewels sewn into its upholstery. Their pursuit becomes a picaresque tour of 1920s opportunists, swindlers, and dreamers. The treasure proves more elusive, and more ironic, than either rogue expects.",
     context:
-      "Gaidai's adaptation of the classic Ilf and Petrov satirical novel follows the rogue Ostap Bender through a picaresque comedy of post-revolutionary opportunism, a much-filmed story Gaidai rendered with his trademark verve.",
+      "Gaidai adapted the classic satirical novel by Ilf and Petrov, a much-filmed story whose hero, the irrepressible Ostap Bender, is one of the great rogues of Russian literature. The film follows Bender through the freewheeling years of the New Economic Policy, mocking the era's get-rich schemes. Gaidai's energetic comic style fit the material naturally.",
   },
   {
     slug: "walking-the-streets-of-moscow",
@@ -740,9 +742,9 @@ export const newFilms: NewFilm[] = [
     themes: ["youth", "the city", "fleeting connection"],
     cast: ["Nikita Mikhalkov", "Aleksey Loktev", "Galina Polskikh"],
     summary:
-      "Over a single summer day in Moscow, a young Siberian writer in town for a few hours, a carefree local teenager, and the people they meet drift through small encounters, flirtations, and the simple pleasure of the city.",
+      "Over a single summer day in Moscow, a young writer from Siberia, in town for only a few hours, falls in with a carefree local teenager and the people they meet along the way. Flirtations bloom and fade, small dramas come and go, and the city itself, freshly washed by a sudden rain, becomes the real subject. Nothing momentous happens, and that lightness is its charm.",
     context:
-      "A quintessential film of the Thaw, light as air and gently lyrical, it captured a hopeful, open-hearted mood in Soviet youth culture and gave the teenage Nikita Mikhalkov a breakout role and a famous closing song.",
+      "A quintessential film of the Thaw, light as air and gently lyrical, it caught a hopeful, open-hearted mood in Soviet youth culture of the early 1960s. It gave the teenage Nikita Mikhalkov a breakout role and ended with a song that became a standard. Daneliya's warm, unforced style is already fully present here, in one of the most beloved films of its decade.",
   },
   {
     slug: "afonya",
@@ -755,9 +757,9 @@ export const newFilms: NewFilm[] = [
     themes: ["drift", "loneliness", "redemption"],
     cast: ["Leonid Kuravlyov", "Yevgenia Simonova", "Yevgeny Leonov"],
     summary:
-      "A charming but feckless plumber coasts through life on small scams, drink, and easy charm, alienating those around him — until a devoted young woman's patient affection offers him a chance to change.",
+      "A charming but feckless plumber coasts through life on petty scams, easy drink, and a smile, cutting corners at work and letting down everyone who cares about him. His emptiness catches up with him as old friends fall away and his habits sour into something sadder. A devoted young nurse who sees something worth saving in him offers a last chance at change.",
     context:
-      "One of the biggest box-office hits of its era, Daneliya's tragicomedy paired laughs with an honest look at aimlessness and casual moral decay in everyday Soviet life, anchored by Kuravlyov's likeable wastrel.",
+      "One of the biggest box-office hits of its era, Daneliya's tragicomedy mixes broad laughs with an unsentimental look at aimlessness and quiet moral decay in everyday Soviet life. Leonid Kuravlyov makes the wastrel likeable even as the film refuses to excuse him. The open, ambiguous ending leaves his fate, and the possibility of his redemption, hanging.",
   },
   {
     slug: "love-and-doves",
@@ -770,9 +772,9 @@ export const newFilms: NewFilm[] = [
     themes: ["family", "temptation", "forgiveness"],
     cast: ["Aleksandr Mikhailov", "Nina Doroshina", "Lyudmila Gurchenko"],
     summary:
-      "A rural family man who keeps doves is swept off to a southern resort by a glamorous city woman, abandoning his wife and children — before homesickness and second thoughts pull him back toward the family he left.",
+      "A good-natured village family man who keeps a loft of doves is sent off to a southern seaside resort to recover from an injury, where a glamorous, worldly city woman sweeps him off his feet. He leaves his wife and children to follow her, only to find that the new life does not fit him. Homesickness and second thoughts soon pull him back toward the family he abandoned.",
     context:
-      "Menshov's warm-hearted village comedy, adapted from a stage play, became a much-loved crowd-pleaser, its broad humour and folk texture making it a fixture of Russian television ever since.",
+      "Vladimir Menshov, fresh off the Oscar-winning Moscow Does Not Believe in Tears, adapted this warm-hearted village comedy from a stage play. Its broad humour, folk texture, and affection for ordinary rural life made it an enormous crowd-pleaser. It has remained a fixture of Russian television, its characters and catchphrases widely known.",
   },
   {
     slug: "an-ordinary-miracle",
@@ -785,9 +787,9 @@ export const newFilms: NewFilm[] = [
     themes: ["love and transformation", "free will", "magic"],
     cast: ["Oleg Yankovsky", "Yevgeny Leonov", "Andrei Mironov"],
     summary:
-      "A wizard, for his own amusement and instruction, turns a bear into a young man who can only become a bear again if a princess kisses him — and then, having engineered exactly that love story, can only watch as it unfolds.",
+      "A wizard, for his own amusement and instruction, has long ago turned a bear into a young man who can become a bear again only if a princess kisses him. When the wizard arranges for exactly such a princess to arrive, the two young people fall genuinely in love, and the spell that was meant as a game becomes a real and painful test. Even the wizard who wrote the story can only watch how it ends.",
     context:
-      "Zakharov's whimsical two-part television film, adapted from Yevgeny Schwartz's allegorical play, mixes fairy-tale fantasy, sparkling dialogue, and Gennady Gladkov songs into a beloved meditation on love disguised as a children's tale.",
+      "Mark Zakharov's whimsical two-part television film, adapted from Yevgeny Schwartz's allegorical play, blends fairy-tale fantasy with sparkling dialogue and songs by Gennady Gladkov. Beneath the magic lies a meditation on love, free will, and the courage to risk transformation. Its starry cast and quotable wit made it an enduring favourite that returns to Russian screens every holiday season.",
   },
   {
     slug: "that-same-munchausen",
@@ -800,9 +802,9 @@ export const newFilms: NewFilm[] = [
     themes: ["truth vs. conformity", "imagination", "integrity"],
     cast: ["Oleg Yankovsky", "Inna Churikova", "Leonid Bronevoy"],
     summary:
-      "The fabled Baron Munchausen insists on living by his own extraordinary truth in a town that would much prefer he be ordinary, and the pressure to renounce his impossible deeds — even to fake his own death — becomes a quiet tragedy of the free spirit.",
+      "The legendary Baron Munchausen insists on living by his own extraordinary truth, dating his calendar by personal events and recounting impossible feats, in a town that would much prefer him to be ordinary and quiet. The pressure to recant his deeds, and even to fake his own death to win a peaceful life, becomes a quiet tragedy. To stay himself, the Baron must refuse every comfortable compromise on offer.",
     context:
-      "A philosophical television comedy by Zakharov, its tale of a dreamer crushed by demands to conform was widely read as a sly parable of intellectual life under Soviet conformism. Yankovsky's Baron is among his signature roles.",
+      "Mark Zakharov's philosophical television comedy turns the tall-tale Baron into a parable of the free spirit under pressure to conform, a theme widely understood in the context of Soviet intellectual life. Oleg Yankovsky's Baron, witty and melancholy, is among his most cherished roles. The film's blend of humour and sadness, and its famous closing line about a serious face being no sign of intelligence, gave it a lasting place in the culture.",
   },
   {
     slug: "heart-of-a-dog",
@@ -815,9 +817,9 @@ export const newFilms: NewFilm[] = [
     themes: ["nature vs. nurture", "revolution's excesses", "hubris"],
     cast: ["Yevgeny Yevstigneev", "Vladimir Tolokonnikov", "Roman Kartsev"],
     summary:
-      "A celebrated Moscow professor transplants human glands into a stray dog, which gradually becomes a crude, belligerent man — a 'new Soviet citizen' whose vulgarity and opportunism turn the scientist's experiment into a disaster.",
+      "A distinguished Moscow professor transplants a man's glands into a stray dog as a scientific experiment, and to his astonishment the animal slowly becomes human. But the new man, christened Sharikov, is crude, drunken, and grasping, and as a committee gives him papers and a job hounding stray cats, he turns the professor's elegant apartment and life upside down. The experiment in remaking a creature becomes a disaster the scientist must undo.",
     context:
-      "Bortko's faithful, sepia-toned adaptation of Bulgakov's once-banned satirical novella arrived during glasnost and became an instant classic, its biting allegory of the revolution's social engineering newly speakable.",
+      "Vladimir Bortko's faithful, sepia-toned adaptation of Mikhail Bulgakov's once-banned satirical novella arrived during glasnost, when its biting allegory of the revolution's attempt to engineer a 'new man' could finally be spoken aloud. Yevgeny Yevstigneev and Vladimir Tolokonnikov gave career-defining performances. It became an instant classic, endlessly quoted and rebroadcast.",
   },
   {
     slug: "liberation",
@@ -830,9 +832,9 @@ export const newFilms: NewFilm[] = [
     themes: ["total war", "command", "the road to victory"],
     cast: ["Nikolai Olyalin", "Larisa Golubkina", "Bukhuti Zakariadze"],
     summary:
-      "A sweeping five-film cycle dramatizing the Eastern Front from the 1943 Battle of Kursk to the fall of Berlin, intercutting the experiences of ordinary soldiers with the strategic decisions of generals and heads of state.",
+      "A sweeping cycle of films dramatises the Eastern Front from the great tank battle at Kursk in 1943 through to the fall of Berlin. It cuts constantly between two scales: the experience of ordinary soldiers in the mud and fire of combat, and the strategic decisions taken by generals and heads of state in their headquarters. The whole forms a panoramic account of the war's final, decisive years.",
     context:
-      "An enormous state-backed epic mounted with real tanks, thousands of troops, and vast staged battles, Ozerov's cycle aimed to be the definitive Soviet account of the war's final years — monumental in scale and official in tone.",
+      "Yuri Ozerov mounted this enormous state-backed epic with the full resources of the Soviet army, staging vast battles with real tanks and thousands of troops. Conceived as the definitive Soviet record of the road to victory, the cycle is monumental in scale and official in tone, presenting the war from the high command down to the front line. It drew massive audiences and shaped the popular memory of the conflict.",
   },
   {
     slug: "they-fought-for-their-country",
@@ -845,9 +847,9 @@ export const newFilms: NewFilm[] = [
     themes: ["comradeship", "retreat", "endurance"],
     cast: ["Vasily Shukshin", "Vyacheslav Tikhonov", "Sergei Bondarchuk"],
     summary:
-      "During the grim 1942 retreat toward Stalingrad, a battered Soviet infantry unit fights rear-guard actions and clings to its dwindling ranks, the men's banter and bonds holding them together amid exhaustion and loss.",
+      "In the bleak summer of 1942, during the long retreat toward Stalingrad, a battered Soviet infantry unit fights rear-guard actions and clings to its shrinking ranks. Between the bombardments, the men joke, argue, eat, and grieve, their banter and loyalty the thin line holding them together. The film stays at ground level, among exhausted soldiers far from any headquarters.",
     context:
-      "Adapted from Sholokhov, Bondarchuk's film is notable for its unglamorous, ground-level view of defeat and survival, and for being the final screen role of the writer-director-actor Vasily Shukshin, who died during production.",
+      "Sergei Bondarchuk adapted the film from Mikhail Sholokhov's novel, and it is notable for its unglamorous, ground-level view of defeat and survival rather than triumph. It was the final screen role of the writer, director, and actor Vasily Shukshin, who died during production. The realism of its combat scenes and the warmth of its ensemble made it one of the most respected later Soviet war films.",
   },
   {
     slug: "belorussian-station",
@@ -860,9 +862,9 @@ export const newFilms: NewFilm[] = [
     themes: ["veterans", "memory", "brotherhood"],
     cast: ["Yevgeny Leonov", "Anatoly Papanov", "Nina Urgant"],
     summary:
-      "Four veterans reunite in 1960s Moscow for a comrade's funeral and spend a long day and night rediscovering, beneath their ordinary civilian lives, the bond forged in the war.",
+      "Four veterans who served together reunite in 1960s Moscow for the funeral of a comrade and spend a long day and night in each other's company. Beneath their settled civilian lives, as accountants, factory managers, and workers, the old wartime bond resurfaces, along with everything it cost them. By morning they have rediscovered who they were to one another.",
     context:
-      "A restrained, humane drama about how the war's generation carried its experience into peacetime, it is remembered especially for Bulat Okudzhava's song 'We Need One Victory,' which became an anthem in its own right.",
+      "Andrei Smirnov's restrained, humane drama looks at how the wartime generation carried its experience into peacetime, and at the quiet gulf between then and now. It is remembered above all for Bulat Okudzhava's song 'We Need One Victory,' performed at the film's close, which became an anthem in its own right. The film's understated emotion made it a lasting favourite.",
   },
   {
     slug: "twenty-days-without-war",
@@ -875,9 +877,9 @@ export const newFilms: NewFilm[] = [
     themes: ["the home front", "weariness", "quiet love"],
     cast: ["Yuri Nikulin", "Lyudmila Gurchenko", "Aleksei Petrenko"],
     summary:
-      "A war correspondent on leave from Stalingrad spends twenty days far from the front — visiting a film set based on his writing, comforting the bereaved, and beginning a tentative romance — before returning to the fighting.",
+      "A war correspondent takes twenty days of leave from the fighting at Stalingrad and travels to Tashkent, far from the front. He visits a film set loosely based on his own writing, delivers a dead soldier's last words to a grieving family, and begins a tentative, fragile romance, before the leave ends and he returns to the war. The film stays entirely in the spaces between combat.",
     context:
-      "German's spare, documentary-textured drama deliberately avoids combat to show the war's emotional undertow in rear-area life. Casting the beloved comic Yuri Nikulin against type lent its restraint unusual weight.",
+      "Aleksei German's spare, documentary-textured drama deliberately avoids battle scenes to show the emotional undertow of the war in rear-area life. Casting the beloved circus clown and comic actor Yuri Nikulin against type, as a weary, dignified correspondent, gave the restraint unusual weight. German's exacting realism, which often troubled the censors, marks the film as the work of a major and uncompromising director.",
   },
   {
     slug: "an-unfinished-piece-for-mechanical-piano",
@@ -890,9 +892,9 @@ export const newFilms: NewFilm[] = [
     themes: ["wasted lives", "self-deception", "lost youth"],
     cast: ["Aleksandr Kalyagin", "Yelena Solovey", "Yevgenia Glushenko"],
     summary:
-      "At a faded country estate, a summer gathering of provincial gentry simmers with old flirtations and regrets until a disillusioned schoolteacher erupts, confronting them all — and himself — with the smallness of their lives.",
+      "At a faded country estate one long summer day, a gathering of provincial gentry drinks, flirts, and reminisces, until old feelings resurface between a disillusioned schoolteacher and a woman he once loved. His mounting despair finally erupts in a confrontation that lays bare the smallness and self-deception of all their lives. By evening the outburst has passed, and everyone retreats back into comfortable illusion.",
     context:
-      "Mikhalkov's elegant ensemble piece, drawn from early Chekhov, distils the playwright's themes of stagnation and self-delusion into a single bittersweet day, and won major international prizes.",
+      "Nikita Mikhalkov drew this elegant ensemble piece from the early writings of Anton Chekhov, distilling the playwright's recurring themes of stagnation and missed chances into a single bittersweet day. The film is praised for its luminous period atmosphere and finely tuned performances. It won major international prizes and helped establish Mikhalkov's reputation abroad.",
   },
   {
     slug: "a-slave-of-love",
@@ -905,9 +907,9 @@ export const newFilms: NewFilm[] = [
     themes: ["art vs. politics", "awakening", "revolution"],
     cast: ["Yelena Solovey", "Rodion Nakhapetov", "Aleksandr Kalyagin"],
     summary:
-      "During the Civil War, a silent-film company shoots a frivolous melodrama at a southern resort, oblivious to the revolution around them, until the pampered leading lady falls for a cameraman secretly aiding the Bolsheviks and is forced to take sides.",
+      "During the Civil War, a silent-film crew shoots a frivolous melodrama at a sunny southern resort, blissfully detached from the revolution convulsing the country. The pampered leading lady drifts through the shoot until she falls for a cameraman who is secretly filming evidence for the Bolsheviks. Drawn out of her dream world, she is forced at last to take a side, with tragic consequences.",
     context:
-      "A nostalgic, sun-drenched homage to early cinema that turns abruptly serious, Mikhalkov's film contrasts the dreamworld of the movies with the violence of history closing in.",
+      "Nikita Mikhalkov's nostalgic, sun-drenched homage to the early days of cinema turns abruptly serious as history closes in on its sheltered characters. The film contrasts the make-believe of the movies with the violence of the world outside the studio gates. Yelena Solovey's performance as the awakening diva became one of her signature roles.",
   },
   {
     slug: "oblomov",
@@ -918,11 +920,11 @@ export const newFilms: NewFilm[] = [
     source: "mosfilm",
     genres: ["Drama", "Literary adaptation"],
     themes: ["inertia", "friendship", "the Russian soul"],
-    cast: ["Oleg Tabakov", "Yuri Bogatyryov", "Elena Solovey"],
+    cast: ["Oleg Tabakov", "Yuri Bogatyryov", "Yelena Solovey"],
     summary:
-      "A gentle, hopelessly indolent nobleman who can barely rouse himself from his sofa is drawn briefly toward life and love by his energetic friend and a spirited young woman, before his nature reclaims him.",
+      "A gentle, hopelessly indolent nobleman can barely rouse himself from his dressing gown and sofa, content to dream and drift while life passes by. His energetic, practical friend Stoltz and a spirited young woman named Olga briefly draw him toward activity and love. But Oblomov's deep nature reclaims him, and the film treats his retreat with tenderness rather than scorn.",
     context:
-      "Mikhalkov's warm adaptation of Goncharov's novel treats its famously inert hero with affection rather than scorn, finding in Oblomov's languor a critique of, and a tenderness for, a whole Russian temperament.",
+      "Nikita Mikhalkov's warm adaptation of Ivan Goncharov's celebrated novel finds in its famously inert hero not just a figure of satire but an object of real affection. The languid Oblomov becomes a lens on a whole Russian temperament, weighed against the brisk, Westernised efficiency of his friend. Oleg Tabakov's performance is among the most beloved in the Mikhalkov canon.",
   },
   {
     slug: "at-home-among-strangers",
@@ -935,9 +937,9 @@ export const newFilms: NewFilm[] = [
     themes: ["loyalty under suspicion", "friendship", "the new order"],
     cast: ["Yuri Bogatyryov", "Anatoly Solonitsyn", "Sergei Shakurov"],
     summary:
-      "In the early 1920s, gold shipped to feed the starving Soviet republic is stolen, and a Cheka officer falls under suspicion as he hunts the bandits and White officers behind the theft, his loyalty tested at every turn.",
+      "In the early 1920s, a shipment of gold meant to buy grain for the starving young Soviet republic is stolen, and a loyal Cheka officer falls under suspicion of the theft. To clear his name he must hunt down the bandits and White officers behind the robbery, his old comrades unsure whether to trust him. Shifting allegiances and a train heist drive the chase across the steppe.",
     context:
-      "Mikhalkov's debut feature is a stylish Civil-War 'Ostern' — a Soviet Western — full of train heists, shifting allegiances, and a brooding Eduard Artemyev score, marking the arrival of a major directorial talent.",
+      "Nikita Mikhalkov's debut feature is a stylish Civil-War 'Ostern,' a Soviet Western complete with shootouts, ambushes, and a brooding Eduard Artemyev score. Beneath the action lies a story about trust and loyalty in a world where old certainties have dissolved. The confident, energetic filmmaking announced the arrival of a major directorial talent.",
   },
   {
     slug: "siberiade",
@@ -950,9 +952,9 @@ export const newFilms: NewFilm[] = [
     themes: ["progress and nature", "family saga", "the century's sweep"],
     cast: ["Nikita Mikhalkov", "Lyudmila Gurchenko", "Vitaly Solonitsyn"],
     summary:
-      "Across much of the twentieth century, two families — one poor, one well-off — live, feud, and love in a remote Siberian village, their fates bound up with the oil exploration that will transform the taiga.",
+      "Across much of the twentieth century, two families in a remote Siberian village, one poor, one well-to-do, love, feud, and bury their dead as the outside world slowly reaches them. Their fates become bound up with the oil exploration that promises to transform the taiga and tear it open. The personal saga unfolds against the vast, indifferent forest and the upheavals of Soviet history.",
     context:
-      "Konchalovsky's sprawling generational epic interweaves intimate drama with archival footage of the century's upheavals, set to a pulsing Artemyev score. It shared the Grand Prix at Cannes.",
+      "Andrei Konchalovsky's sprawling generational epic weaves intimate family drama together with archival footage of the century's wars and revolutions, set to a driving Eduard Artemyev score. The film balances reverence for the wilderness against the relentless push of industrial progress. It shared the Grand Prix at the Cannes Film Festival, confirming Konchalovsky's international standing.",
   },
   {
     slug: "the-lady-with-the-dog",
@@ -965,9 +967,9 @@ export const newFilms: NewFilm[] = [
     themes: ["adultery", "longing", "self-discovery"],
     cast: ["Aleksey Batalov", "Iya Savvina"],
     summary:
-      "At a Black Sea resort, a jaded married Moscow banker and a young married woman begin a casual affair that, to their own surprise, deepens into a love neither can abandon once they return to their separate, ordinary lives.",
+      "At a Black Sea resort, a jaded married banker from Moscow strikes up a casual affair with a young married woman walking her little dog. What begins as an idle dalliance deepens, against the expectations of both, into a love they cannot shake once they return to their separate, settled lives. They are left meeting in secret, longing for a future neither can quite imagine.",
     context:
-      "Kheifits's exquisitely restrained adaptation of Chekhov's story captures the writer's mood of quiet yearning and irresolution. Widely praised abroad, it was honoured at Cannes for its delicacy.",
+      "Iosif Kheifits's exquisitely restrained adaptation of Anton Chekhov's short story captures the writer's mood of quiet yearning and irresolution. The film trusts glances, weather, and silence to carry feeling, and it refuses any neat conclusion. Widely praised abroad, it was honoured at Cannes and is often held up as a model of how to bring Chekhov to the screen.",
   },
   {
     slug: "king-lear",
@@ -980,11 +982,11 @@ export const newFilms: NewFilm[] = [
     themes: ["pride and madness", "power", "nature and ruin"],
     cast: ["Jüri Järvet", "Elza Radziņa", "Oleg Dal"],
     summary:
-      "An aging king divides his realm by flattery, banishing the one daughter who truly loves him, and is driven to madness on a storm-blasted heath as his kingdom collapses into cruelty and war.",
+      "An aging king decides to divide his realm among his daughters according to who flatters him most, and banishes the one who loves him truly but will not perform her devotion. His vanity sets off a chain of betrayal and cruelty that drives him to madness on a storm-blasted heath, while the kingdom collapses into war. Stripped of everything, he finds clarity only when it is too late.",
     context:
-      "Kozintsev's companion to his Hamlet again used Pasternak's translation and a Shostakovich score, staging the tragedy with bleak, elemental landscapes and a strong sense of a whole society unravelling.",
+      "Grigori Kozintsev's companion to his earlier Hamlet again used Boris Pasternak's translation and a Dmitri Shostakovich score, staging the tragedy amid bleak, elemental landscapes and crowds of the dispossessed. He read the play as the story of a whole society unravelling, not merely one man's fall. The Estonian actor Jüri Järvet gave a remarkable, frail performance in the title role.",
     impact:
-      "Together with his Hamlet, it is regarded as one of the finest screen adaptations of Shakespeare, admired internationally for its cinematic rather than theatrical conception.",
+      "Together with his Hamlet, the film is regarded as one of the finest screen adaptations of Shakespeare, admired internationally for its fully cinematic conception of the plays.",
   },
   {
     slug: "my-friend-ivan-lapshin",
@@ -997,11 +999,11 @@ export const newFilms: NewFilm[] = [
     themes: ["memory", "the 1930s", "disillusion"],
     cast: ["Andrei Boltnev", "Nina Ruslanova", "Andrei Mironov"],
     summary:
-      "In a shabby provincial town in 1935, a police investigator pursues a criminal gang while navigating a tangle of unspoken loves among his circle of friends — all recalled decades later through the eyes of a boy who lived among them.",
+      "In a shabby provincial town in 1935, a dedicated police investigator pursues a violent criminal gang while a tangle of unspoken loves plays out among his close circle of friends. The events are recalled decades later through the eyes of a boy who lived among them, half-remembered and tinged with loss. Daily life crowds the frame, ordinary and teeming, just before history darkens.",
     context:
-      "German's densely textured, near-documentary recreation of mid-1930s life, made before the Terror's full shadow, is prized for its immersive realism and elliptical storytelling, and is often cited among the greatest Russian films.",
+      "Aleksei German's densely textured, near-documentary recreation of mid-1930s life is set on the eve of the Great Terror, whose shadow the characters cannot yet see. Its immersive realism, overlapping voices, and roving camera made it difficult for the censors and slow to reach the screen. It is now frequently cited among the greatest of all Russian films.",
     impact:
-      "Its dense, layered soundscapes and roving, lived-in mise-en-scène became hugely influential on later Russian cinema and on German's own singular late style.",
+      "Its layered soundscapes and lived-in, roaming mise-en-scène were hugely influential on later Russian cinema and on German's own singular late style.",
   },
   {
     slug: "letter-never-sent",
@@ -1014,11 +1016,11 @@ export const newFilms: NewFilm[] = [
     themes: ["survival", "duty", "human frailty"],
     cast: ["Tatiana Samoilova", "Innokenty Smoktunovsky", "Yevgeny Urbansky"],
     summary:
-      "A small team of geologists searching for diamonds in the Siberian taiga finally strikes a find, only to be trapped by a raging forest fire and the wilderness, struggling to survive long enough to bring their discovery home.",
+      "A small team of geologists searches the remote Siberian taiga for diamonds, enduring isolation, exhaustion, and a quiet love triangle. Just as they finally strike a deposit, a vast forest fire traps them in the wilderness, and their struggle becomes one of simple survival against nature. One by one they are tested past their limits as they try to carry their discovery home.",
     context:
-      "Reuniting Kalatozov and cinematographer Sergei Urusevsky after The Cranes Are Flying, it is a visually astonishing survival drama whose fire and forest imagery pushed expressive camerawork to extremes.",
+      "Reuniting director Mikhail Kalatozov with cinematographer Sergei Urusevsky after The Cranes Are Flying, this is a visually astonishing survival drama in which the fire and forest become overwhelming presences. The camerawork pushes expressive, handheld technique to extremes, immersing the viewer in smoke, water, and snow. The film was admired more abroad than at home on release.",
     impact:
-      "Its bravura handheld and elemental photography later drew the admiration of filmmakers such as Francis Ford Coppola and Martin Scorsese, who helped bring it to Western attention.",
+      "Its bravura, elemental photography later drew the admiration of filmmakers such as Francis Ford Coppola and Martin Scorsese, who helped bring Kalatozov's work to wider attention in the West.",
   },
   {
     slug: "repentance",
@@ -1032,11 +1034,11 @@ export const newFilms: NewFilm[] = [
     themes: ["memory of terror", "guilt", "reckoning"],
     cast: ["Avtandil Makharadze", "Zeinab Botsvadze", "Ketevan Abuladze"],
     summary:
-      "A woman repeatedly digs up the corpse of a dead small-town dictator, refusing to let him rest, and her trial unspools the surreal, nightmarish story of the terror he inflicted — and the town's complicity in forgetting it.",
+      "A woman keeps digging up the buried corpse of a dead small-town dictator, refusing to let him rest in the ground. Put on trial, she tells the surreal, nightmarish story of the terror he inflicted on her family and her town, and of the neighbours who looked away. Her act of defiance forces the community, and the dictator's own descendants, to confront a past they would rather forget.",
     context:
-      "Made in Georgia in 1984 but shelved until glasnost, Abuladze's allegory of Stalinist repression became a landmark of the perestroika era, openly confronting the buried crimes of the past for the first time on Soviet screens.",
+      "Made in Georgia in 1984 but shelved until the perestroika thaw, Tengiz Abuladze's allegory of Stalinist repression became one of the defining films of the late 1980s. Its dictator is a composite of the century's tyrants, and its nightmare logic let it say what realism could not. Its eventual release was a cultural earthquake, opening the way for an open public reckoning with the crimes of the Soviet past.",
     impact:
-      "Its release was a cultural watershed, helping to legitimize public reckoning with Stalinism and signalling the new openness that would reshape Soviet cinema and society.",
+      "The film's release helped legitimise the public confrontation with Stalinism and signalled the new openness that would reshape Soviet cinema and society in its final years.",
   },
   {
     slug: "little-vera",
@@ -1049,9 +1051,9 @@ export const newFilms: NewFilm[] = [
     themes: ["generational conflict", "disillusion", "stifled youth"],
     cast: ["Natalya Negoda", "Andrei Sokolov", "Yuri Nazarov"],
     summary:
-      "A restless young woman in a grim industrial port city chafes against her drunken, quarrelsome family and a future that offers her little, drifting into a fraught romance that detonates the household's tensions.",
+      "A restless young woman in a grim industrial port city drifts through a future that seems to offer her nothing, chafing against her cramped flat and her drunken, quarrelsome parents. She takes up with a student, and bringing him home detonates the simmering tensions in the household. What follows is a raw portrait of a family, and a generation, with nowhere to go.",
     context:
-      "A sensation of the glasnost years, Pichul's bleak, frank portrait of provincial family dysfunction broke taboos — including the first overt sex scene in mainstream Soviet film — and was read as an unsparing verdict on late-Soviet malaise.",
+      "A sensation of the glasnost years, Vasili Pichul's bleak, unsparing film broke long-standing taboos, including the first frank depiction of sex in mainstream Soviet cinema, which made it notorious overnight. Audiences and critics read it as an honest verdict on the dead end of late-Soviet life. Natalya Negoda's fearless lead performance made her the face of the era.",
   },
   {
     slug: "the-needle",
@@ -1065,9 +1067,9 @@ export const newFilms: NewFilm[] = [
     themes: ["addiction", "youth subculture", "the lone outsider"],
     cast: ["Viktor Tsoi", "Marina Smirnova", "Pyotr Mamonov"],
     summary:
-      "A laconic drifter returns to Alma-Ata to collect a debt and finds his old girlfriend addicted to morphine, setting out to free her from the dealers who control her in a deadpan, music-driven anti-hero tale.",
+      "A laconic drifter returns to Alma-Ata to collect an old debt and finds the woman he once loved addicted to morphine and entangled with the dealers who supply her. Cool and unhurried, he sets out to pull her free and to confront the people controlling her. The deadpan, music-driven tale moves toward a stark and open-ended reckoning.",
     context:
-      "A cult landmark of the 'Kazakh New Wave' and perestroika youth cinema, it owes its enduring status largely to its star, the rock idol Viktor Tsoi of the band Kino, whose cool screen presence and songs made it a generational touchstone.",
+      "A cult landmark of the Kazakh New Wave and of perestroika youth cinema, the film owes much of its enduring power to its star, the rock idol Viktor Tsoi of the band Kino. His magnetic, understated presence and his songs made it a generational touchstone across the Soviet Union. Tsoi's death in a car crash two years later turned the film into a memorial.",
   },
   {
     slug: "assa",
@@ -1080,9 +1082,9 @@ export const newFilms: NewFilm[] = [
     themes: ["the old vs. the new", "rock culture", "change"],
     cast: ["Sergei Bugaev", "Tatyana Drubich", "Stanislav Govorukhin"],
     summary:
-      "In wintry Yalta, a young musician and an aging gangster vie for the same woman, their clash set against the emerging Soviet rock underground — and erupting, in the famous finale, into a Viktor Tsoi concert.",
+      "In wintry, off-season Yalta, a young musician nicknamed Bananan and an aging, sharp-suited gangster are drawn to the same young woman, and their rivalry simmers toward violence. Around them swirls the colourful, unofficial world of Soviet rock and youth culture just beginning to surface. The film famously breaks open at its close into a Viktor Tsoi concert and the song that became an anthem of change.",
     context:
-      "Solovyov's stylish, music-soaked film became an anthem of perestroika youth, smuggling the once-marginal Leningrad rock scene onto big screens and ending with Tsoi's 'We Want Changes!' as a generational rallying cry.",
+      "Sergei Solovyov's stylish, music-soaked film smuggled the once-marginal Leningrad rock underground onto big screens at the dawn of perestroika. Its mix of crime drama, pop art, and live music caught the restless energy of a country on the verge of transformation. The closing performance of Tsoi's 'We Want Changes!' turned the film into a rallying cry for a generation.",
   },
   {
     slug: "morozko",
@@ -1096,9 +1098,9 @@ export const newFilms: NewFilm[] = [
     themes: ["kindness rewarded", "vanity punished", "magic"],
     cast: ["Aleksandr Khvylya", "Natalya Sedykh", "Inna Churikova"],
     summary:
-      "A sweet, mistreated girl and a vain, boastful young man are each tested by the wintry wizard Father Frost and the witch Baba Yaga, with the kind-hearted rewarded and the selfish comically humbled.",
+      "A sweet, hardworking girl, tormented by her cruel stepmother, and a vain, boastful young man are each sent out into a magical winter world where they meet Father Frost and the witch Baba Yaga. Their true natures are tested: the kind-hearted girl is rewarded with warmth and treasure, while the selfish boastful one is comically humbled and, for a time, given the head of a bear.",
     context:
-      "Rou's exuberant fairy-tale film, full of folk creatures and practical magic, became a perennial children's favourite at home and, dubbed, a cult holiday staple abroad — especially in Czech and other European traditions.",
+      "Aleksandr Rou's exuberant fairy-tale film overflows with folk creatures, talking trees, and inventive practical magic. It became a perennial children's favourite at home and, in dubbed versions, a cult holiday staple abroad, especially in the Czech lands and across Europe. The film distils the moral simplicity and visual delight of the Russian wonder-tale tradition.",
   },
   {
     slug: "ruslan-and-lyudmila",
@@ -1111,9 +1113,9 @@ export const newFilms: NewFilm[] = [
     themes: ["the quest", "true love", "enchantment"],
     cast: ["Valery Kozinets", "Natalya Petrova", "Vladimir Fyodorov"],
     summary:
-      "On their wedding night, the bride Lyudmila is spirited away by an evil sorcerer, and the knight Ruslan sets out across a land of giants, witches, and a colossal living severed head to win her back.",
+      "On the night of her wedding to the knight Ruslan, the princess Lyudmila is snatched away by an evil sorcerer. Ruslan sets out to win her back, journeying across a land of giants, witches, and a colossal living severed head that guards a magic sword. Rival suitors, enchantments, and trials stand between him and his bride before love and courage prevail.",
     context:
-      "Adapted from Pushkin's mock-epic poem, Ptushko's final film is a lavish two-part fantasy spectacle, crowning a career devoted to bringing Russian folklore and fairy tale to the screen with elaborate effects.",
+      "Adapted from Alexander Pushkin's mock-epic poem, this lavish two-part fantasy was Aleksandr Ptushko's final film, a fitting crown to a career devoted to bringing Russian folklore to the screen. He filled it with elaborate effects, giant figures, and storybook spectacle. It stands as one of the grandest of all Soviet fairy-tale productions.",
   },
   {
     slug: "scarlet-sails",
@@ -1126,9 +1128,9 @@ export const newFilms: NewFilm[] = [
     themes: ["hope", "dreams come true", "faith"],
     cast: ["Anastasiya Vertinskaya", "Vasily Lanovoy"],
     summary:
-      "A girl in a hostile fishing village clings to an old prophecy that a ship with scarlet sails will one day carry her away to happiness, and a passing captain, learning of her dream, resolves to make it come true.",
+      "A girl in a hostile, superstitious fishing village clings to an old wanderer's prophecy that a ship with scarlet sails will one day come to carry her away to happiness. Mocked by her neighbours, she keeps her faith through a lonely childhood. A passing sea captain, learning of her dream, quietly resolves to make the impossible promise come true.",
     context:
-      "Ptushko's tender adaptation of Alexander Grin's beloved romantic novella became a symbol of youthful hope; in St. Petersburg, a 'Scarlet Sails' festival with a tall ship still marks the end of the school year.",
+      "Aleksandr Ptushko's tender adaptation of Alexander Grin's beloved romantic novella became a lasting symbol of youthful hope and the courage to believe in a dream. The luminous young Anastasiya Vertinskaya played the dreaming heroine. In St. Petersburg, a 'Scarlet Sails' festival, complete with a tall ship sailing the Neva, still marks the end of the school year in the film's honour.",
   },
   {
     slug: "nu-pogodi",
@@ -1142,9 +1144,9 @@ export const newFilms: NewFilm[] = [
     themes: ["the chase", "rivalry", "slapstick"],
     cast: [],
     summary:
-      "A scruffy, cigarette-smoking Wolf endlessly chases a clever, good-natured Hare through parks, beaches, and city streets, and is endlessly, slapstickly foiled — barking his catchphrase, 'Well, just you wait!'",
+      "A scruffy, cigarette-smoking Wolf endlessly pursues a clever, good-natured Hare through parks, beaches, museums, building sites, and city streets. Every elaborate scheme to catch his quarry backfires, leaving the Wolf battered and the Hare unruffled, as the Wolf snarls his catchphrase, 'Well, just you wait!' The wordless chases play out as pure visual comedy.",
     context:
-      "Soyuzmultfilm's long-running answer to Tom and Jerry became a national institution, its wordless chases beloved across generations and its characters among the most recognizable in Russian popular culture.",
+      "Soyuzmultfilm's long-running answer to Tom and Jerry grew into a national institution, its episodes beloved across generations and packed with affectionate detail of everyday Soviet life. The Wolf and Hare became among the most recognisable characters in Russian popular culture, and new episodes appeared over many years. Its gentle, knockabout humour needs no translation.",
   },
   {
     slug: "the-scarlet-flower",
@@ -1157,9 +1159,9 @@ export const newFilms: NewFilm[] = [
     themes: ["love beyond appearance", "sacrifice", "enchantment"],
     cast: [],
     summary:
-      "A merchant's youngest daughter, asked only for a scarlet flower, ends up bound to a fearsome enchanted beast in his magical palace, and her growing love breaks the curse to reveal the prince beneath.",
+      "A merchant about to sail abroad asks each of his three daughters what gift she would like, and his youngest wishes only for a single scarlet flower. Plucking it in an enchanted garden binds him to a fearsome, hidden beast, and to save him the daughter takes his place in the beast's magical palace. Her growing love sees past the monstrous form and breaks the curse to reveal the prince beneath.",
     context:
-      "Atamanov's hand-drawn Russian retelling of the 'Beauty and the Beast' story, made with the lush, rotoscoped realism of early Soyuzmultfilm features, remains a touchstone of classic Soviet animation.",
+      "Lev Atamanov's hand-drawn retelling of the Russian version of the 'Beauty and the Beast' story was made with the lush, rotoscoped realism of early Soyuzmultfilm features. Its rich colour and graceful movement set a standard for Soviet feature animation. The film remains a treasured classic of the studio's golden age.",
   },
   {
     slug: "the-bremen-town-musicians",
@@ -1172,9 +1174,9 @@ export const newFilms: NewFilm[] = [
     themes: ["freedom", "friendship", "rebellion"],
     cast: [],
     summary:
-      "A wandering troubadour and his band of animal friends — donkey, dog, cat, and rooster — outwit a foolish king and his guards to rescue the princess the troubadour loves, all in song.",
+      "A wandering troubadour and his band of animal friends, a donkey, a dog, a cat, and a rooster, travel the roads making music and living free. When the troubadour falls for a princess, the friends scheme to outwit her foolish father the king and his blundering guards. With disguises, songs, and high spirits, they win the day and the princess's heart.",
     context:
-      "A loose, hip musical riff on the Brothers Grimm, its catchy beat-influenced songs by Gennady Gladkov became enormously popular, turning the cartoon into a cult favourite and an unlikely emblem of countercultural cool.",
+      "A loose, hip riff on the Brothers Grimm tale, the cartoon is driven by Gennady Gladkov's catchy, beat-flavoured songs, which became enormously popular hits on their own. Its long-haired, guitar-slinging troubadour and its celebration of footloose freedom gave it an unlikely countercultural cool. It grew into a cult favourite and spawned beloved sequels.",
   },
   {
     slug: "planet-of-storms",
@@ -1187,10 +1189,10 @@ export const newFilms: NewFilm[] = [
     themes: ["exploration", "man and machine", "the unknown"],
     cast: ["Vladimir Yemelyanov", "Gennadi Vernov", "Georgi Zhzhonov"],
     summary:
-      "A Soviet expedition lands on Venus, where the cosmonauts and their robot encounter a hostile prehistoric world of monsters, eruptions, and hints of a vanished civilization while waiting for rescue.",
+      "A Soviet expedition reaches Venus and sets down on its surface, where the cosmonauts and their walking robot must survive a hostile prehistoric world of erupting volcanoes, dinosaur-like beasts, and strange storms. As one craft is lost and rescue grows uncertain, the explorers press on and find hints that an intelligent civilisation once existed on the planet.",
     context:
-      "Klushantsev's inventive science-fiction film was celebrated for its then-advanced special effects and design, blending adventure with a serious vision of space travel.",
+      "Pavel Klushantsev came from popular-science filmmaking, and his inventive special effects and spacecraft designs were remarkably advanced for their time, blending adventure with a serious vision of space travel. The film was a showcase of Soviet effects artistry in the early years of the space race.",
     impact:
-      "Its footage and effects were bought, re-edited, and reused in several American science-fiction films of the 1960s, and its imagery influenced Western filmmakers and effects artists.",
+      "American producers bought the footage and re-edited it into more than one English-language science-fiction film in the 1960s, and its effects and imagery influenced filmmakers and effects artists in the West.",
   },
 ];

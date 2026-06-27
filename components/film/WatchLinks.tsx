@@ -59,7 +59,7 @@ export default function WatchLinks({
             </a>
           ) : (
             <p className="text-sm italic text-kot-char/70">
-              Link pending verification — not yet published.
+              Link pending verification, not yet published.
             </p>
           )}
         </li>

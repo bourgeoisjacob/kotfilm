@@ -188,7 +188,15 @@ export function listRelatedFilms(
 // ---------------------------------------------------------------------------
 
 const personInclude = {
-  imageAssets: { select: { url: true }, take: 1 },
+  imageAssets: {
+    select: {
+      url: true,
+      attribution: true,
+      licenseName: true,
+      licenseUrl: true,
+    },
+    take: 1,
+  },
 } satisfies Prisma.PersonInclude;
 
 export type PersonWithFilms = {

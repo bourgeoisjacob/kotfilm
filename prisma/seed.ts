@@ -1,6 +1,7 @@
 import { films } from "../lib/films";
 import { createPrismaClient } from "../lib/prisma";
 import { filmImages, personImages } from "../lib/imageData";
+import { personBios } from "../lib/personBios";
 
 // This script runs via `tsx` (not the Prisma CLI), so load DATABASE_URL from
 // .env ourselves before creating the client. No-op if the file is absent.
@@ -87,10 +88,15 @@ async function main() {
         })
       : null;
 
+    const directorSlug = slugify(f.director);
     const director = await prisma.person.upsert({
-      where: { slug: slugify(f.director) },
-      update: {},
-      create: { slug: slugify(f.director), name: f.director },
+      where: { slug: directorSlug },
+      update: { bio: personBios[directorSlug] ?? undefined },
+      create: {
+        slug: directorSlug,
+        name: f.director,
+        bio: personBios[directorSlug] ?? null,
+      },
     });
 
     const film = await prisma.film.create({
@@ -125,10 +131,15 @@ async function main() {
     }
 
     for (const name of f.cast) {
+      const personSlug = slugify(name);
       const person = await prisma.person.upsert({
-        where: { slug: slugify(name) },
-        update: {},
-        create: { slug: slugify(name), name },
+        where: { slug: personSlug },
+        update: { bio: personBios[personSlug] ?? undefined },
+        create: {
+          slug: personSlug,
+          name,
+          bio: personBios[personSlug] ?? null,
+        },
       });
       await prisma.castCredit.create({
         data: { filmId: film.id, personId: person.id, characterName: "" },

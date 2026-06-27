@@ -250,9 +250,9 @@ const SUBS_DEFAULT: Record<NewSource, string[]> = {
 
 function watchFor(source: NewSource) {
   const confirm =
-    "Released free & legal by the studio — confirm the exact video link before production.";
+    "Released free & legal by the studio. Confirm the exact video link before production.";
   const pd =
-    "In the public domain; a free copy is hosted on the Internet Archive — confirm the exact link before production.";
+    "In the public domain; a free copy is hosted on the Internet Archive. Confirm the exact link before production.";
   switch (source) {
     case "mosfilm":
       return [{ platform: "YouTube", label: "Mosfilm official channel", sourceType: "OFFICIAL", rightsNote: confirm }];

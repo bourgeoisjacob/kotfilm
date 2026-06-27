@@ -222,11 +222,24 @@ export const filmImages: Record<string, ImageRecord> = {
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "М.А. Трахман (Главархив Москвы) / https://www.mos.ru/news/item/158835073/"
   },
-  "the-bremen-town-musicians": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/RR5015-0030R_25_%D1%80%D1%83%D0%B1%D0%BB%D0%B5%D0%B9_%D0%BC%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D1%8B%D0%B9_2019_%D0%91%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82%D1%8B_%28%D0%B2_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B8%29_%D1%80%D0%B5%D0%B2%D0%B5%D1%80%D1%81.png",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:RR5015-0030R_25_%D1%80%D1%83%D0%B1%D0%BB%D0%B5%D0%B9_%D0%BC%D0%B5%D0%B4%D0%BD%D0%BE-%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D1%8B%D0%B9_2019_%D0%91%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82%D1%8B_(%D0%B2_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B8)_%D1%80%D0%B5%D0%B2%D0%B5%D1%80%D1%81.png",
+  "october-ten-days-that-shook-the-world": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Movie_poster_October_%281927%29.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Movie_poster_October_(1927).jpg",
     "licenseName": "Public domain",
-    "attribution": "Банк России / https://cbr.ru/cash_circulation/memorable_coins/coins_base/ShowCoins/?cat_num=5015-0030"
+    "attribution": "Unknown authorUnknown author The original uploader was Animal-wiki at Russian Wikipedia.. неизвестен / Файл:Постер фильма «Октябрь» (СССР, 1927 г.).jpg (Original text : Transferred from ru.wikipedia to Commons. (Original text: http://www.postermandan.com/images/octoberR.jpg))"
+  },
+  "storm-over-asia": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Still_frame_of_Inkijinoff_from_Storm_Over_Asia.png",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Still_frame_of_Inkijinoff_from_Storm_Over_Asia.png",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Mezhrabpomfilm / https://en.wikipedia.org/wiki/Storm_over_Asia_(1928_film)"
+  },
+  "aelita": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Aelita_1924_still_03.jpg",
+    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Aelita_1924_still_03.jpg",
+    "licenseName": "Public domain",
+    "attribution": "Кинокомпания «Межрабпом-Русь». / [1]"
   }
 };
 
@@ -264,7 +277,7 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "Public domain",
     "attribution": "Jerzy Kośnik / A Polish film magazine „Film” (weekly), May 21st 1978, the front cover. No copyright notice. / Polski tygodnik filmowy „Film”, nr 21 (1573) z 21 maja 1978, okładka."
   },
-  "yury-yakovlev": {
+  "yuri-yakovlev": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Yury_Yakovlev_%28cropped%29.jpg",
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Yury_Yakovlev_(cropped).jpg",
     "licenseName": "CC BY 4.0",
@@ -320,7 +333,7 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "Театр сатиры / 95 лет с улыбкой. Как появился и чем живет сегодня Театр сатирыВечно юный и смешливый: каким Московский академический театр сатиры встретил столетие"
   },
-  "anatoli-papanov": {
+  "anatoly-papanov": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Anatoli_Papanov_%281%29_cr.jpg",
     "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Anatoli_Papanov_(1)_cr.jpg",
     "licenseName": "CC BY-SA 4.0",
@@ -347,13 +360,6 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Leo Medvedev/Лев Леонидович Медведев / Leo Medvedev’s Archive"
-  },
-  "georgi-daneliya": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Danelia.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Danelia.jpg",
-    "licenseName": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "attribution": "Alexey Yushenkov/Алексей Юшенков / Own work"
   },
   "stanislav-lyubshin": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Lyubshin.jpg",

@@ -1,11 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import FilmGrid from "@/components/catalogue/FilmGrid";
 import CollaborationText from "@/components/people/CollaborationText";
+import ImageCredit from "@/components/ImageCredit";
 import type { PersonWithFilms } from "@/lib/queries";
 import { collaborations } from "@/lib/collaborations";
 import { getWatchlistContext } from "@/lib/userData";
+
+// Natural fallback when no curated biography exists, built from the person's
+// own filmography so the page never shows an empty placeholder.
+function fallbackBio(
+  name: string,
+  role: "director" | "actor",
+  directed: { title: string }[],
+  actedIn: { title: string }[],
+): string {
+  const credits = role === "director" ? directed : actedIn;
+  const titles = credits.slice(0, 3).map((f) => f.title);
+  const list =
+    titles.length === 0
+      ? ""
+      : titles.length === 1
+        ? titles[0]
+        : `${titles.slice(0, -1).join(", ")} and ${titles[titles.length - 1]}`;
+  const craft = role === "director" ? "film director" : "actor";
+  const other =
+    role === "director" && actedIn.length > 0
+      ? " who also appeared on screen"
+      : role === "actor" && directed.length > 0
+        ? " who also directed"
+        : "";
+  if (!list) {
+    return `${name} is a Soviet ${craft}${other} featured in the Kotfilm collection.`;
+  }
+  return `${name} is a Soviet ${craft}${other}. On Kotfilm you can explore their work in ${list}.`;
+}
 
 export default async function PersonProfile({
   data,
@@ -39,13 +69,18 @@ export default async function PersonProfile({
 
       <header className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start">
         {person.imageAssets[0]?.url && (
-          <Image
-            src={person.imageAssets[0].url}
-            alt={person.name}
-            width={120}
-            height={120}
-            className="h-28 w-28 shrink-0 rounded-full object-cover ring-1 ring-kot-line"
-          />
+          <div className="shrink-0">
+            <Image
+              src={person.imageAssets[0].url}
+              alt={person.name}
+              width={120}
+              height={120}
+              className="h-28 w-28 rounded-full object-cover ring-1 ring-kot-line"
+            />
+            <div className="max-w-28">
+              <ImageCredit asset={person.imageAssets[0]} />
+            </div>
+          </div>
         )}
         <div>
           <p className="font-display text-xs uppercase tracking-[0.18em] text-kot-red">
@@ -55,12 +90,7 @@ export default async function PersonProfile({
             {person.name}
           </h1>
           <p className="mt-3 max-w-2xl leading-relaxed text-kot-char">
-            {person.bio ?? (
-              <span className="italic text-kot-char/70">
-                A short, original biography will appear here once added — Kotfilm
-                writes its own concise summaries rather than copying source text.
-              </span>
-            )}
+            {person.bio ?? fallbackBio(person.name, role, directed, actedIn)}
           </p>
         </div>
       </header>
@@ -104,36 +134,6 @@ export default async function PersonProfile({
           </div>
         </section>
       )}
-
-      <section className="mt-10">
-        <h2 className="font-display text-xl font-semibold uppercase tracking-[0.14em] text-kot-red">
-          Sources &amp; attribution
-        </h2>
-        <div className="mt-3 rounded-lg border border-kot-line bg-kot-cream p-5 text-sm text-kot-char">
-          <p>
-            Biographical details will cite Wikidata and Wikipedia when added; any
-            summary text on Kotfilm is{" "}
-            <strong className="text-kot-ink">original</strong>, not copied.
-          </p>
-          {person.wikipediaUrl && (
-            <p className="mt-2">
-              <a
-                href={person.wikipediaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-kot-red underline-offset-4 hover:underline"
-              >
-                <ExternalLink aria-hidden className="h-3.5 w-3.5" />
-                Wikipedia
-              </a>
-            </p>
-          )}
-          <p className="mt-2 text-xs text-kot-char/70">
-            Kotfilm is an independent guide and is not affiliated with any studio,
-            platform, or archive.
-          </p>
-        </div>
-      </section>
     </main>
   );
 }

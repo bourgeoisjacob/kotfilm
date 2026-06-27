@@ -13,6 +13,10 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "upload.wikimedia.org" },
       { protocol: "https", hostname: "commons.wikimedia.org" },
+      // Official studio YouTube upload thumbnails (used as a last-resort preview
+      // for films with no freely-licensed Commons image).
+      { protocol: "https", hostname: "i.ytimg.com" },
+      { protocol: "https", hostname: "img.youtube.com" },
     ],
   },
 };

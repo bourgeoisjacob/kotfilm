@@ -34,6 +34,11 @@ export default function SiteFooter() {
                 Data sources
               </Link>
             </li>
+            <li>
+              <Link className="transition-colors hover:text-kot-red" href="/privacy">
+                Privacy
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

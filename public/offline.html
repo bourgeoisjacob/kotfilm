@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offline — Kotfilm</title>
+    <style>
+      :root { color-scheme: light; }
+      body {
+        margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 1rem; text-align: center;
+        padding: 2rem; background: #f6efe0; color: #211d18;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      img { width: 88px; height: 88px; border-radius: 9999px; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+      h1 { margin: .25rem 0 0; color: #9e2b25; letter-spacing: .16em; font-size: 1.6rem; }
+      p { margin: 0; max-width: 22rem; color: #2c2722; line-height: 1.5; }
+      button {
+        margin-top: .5rem; border: 1px solid #9e2b25; background: transparent; color: #9e2b25;
+        padding: .6rem 1.2rem; border-radius: 9999px; font: inherit; letter-spacing: .08em;
+        text-transform: uppercase; cursor: pointer;
+      }
+      button:hover { background: #9e2b25; color: #f6efe0; }
+    </style>
+  </head>
+  <body>
+    <img src="/kotfilm-icon.png" alt="Kotfilm" />
+    <h1>KOTFILM</h1>
+    <p>You’re offline. Kotfilm needs a connection to load the catalogue. Check your network and try again.</p>
+    <button onclick="location.reload()">Retry</button>
+  </body>
+</html>

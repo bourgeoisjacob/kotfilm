@@ -1,8 +1,15 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+
+// A signed-out watchlist can hold at most this many slugs when merged into an
+// account — bounds the work an authenticated request can trigger.
+const mergeSlugsSchema = z
+  .array(z.string().regex(/^[a-z0-9-]+$/).max(120))
+  .max(200);
 
 async function requireUserId(): Promise<string> {
   const session = await auth();
@@ -61,10 +68,13 @@ export async function removeWatchlist(filmId: string) {
 /** Merge a signed-out localStorage watchlist (slugs) into the account, once. */
 export async function mergeLocalWatchlist(slugs: string[]) {
   const userId = await requireUserId();
-  if (slugs.length === 0) return;
+  const parsed = mergeSlugsSchema.safeParse(slugs);
+  if (!parsed.success) return;
+  const cleanSlugs = Array.from(new Set(parsed.data));
+  if (cleanSlugs.length === 0) return;
 
   const films = await prisma.film.findMany({
-    where: { slug: { in: slugs } },
+    where: { slug: { in: cleanSlugs } },
     select: { id: true },
   });
   const existing = await prisma.watchlistItem.findMany({

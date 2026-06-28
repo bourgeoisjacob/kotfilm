@@ -9,18 +9,33 @@ import { PrismaPg } from "@prisma/adapter-pg";
 /** Create a fresh PrismaClient backed by the Postgres (pg) adapter. */
 export function createPrismaClient(): PrismaClient {
   let connectionString = process.env.DATABASE_URL;
-  let ssl: { rejectUnauthorized: boolean } | undefined;
+  let ssl: { rejectUnauthorized: boolean; ca?: string } | undefined;
 
   // Managed Postgres (Supabase/Neon) terminates TLS with a chain Node doesn't
   // verify by default, and recent `pg` treats `sslmode=require` as full
   // verification (rejecting it). Strip `sslmode` from the string and configure
-  // SSL explicitly to honour the intended `require` meaning — encrypt without CA
-  // verification. (To verify strictly, supply the provider's CA instead.)
+  // SSL explicitly.
   if (connectionString && /[?&]sslmode=/.test(connectionString)) {
     const url = new URL(connectionString);
     url.searchParams.delete("sslmode");
     connectionString = url.toString();
-    ssl = { rejectUnauthorized: false };
+
+    // Preferred: verify the server certificate against the provider's CA.
+    // Set DATABASE_CA_CERT to the PEM contents (Supabase: Settings → Database →
+    // SSL configuration → download certificate). Falls back to encrypt-without-
+    // verify only when no CA is supplied.
+    const ca = process.env.DATABASE_CA_CERT?.trim();
+    if (ca) {
+      ssl = { rejectUnauthorized: true, ca };
+    } else {
+      if (process.env.NODE_ENV === "production") {
+        console.warn(
+          "[prisma] DATABASE_CA_CERT not set — DB connection is encrypted but " +
+            "the server certificate is NOT verified (MITM risk). Set DATABASE_CA_CERT.",
+        );
+      }
+      ssl = { rejectUnauthorized: false };
+    }
   }
 
   const adapter = new PrismaPg({ connectionString, ...(ssl ? { ssl } : {}) });

@@ -21,7 +21,7 @@ export async function registerUser(input: {
 }): Promise<RegisterResult> {
   // Throttle account creation per client IP.
   const ip = clientIp(await headers());
-  const limit = rateLimit(`register:${ip}`, 5, 10 * 60 * 1000);
+  const limit = await rateLimit(`register:${ip}`, 5, 10 * 60 * 1000);
   if (!limit.ok) {
     return {
       ok: false,

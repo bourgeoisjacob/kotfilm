@@ -30,7 +30,7 @@ const providers: NextAuthConfig["providers"] = [
     authorize: async (raw, request) => {
       // Throttle sign-in attempts per client IP.
       const ip = clientIp(request.headers);
-      if (!rateLimit(`signin:${ip}`, 10, 10 * 60 * 1000).ok) return null;
+      if (!(await rateLimit(`signin:${ip}`, 10, 10 * 60 * 1000)).ok) return null;
 
       const parsed = credentialsSchema.safeParse(raw);
       if (!parsed.success) return null;

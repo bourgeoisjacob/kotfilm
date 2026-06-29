@@ -7,7 +7,6 @@ import { getViewerRegion } from "@/lib/region";
 const navItems = [
   { href: "/learn", label: "Learn" },
   { href: "/films", label: "Catalogue" },
-  { href: "/genres", label: "Genres" },
   { href: "/directors", label: "Directors" },
   { href: "/actors", label: "Actors" },
   { href: "/about", label: "About" },

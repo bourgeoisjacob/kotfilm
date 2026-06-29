@@ -13,10 +13,7 @@ export default async function Home() {
   const rails = await getHomeRails(region.restricted);
 
   // Spotlight: strong, embeddable picks (Start here, then other official films).
-  const pool = [
-    ...(rails.find((r) => r.key === "start-here")?.films ?? []),
-    ...(rails.find((r) => r.key === "watch-free")?.films ?? []),
-  ];
+  const pool = rails.flatMap((r) => r.films);
   const seen = new Set<string>();
   const featured = pool
     .filter((f) => f.posterUrl && f.watchSourceType === "OFFICIAL")

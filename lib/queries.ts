@@ -121,7 +121,6 @@ export async function getHomeRails(restricted = false): Promise<HomeRail[]> {
   };
 
   push("start-here", "Start here", films.filter((f) => f.starterClassic));
-  push("watch-free", "Watch free now", films.filter((f) => source(f) === "OFFICIAL"));
 
   const genreRows: [string, string][] = [
     ["comedy", "Comedies"],

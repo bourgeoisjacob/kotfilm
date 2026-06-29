@@ -160,10 +160,10 @@ export default function LearnPage() {
                   <FilmLink slug="aelita">Aelita: Queen of Mars</FilmLink>.
                 </p>
                 <FigureRow>
-                  <Figure kind="film" slug="battleship-potemkin" caption="Battleship Potemkin (1925)" />
-                  <Figure kind="film" slug="man-with-a-movie-camera" caption="Man with a Movie Camera (1929)" />
-                  <Figure kind="film" slug="earth" caption="Earth (1930)" />
                   <Figure kind="film" slug="aelita" caption="Aelita (1924)" />
+                  <Figure kind="film" slug="battleship-potemkin" caption="Battleship Potemkin (1925)" />
+                  <Figure kind="film" slug="arsenal" caption="Arsenal (1929)" />
+                  <Figure kind="film" slug="man-with-a-movie-camera" caption="Man with a Movie Camera (1929)" />
                 </FigureRow>
               </EraSection>
 
@@ -191,10 +191,10 @@ export default function LearnPage() {
                   one.
                 </p>
                 <FigureRow>
+                  <Figure kind="film" slug="earth" caption="Earth (1930)" />
                   <Figure kind="film" slug="chapaev" caption="Chapaev (1934)" />
                   <Figure kind="film" slug="jolly-fellows" caption="Jolly Fellows (1934)" />
                   <Figure kind="film" slug="alexander-nevsky" caption="Alexander Nevsky (1938)" />
-                  <Figure kind="person" slug="lyubov-orlova" role="actors" caption="Lyubov Orlova" />
                 </FigureRow>
               </EraSection>
 
@@ -223,8 +223,8 @@ export default function LearnPage() {
                 </p>
                 <FigureRow>
                   <Figure kind="film" slug="ivan-the-terrible-part-i" caption="Ivan the Terrible (1944)" />
+                  <Figure kind="film" slug="ivan-the-terrible-part-ii" caption="Ivan the Terrible, Part II (1958)" />
                   <Figure kind="film" slug="the-stone-flower" caption="The Stone Flower (1946)" />
-                  <Figure kind="film" slug="the-scarlet-flower" caption="The Scarlet Flower (1952)" />
                   <Figure kind="film" slug="sadko" caption="Sadko (1953)" />
                 </FigureRow>
               </EraSection>

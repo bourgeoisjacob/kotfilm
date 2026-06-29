@@ -25,11 +25,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "hedgehog-in-the-fog": {
-    "url": "https://www.youtube.com/watch?v=HPTkvoQZYlg",
+    "url": "https://www.youtube.com/watch?v=mQqgViGenvk",
     "platform": "YouTube",
-    "label": "Soyuzmultfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "battleship-potemkin": {
     "url": "https://www.youtube.com/watch?v=a_bkBbrdyyw",
@@ -151,11 +151,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },
   "the-snow-queen": {
-    "url": "https://www.youtube.com/watch?v=Qp8ZhJqzABs",
+    "url": "https://www.youtube.com/watch?v=g0VSkAoocmM",
     "platform": "YouTube",
-    "label": "Soyuzmultfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "the-tale-of-tsar-saltan": {
     "url": "https://www.youtube.com/watch?v=f0Sfwa9VqT8",
@@ -249,11 +249,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-mystery-of-the-third-planet": {
-    "url": "https://www.youtube.com/watch?v=HZodexUkiDI",
+    "url": "https://www.youtube.com/watch?v=QSOiC5NfZcM",
     "platform": "YouTube",
-    "label": "Soyuzmultfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "hamlet": {
     "url": "https://www.youtube.com/watch?v=OzN1isLYc_A",
@@ -487,11 +487,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "heart-of-a-dog": {
-    "url": "https://www.youtube.com/watch?v=FeGuBXYLbug",
+    "url": "https://www.youtube.com/watch?v=H66k6jHiMfw",
     "platform": "YouTube",
-    "label": "Lenfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "liberation": {
     "url": "https://www.youtube.com/watch?v=GZlzMhfx2hQ",
@@ -557,18 +557,18 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-lady-with-the-dog": {
-    "url": "https://www.youtube.com/watch?v=qtIzBPAbCyg",
+    "url": "https://www.youtube.com/watch?v=_8MwK0EvJ5A",
     "platform": "YouTube",
-    "label": "Gevorg Vardanyan",
+    "label": "English-subtitled upload",
     "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "king-lear": {
-    "url": "https://www.youtube.com/watch?v=BqS1V41MjFQ",
+    "url": "https://www.youtube.com/watch?v=RDOm18j4dE0",
     "platform": "YouTube",
-    "label": "Кино Советской Эпохи",
+    "label": "English-subtitled upload",
     "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "my-friend-ivan-lapshin": {
     "url": "https://www.youtube.com/watch?v=SnS5xz_XniI",
@@ -613,11 +613,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "morozko": {
-    "url": "https://www.youtube.com/watch?v=TESoWRfVPCc",
+    "url": "https://www.youtube.com/watch?v=hw2DN4335hU",
     "platform": "YouTube",
-    "label": "Gorky Film Studio official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "ruslan-and-lyudmila": {
     "url": "https://www.youtube.com/watch?v=hXz4dKq0Cps",
@@ -641,25 +641,25 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-scarlet-flower": {
-    "url": "https://www.youtube.com/watch?v=1FtcZy6fow0",
+    "url": "https://www.youtube.com/watch?v=GqSyfN5bOh0",
     "platform": "YouTube",
-    "label": "Soyuzmultfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "the-bremen-town-musicians": {
-    "url": "https://www.youtube.com/watch?v=EZ70fF0htjQ",
+    "url": "https://www.youtube.com/watch?v=ekdWS1c3-bg",
     "platform": "YouTube",
-    "label": "Soyuzmultfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "planet-of-storms": {
-    "url": "https://www.youtube.com/watch?v=IC1J_ZprwJs",
+    "url": "https://www.youtube.com/watch?v=-VTF23EFvEM",
     "platform": "YouTube",
-    "label": "WonderLife",
+    "label": "English-subtitled upload",
     "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "beware-of-the-car": {
     "url": "https://www.youtube.com/watch?v=PGr-NddVue0",
@@ -739,11 +739,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "well-live-till-monday": {
-    "url": "https://www.youtube.com/watch?v=TpTCCF9sEFA",
+    "url": "https://www.youtube.com/watch?v=G7rbFy5EYwU",
     "platform": "YouTube",
-    "label": "Gorky Film Studio official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "kingdom-of-crooked-mirrors": {
     "url": "https://www.youtube.com/watch?v=bWvdNYJfxHM",
@@ -774,11 +774,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "don-quixote": {
-    "url": "https://www.youtube.com/watch?v=bpnXtvhkThg",
+    "url": "https://www.youtube.com/watch?v=aebHLrhyz-c",
     "platform": "YouTube",
-    "label": "Lenfilm official channel",
-    "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "label": "English-subtitled upload",
+    "sourceType": "UNVERIFIED",
+    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "trial-on-the-road": {
     "url": "https://www.youtube.com/watch?v=2rHFVO87TyY",

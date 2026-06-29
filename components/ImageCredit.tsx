@@ -12,7 +12,7 @@ export default function ImageCredit({
 }) {
   if (!asset?.attribution) return null;
   return (
-    <p className="mt-1 text-[0.6rem] leading-tight text-kot-char/55">
+    <p className="mt-1 break-words text-[0.6rem] leading-tight text-kot-char/55 [overflow-wrap:anywhere]">
       {asset.attribution}
       {asset.licenseName ? `, ${asset.licenseName}` : ""}
       {asset.licenseUrl && (

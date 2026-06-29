@@ -51,7 +51,7 @@ export function Figure({
   if (!rec) return null;
   const href = kind === "film" ? `/films/${slug}` : `/${role}/${slug}`;
   return (
-    <figure className="w-full">
+    <figure className="w-full min-w-0">
       <Link
         href={href}
         className="block overflow-hidden rounded-lg border border-kot-line transition-colors hover:border-kot-red"

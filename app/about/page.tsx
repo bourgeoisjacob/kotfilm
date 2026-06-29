@@ -45,7 +45,7 @@ export default function AboutPage() {
             stubborn curiosity about the wider world. That curiosity turned into a love
             of history and foreign policy, and somewhere along the way into a lasting
             fascination with the films that came out of the Soviet Union: bold, strange,
-            funny, and heartbreaking by turns, and far too good to be left gathering dust
+            funny, and heartbreaking, and far too good to be left gathering dust
             behind a language barrier.
           </p>
           <p>

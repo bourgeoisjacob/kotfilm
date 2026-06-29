@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About — Kotfilm",
   description:
-    "The story behind Kotfilm — one enthusiastic film lover, one unimpressed cat, and a mission to bring the great films of Soviet cinema to a wider audience.",
+    "The story behind Kotfilm: one enthusiastic film lover, one very patient cat, and a mission to bring the great films of Soviet cinema to a wider audience.",
 };
 
 export default function AboutPage() {
@@ -16,18 +16,18 @@ export default function AboutPage() {
           About
         </h1>
         <p className="mt-2 font-display text-sm uppercase tracking-[0.18em] text-kot-char/80">
-          A film lover and one very supportive cat
+          A film lover and one very patient cat
         </p>
       </header>
 
-      <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
+      <div className="grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-10">
         <figure className="overflow-hidden rounded-xl border border-kot-line shadow-sm">
           <span className="relative block aspect-[4/3] bg-kot-cream">
             <Image
               src="/about-illustration.png"
               alt="The founder of Kotfilm sitting with his cat and a film reel"
               fill
-              sizes="(max-width: 1024px) 100vw, 520px"
+              sizes="(max-width: 1024px) 100vw, 600px"
               className="object-cover"
               priority
             />
@@ -36,7 +36,7 @@ export default function AboutPage() {
 
         <div className="flex flex-col gap-4 leading-relaxed text-kot-char">
           <p>
-            Behind Kotfilm is one very enthusiastic film lover and one very supportive
+            Behind Kotfilm is one very enthusiastic film lover and one very patient
             cat, who is quite sure he is the true head of the studio and supervises every
             late-night screening from the arm of the couch.
           </p>
@@ -49,14 +49,14 @@ export default function AboutPage() {
             behind a language barrier.
           </p>
           <p>
-            That is what Kotfilm is about: taking these great stories, the montage
+            That is what Kotfilm is all about: taking these great stories, the montage
             experiments, the fairy tales, the war epics, and the surprising comedies, and
             bringing them to a broader audience, with original write-ups and honest, legal
             places to watch. No politics to glorify, just remarkable filmmaking that
             deserves a new generation of viewers.
           </p>
           <p>
-            So settle in, find yourself a good furry companion, and enjoy. I hope Kotfilm
+            So settle in, find a viewing buddy, and enjoy. I hope Kotfilm
             helps you discover a film you will love. The {""}
             <Link href="/learn" className="font-medium text-kot-red underline-offset-4 hover:underline">
               short history

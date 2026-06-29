@@ -47,7 +47,7 @@ export default async function Home() {
 
           <p className="max-w-xl text-pretty text-base leading-relaxed text-kot-char sm:text-lg">
             Watch it, love it, learn it. The great films of Soviet cinema, free
-            and legal, gathered in one den.
+            and legal, gathered in one place.
           </p>
 
           <form

@@ -4,14 +4,13 @@ import AuthNav from "@/components/auth/AuthNav";
 import RegionSelector from "@/components/RegionSelector";
 import { getViewerRegion } from "@/lib/region";
 
-// Routes are wired to their intended Phase 3+ paths; they will 404 until those
-// pages are built.
 const navItems = [
+  { href: "/learn", label: "Learn" },
   { href: "/films", label: "Catalogue" },
   { href: "/genres", label: "Genres" },
   { href: "/directors", label: "Directors" },
   { href: "/actors", label: "Actors" },
-  { href: "/watchlist", label: "Watchlist" },
+  { href: "/about", label: "About" },
 ];
 
 export default async function SiteHeader() {

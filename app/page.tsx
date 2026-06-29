@@ -45,6 +45,11 @@ export default async function Home() {
             </p>
           </div>
 
+          <p className="max-w-xl text-pretty text-base leading-relaxed text-kot-char sm:text-lg">
+            Watch it, love it, understand it — the great films of Soviet cinema,
+            free and legal, all in one den.
+          </p>
+
           <form
             action="/films"
             method="get"

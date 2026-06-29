@@ -4,7 +4,8 @@ import { redirect } from "next/navigation";
 import { Star } from "lucide-react";
 import { auth } from "@/auth";
 import FilmGrid from "@/components/catalogue/FilmGrid";
-import { getUserActivity, getWatchlistContext } from "@/lib/userData";
+import WatchlistRemoveButton from "@/components/watchlist/WatchlistRemoveButton";
+import { getDbWatchlist, getUserActivity, getWatchlistContext } from "@/lib/userData";
 
 export const metadata: Metadata = {
   title: "Your activity — Kotfilm",
@@ -44,9 +45,10 @@ export default async function ProfilePage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/signin?callbackUrl=/me");
 
-  const [{ favorites, ratings, watched }, watchlist] = await Promise.all([
+  const [{ favorites, ratings, watched }, watchlist, savedFilms] = await Promise.all([
     getUserActivity(session.user.id),
     getWatchlistContext(),
+    getDbWatchlist(session.user.id),
   ]);
 
   return (
@@ -57,6 +59,39 @@ export default async function ProfilePage() {
         </h1>
         <p className="mt-1 text-sm text-kot-char">{session.user.email}</p>
       </header>
+
+      <Section title="Watchlist" count={savedFilms.length}>
+        {savedFilms.length === 0 ? (
+          <EmptyState>
+            Save films to watch later with the bookmark button on any film page or in
+            the{" "}
+            <Link href="/films" className="text-kot-red underline-offset-4 hover:underline">
+              catalogue
+            </Link>
+            .
+          </EmptyState>
+        ) : (
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {savedFilms.map((item) => (
+              <li
+                key={item.filmId}
+                className="group relative flex items-center justify-between gap-2 rounded-lg border border-kot-line bg-kot-cream px-4 py-3 transition-colors hover:border-kot-red"
+              >
+                <Link href={`/films/${item.film.slug}`} className="flex flex-col leading-tight">
+                  <span className="font-display font-semibold tracking-wide text-kot-ink group-hover:text-kot-red">
+                    {item.film.title}
+                  </span>
+                  <span className="text-xs uppercase tracking-wider text-kot-char/75">
+                    {item.film.year}
+                    {item.film.director ? ` · ${item.film.director.name}` : ""}
+                  </span>
+                </Link>
+                <WatchlistRemoveButton filmId={item.filmId} title={item.film.title} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </Section>
 
       <Section title="Favourites" count={favorites.length}>
         {favorites.length === 0 ? (

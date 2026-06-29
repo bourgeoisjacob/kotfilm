@@ -43,8 +43,7 @@ export default async function Home() {
           </div>
 
           <p className="max-w-xl text-pretty text-base leading-relaxed text-kot-char sm:text-lg">
-            Come for the classics, stay for the stories. The great films of Soviet
-            cinema, free and legal, gathered in one place.
+            The great films of Soviet cinema, free and legal, gathered in one place.
           </p>
 
           <form

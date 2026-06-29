@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About — Kotfilm",
   description:
-    "The story behind Kotfilm: one enthusiastic film lover, one very patient cat, and a mission to bring the great films of Soviet cinema to a wider audience.",
+    "The story behind Kotfilm: one enthusiastic film lover, one very opinionated cat, and a mission to bring the great films of Soviet cinema to a wider audience.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
           About
         </h1>
         <p className="mt-2 font-display text-sm uppercase tracking-[0.18em] text-kot-char/80">
-          A film lover and one very patient cat
+          A film lover and one very discerning cat
         </p>
       </header>
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
 
         <div className="flex flex-col gap-4 leading-relaxed text-kot-char">
           <p>
-            Behind Kotfilm is one very enthusiastic film lover and one very patient
+            Behind Kotfilm is one very enthusiastic film lover and one very opinionated
             cat, who is quite sure he is the true head of the studio and supervises every
             late-night screening from the arm of the couch.
           </p>

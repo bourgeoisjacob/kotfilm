@@ -341,7 +341,7 @@ export default function LearnPage() {
                   the rock idol{" "}
                   <PersonLink slug="viktor-tsoi" role="actors">Viktor Tsoi</PersonLink>.
                   When the USSR dissolved in 1991, the state system that had funded all of
-                  this dissolved with it, closing the chapter this guide covers.
+                  this dissolved with it.
                 </p>
                 <FigureRow>
                   <Figure kind="film" slug="come-and-see" caption="Come and See (1985)" />

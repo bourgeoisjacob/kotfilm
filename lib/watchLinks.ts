@@ -11,11 +11,11 @@ export type WatchLink = {
 
 export const watchLinks: Record<string, WatchLink> = {
   "the-cranes-are-flying": {
-    "url": "https://www.youtube.com/watch?v=2OccZQmxKac",
+    "url": "https://www.youtube.com/watch?v=2rINnJat-5k",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "solaris": {
     "url": "https://www.youtube.com/watch?v=Z8ZhQPaw4rE",
@@ -32,11 +32,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "battleship-potemkin": {
-    "url": "https://www.youtube.com/watch?v=GmUef84ybXk",
+    "url": "https://www.youtube.com/watch?v=a_bkBbrdyyw",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "man-with-a-movie-camera": {
     "url": "https://www.youtube.com/watch?v=U1bgnBLqMyg",
@@ -60,25 +60,25 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "stalker": {
-    "url": "https://www.youtube.com/watch?v=UPerb922QGM",
+    "url": "https://www.youtube.com/watch?v=Q3hBLv-HLEc",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "ivans-childhood": {
-    "url": "https://www.youtube.com/watch?v=SbJukagA0lg",
+    "url": "https://www.youtube.com/watch?v=6Lnb1bI0VIk",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "the-mirror": {
-    "url": "https://www.youtube.com/watch?v=2ieiLy_HrHA",
+    "url": "https://www.youtube.com/watch?v=NrMINC5xjMs",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "come-and-see": {
     "url": "https://www.youtube.com/watch?v=zjIiApN6cfg",
@@ -88,46 +88,46 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "the-ascent": {
-    "url": "https://www.youtube.com/watch?v=VteY61FDhc8",
+    "url": "https://www.youtube.com/watch?v=v21lQ449T3Y",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "dersu-uzala": {
-    "url": "https://www.youtube.com/watch?v=bp2ihvch45k",
+    "url": "https://www.youtube.com/watch?v=sFaL03SKEzE",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "the-irony-of-fate": {
-    "url": "https://www.youtube.com/watch?v=L5GnqepBJkE",
+    "url": "https://www.youtube.com/watch?v=ms5Ga6kNvHM",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "moscow-does-not-believe-in-tears": {
-    "url": "https://www.youtube.com/watch?v=X7GuhjGZ-xs",
+    "url": "https://www.youtube.com/watch?v=NTWA_7-ld_U",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "office-romance": {
-    "url": "https://www.youtube.com/watch?v=hR-1QGMK75c",
+    "url": "https://www.youtube.com/watch?v=mi4gQMDgB_g",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "the-diamond-arm": {
-    "url": "https://www.youtube.com/watch?v=M9cGHdVbNXI",
+    "url": "https://www.youtube.com/watch?v=MkHiu9fD820",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "operation-y-and-shuriks-other-adventures": {
     "url": "https://www.youtube.com/watch?v=m3n4LptYWNo",
@@ -172,11 +172,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "alexander-nevsky": {
-    "url": "https://www.youtube.com/watch?v=IKskdbazW7w",
+    "url": "https://www.youtube.com/watch?v=Gq4PaJfod4w",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "ivan-the-terrible-part-i": {
     "url": "https://www.youtube.com/watch?v=ZYOxxp_EVxc",
@@ -193,25 +193,25 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "white-sun-of-the-desert": {
-    "url": "https://www.youtube.com/watch?v=GqnqFhc9aho",
+    "url": "https://www.youtube.com/watch?v=Auj_u7wEyw8",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "ivan-vasilievich-changes-profession": {
-    "url": "https://www.youtube.com/watch?v=TQ8onQu5QKY",
+    "url": "https://www.youtube.com/watch?v=l7eIIIPBNUc",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "gentlemen-of-fortune": {
-    "url": "https://www.youtube.com/watch?v=8tJPKSz6Gaw",
+    "url": "https://www.youtube.com/watch?v=XukcyHljlCE",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "mimino": {
     "url": "https://www.youtube.com/watch?v=GgFLr2bjUNM",
@@ -221,18 +221,18 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "autumn-marathon": {
-    "url": "https://www.youtube.com/watch?v=deEuVTAAzbg",
+    "url": "https://www.youtube.com/watch?v=X4e4-tYlHwo",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "carnival-night": {
-    "url": "https://www.youtube.com/watch?v=fEntSqfPC0g",
+    "url": "https://www.youtube.com/watch?v=TxrtUnWBCeI",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "shadows-of-forgotten-ancestors": {
     "url": "https://www.youtube.com/watch?v=1EpSSmcusUI",
@@ -263,11 +263,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },
   "ivan-the-terrible-part-ii": {
-    "url": "https://www.youtube.com/watch?v=i5g-Ss9BDR4",
+    "url": "https://www.youtube.com/watch?v=vnNgoS8VsoQ",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "a-cruel-romance": {
     "url": "https://www.youtube.com/watch?v=_394TmF4DKY",
@@ -277,25 +277,25 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "a-railway-station-for-two": {
-    "url": "https://www.youtube.com/watch?v=3g-p1d8H02o",
+    "url": "https://www.youtube.com/watch?v=bUya5DBvw_g",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "hussar-ballad": {
-    "url": "https://www.youtube.com/watch?v=929O4WzLRDg",
+    "url": "https://www.youtube.com/watch?v=vDtxO70AQZ4",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "the-garage": {
-    "url": "https://www.youtube.com/watch?v=Xqsa4u00GXM",
+    "url": "https://www.youtube.com/watch?v=VahEhy4HJu4",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "wings": {
     "url": "https://www.youtube.com/watch?v=lO6f6nO5HB4",
@@ -305,18 +305,18 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "welcome-or-no-trespassing": {
-    "url": "https://www.youtube.com/watch?v=e-r9XNmqQHk",
+    "url": "https://www.youtube.com/watch?v=X-4LQzazwUs",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "fate-of-a-man": {
-    "url": "https://www.youtube.com/watch?v=ov7bKyahGL4",
+    "url": "https://www.youtube.com/watch?v=O7xGW8UvBKQ",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "the-dawns-here-are-quiet": {
     "url": "https://www.youtube.com/watch?v=wk6TCpXjPFU",
@@ -340,11 +340,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "viy": {
-    "url": "https://www.youtube.com/watch?v=Amh3uudVMBo",
+    "url": "https://www.youtube.com/watch?v=4YmQn6q36HQ",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "cheburashka-and-gena-the-crocodile": {
     "url": "https://www.youtube.com/watch?v=aMHFMdAaBTQ",
@@ -438,18 +438,18 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "kidnapping-caucasian-style": {
-    "url": "https://www.youtube.com/watch?v=0f1LxDfNpv0",
+    "url": "https://www.youtube.com/watch?v=8KYUSLtXJyo",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "the-twelve-chairs": {
-    "url": "https://www.youtube.com/watch?v=P8t2dbJ7YXY",
+    "url": "https://www.youtube.com/watch?v=d5GSQY4Lt-E",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "walking-the-streets-of-moscow": {
     "url": "https://www.youtube.com/watch?v=vbjs5zfxDMs",
@@ -459,11 +459,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "afonya": {
-    "url": "https://www.youtube.com/watch?v=L9HATyYkZLs",
+    "url": "https://www.youtube.com/watch?v=IszoiMr-nBs",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "love-and-doves": {
     "url": "https://www.youtube.com/watch?v=CLjLLHDUiiA",
@@ -501,18 +501,18 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "they-fought-for-their-country": {
-    "url": "https://www.youtube.com/watch?v=xfUlR_nuBb4",
+    "url": "https://www.youtube.com/watch?v=gOxKScK1KOU",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "belorussian-station": {
-    "url": "https://www.youtube.com/watch?v=AafJinhS1fc",
+    "url": "https://www.youtube.com/watch?v=zX3IVNrx1Zs",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "twenty-days-without-war": {
     "url": "https://www.youtube.com/watch?v=Xd8cptrLhm8",
@@ -522,32 +522,32 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
   },
   "an-unfinished-piece-for-mechanical-piano": {
-    "url": "https://www.youtube.com/watch?v=0OXkvpVCZEA",
+    "url": "https://www.youtube.com/watch?v=XNrAhFUWimI",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "a-slave-of-love": {
-    "url": "https://www.youtube.com/watch?v=majTxmCiw5k",
+    "url": "https://www.youtube.com/watch?v=Otr_5MVh_00",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "oblomov": {
-    "url": "https://www.youtube.com/watch?v=Q1zIasC2Og8",
+    "url": "https://www.youtube.com/watch?v=LxEFja8NYac",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "at-home-among-strangers": {
-    "url": "https://www.youtube.com/watch?v=e0ECy37ayUw",
+    "url": "https://www.youtube.com/watch?v=59tzk9h-nfM",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "siberiade": {
     "url": "https://www.youtube.com/watch?v=6P5Nf7xzXS0",
@@ -627,11 +627,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "scarlet-sails": {
-    "url": "https://www.youtube.com/watch?v=5YzwW4hxrx4",
+    "url": "https://www.youtube.com/watch?v=Mhz-bn1ys4Y",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "nu-pogodi": {
     "url": "https://www.youtube.com/watch?v=jlyzTjzseOk",
@@ -690,18 +690,18 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "uncle-vanya": {
-    "url": "https://www.youtube.com/watch?v=0V2EZqQy99I",
+    "url": "https://www.youtube.com/watch?v=EF3A9mmRzGc",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "nine-days-of-one-year": {
-    "url": "https://www.youtube.com/watch?v=hekubUPUdy4",
+    "url": "https://www.youtube.com/watch?v=HGf-cZZDH3s",
     "platform": "YouTube",
-    "label": "Mosfilm official channel",
+    "label": "Mosfilm (English subtitles)",
     "sourceType": "OFFICIAL",
-    "rightsNote": "Free to watch on the studio's official channel."
+    "rightsNote": "Free to watch on Mosfilm's official channel, with English subtitles."
   },
   "five-evenings": {
     "url": "https://www.youtube.com/watch?v=p9mC85IOkDc",

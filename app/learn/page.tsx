@@ -194,6 +194,7 @@ export default function LearnPage() {
                   <Figure kind="film" slug="chapaev" caption="Chapaev (1934)" />
                   <Figure kind="film" slug="jolly-fellows" caption="Jolly Fellows (1934)" />
                   <Figure kind="film" slug="alexander-nevsky" caption="Alexander Nevsky (1938)" />
+                  <Figure kind="person" slug="lyubov-orlova" role="actors" caption="Lyubov Orlova" />
                 </FigureRow>
               </EraSection>
 
@@ -223,6 +224,7 @@ export default function LearnPage() {
                 <FigureRow>
                   <Figure kind="film" slug="ivan-the-terrible-part-i" caption="Ivan the Terrible (1944)" />
                   <Figure kind="film" slug="the-stone-flower" caption="The Stone Flower (1946)" />
+                  <Figure kind="film" slug="the-scarlet-flower" caption="The Scarlet Flower (1952)" />
                   <Figure kind="film" slug="sadko" caption="Sadko (1953)" />
                 </FigureRow>
               </EraSection>
@@ -344,6 +346,7 @@ export default function LearnPage() {
                 <FigureRow>
                   <Figure kind="film" slug="come-and-see" caption="Come and See (1985)" />
                   <Figure kind="film" slug="repentance" caption="Repentance (1987)" />
+                  <Figure kind="film" slug="little-vera" caption="Little Vera (1988)" />
                   <Figure kind="film" slug="the-needle" caption="The Needle (1988)" />
                 </FigureRow>
               </EraSection>

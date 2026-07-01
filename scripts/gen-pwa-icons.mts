@@ -1,32 +1,41 @@
 // Generates the PWA icon set from public/kotfilm-icon.png.
 //   npx tsx scripts/gen-pwa-icons.mts
+//
+// The source art is a circular emblem on a square with white corners. For app
+// launcher/splash icons that white shows around the circle, so we mask the art
+// to a clean circle and fill the corners with brand cream (the same colour as
+// the manifest background), making the emblem read as a single clean disc.
 import sharp from "sharp";
 import path from "node:path";
 
 const pub = path.join(process.cwd(), "public");
 const src = path.join(pub, "kotfilm-icon.png");
-const CREAM = "#efe4cd"; // --kot-cream, used as the maskable safe-zone background
+const CREAM = "#efe4cd"; // --kot-cream, matches manifest background_color
 
-async function square(size: number, out: string) {
-  await sharp(src).resize(size, size, { fit: "cover" }).png().toFile(path.join(pub, out));
-  console.log("wrote", out, `${size}x${size}`);
-}
+const circleMask = (size: number) =>
+  Buffer.from(
+    `<svg width="${size}" height="${size}"><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="#fff"/></svg>`,
+  );
 
-// Maskable: the icon must survive Android's circular/squircle mask, so the art
-// sits inside an ~80% safe zone on a brand-cream field.
-async function maskable(size: number, out: string) {
-  const inner = Math.round(size * 0.8);
-  const art = await sharp(src).resize(inner, inner, { fit: "contain", background: CREAM }).png().toBuffer();
+// Circular emblem on a full-bleed cream field. `scale` < 1 leaves a small safe
+// margin (used for maskable icons so aggressive launcher masks don't clip it).
+async function circleOnCream(size: number, out: string, scale = 1) {
+  const inner = Math.round(size * scale);
+  const emblem = await sharp(src)
+    .resize(inner, inner, { fit: "cover" })
+    .composite([{ input: circleMask(inner), blend: "dest-in" }])
+    .png()
+    .toBuffer();
   await sharp({ create: { width: size, height: size, channels: 4, background: CREAM } })
-    .composite([{ input: art, gravity: "center" }])
+    .composite([{ input: emblem, gravity: "center" }])
     .png()
     .toFile(path.join(pub, out));
-  console.log("wrote", out, `${size}x${size} (maskable)`);
+  console.log("wrote", out, `${size}x${size}${scale < 1 ? ` (safe ${scale})` : ""}`);
 }
 
-await square(192, "icon-192.png");
-await square(512, "icon-512.png");
-await square(180, "apple-icon-180.png");
-await maskable(512, "icon-maskable-512.png");
-await maskable(192, "icon-maskable-192.png");
+await circleOnCream(192, "icon-192.png");
+await circleOnCream(512, "icon-512.png");
+await circleOnCream(180, "apple-icon-180.png");
+await circleOnCream(512, "icon-maskable-512.png", 0.96);
+await circleOnCream(192, "icon-maskable-192.png", 0.96);
 console.log("done");

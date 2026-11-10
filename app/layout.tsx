@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     icon: "/kotfilm-icon.png",
     apple: "/apple-icon-180.png",
   },
+  // Google Search Console ownership (URL-prefix property); lets Play Console
+  // verify the developer website. Public token, safe to commit.
+  verification: {
+    google: "33MlPoBAp7iXzQfXrX5kxQ7v2terjz9M4osVrKG13ZQ",
+  },
   appleWebApp: {
     capable: true,
     title: "Kotfilm",

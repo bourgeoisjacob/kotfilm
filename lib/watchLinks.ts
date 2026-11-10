@@ -151,11 +151,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel. Plays in Russian; English subtitles may be unavailable."
   },
   "the-snow-queen": {
-    "url": "https://www.youtube.com/watch?v=g0VSkAoocmM",
+    "url": "https://www.youtube.com/watch?v=BtfZL16BNOk",
     "platform": "YouTube",
-    "label": "English-subtitled upload",
-    "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
+    "label": "Soyuzmultfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel. Plays in Russian; English subtitles may be unavailable."
   },
   "the-tale-of-tsar-saltan": {
     "url": "https://www.youtube.com/watch?v=f0Sfwa9VqT8",
@@ -417,11 +417,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Public-domain copy hosted on the Internet Archive."
   },
   "chapaev": {
-    "url": "https://www.youtube.com/watch?v=vv1QJ9g_yYc",
+    "url": "https://www.youtube.com/watch?v=z_p82GCHmSE",
     "platform": "YouTube",
-    "label": "Soviet Russian Films",
+    "label": "Шедевры советского кинематографа",
     "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel. Plays in Russian; English subtitles may be unavailable."
   },
   "jolly-fellows": {
     "url": "https://www.youtube.com/watch?v=chDRXQ77IgA",
@@ -585,9 +585,9 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel."
   },
   "repentance": {
-    "url": "https://www.youtube.com/watch?v=bIIb5wUzjdc",
+    "url": "https://www.youtube.com/watch?v=JtgePDGMg-M",
     "platform": "YouTube",
-    "label": "RVISION",
+    "label": "КиноПерестройка",
     "sourceType": "UNVERIFIED",
     "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel. Plays in Russian; English subtitles may be unavailable."
   },
@@ -641,11 +641,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Free to watch on the studio's official channel. Plays in Russian; English subtitles may be unavailable."
   },
   "the-scarlet-flower": {
-    "url": "https://www.youtube.com/watch?v=GqSyfN5bOh0",
+    "url": "https://www.youtube.com/watch?v=1FtcZy6fow0",
     "platform": "YouTube",
-    "label": "English-subtitled upload",
-    "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
+    "label": "Soyuzmultfilm official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel. Plays in Russian; English subtitles may be unavailable."
   },
   "the-bremen-town-musicians": {
     "url": "https://www.youtube.com/watch?v=ekdWS1c3-bg",
@@ -753,11 +753,11 @@ export const watchLinks: Record<string, WatchLink> = {
     "rightsNote": "Unofficial upload with English subtitles; not the rights holder's own channel."
   },
   "fire-water-and-brass-pipes": {
-    "url": "https://www.youtube.com/watch?v=d1L8NEdYLKU",
+    "url": "https://www.youtube.com/watch?v=XJeH1wkx80o",
     "platform": "YouTube",
-    "label": "Soviet and Russian Cinema",
-    "sourceType": "UNVERIFIED",
-    "rightsNote": "Unofficial upload, provided as a convenience; not the rights holder's own channel."
+    "label": "Gorky Film Studio official channel",
+    "sourceType": "OFFICIAL",
+    "rightsNote": "Free to watch on the studio's official channel. Plays in Russian; English subtitles may be unavailable."
   },
   "the-golden-antelope": {
     "url": "https://www.youtube.com/watch?v=YJxNWACuskg",

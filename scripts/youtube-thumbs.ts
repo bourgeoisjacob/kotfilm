@@ -48,9 +48,10 @@ const MANUAL: Record<
   },
   // Licensed third-party uploads (not the studio's own channel), labelled as such.
   repentance: {
-    videoId: "bIIb5wUzjdc",
-    attribution: "RVISION (licensed distributor)",
-    licenseName: "Licensed distributor upload",
+    // Previous RVISION upload (bIIb5wUzjdc) was removed; best live upload.
+    videoId: "JtgePDGMg-M",
+    attribution: "КиноПерестройка (unverified source)",
+    licenseName: "Unverified source",
   },
   "the-needle": {
     videoId: "UFEMle60E-4",
@@ -89,9 +90,10 @@ const MANUAL: Record<
     licenseName: "Unverified source",
   },
   "fire-water-and-brass-pipes": {
-    videoId: "d1L8NEdYLKU",
-    attribution: "Soviet and Russian Cinema (unverified source)",
-    licenseName: "Unverified source",
+    // Official Gorky Film Studio upload (@gorkyfilmstudio).
+    videoId: "XJeH1wkx80o",
+    attribution: "Киностудия Горького (official YouTube)",
+    licenseName: "Official YouTube upload",
   },
   // Best available enthusiast uploads where no official/licensed source exists.
   // Labelled "unverified source" so they are never presented as official.

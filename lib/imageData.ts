@@ -549,10 +549,10 @@ export const filmImages: Record<string, ImageRecord> = {
     "attribution": "Dovzhenko Centre (official YouTube)"
   },
   "repentance": {
-    "url": "https://i.ytimg.com/vi/bIIb5wUzjdc/hqdefault.jpg",
-    "descriptionUrl": "https://www.youtube.com/watch?v=bIIb5wUzjdc",
-    "licenseName": "Licensed distributor upload",
-    "attribution": "RVISION (licensed distributor)"
+    "url": "https://i.ytimg.com/vi/JtgePDGMg-M/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=JtgePDGMg-M",
+    "licenseName": "Unverified source",
+    "attribution": "КиноПерестройка (unverified source)"
   },
   "the-needle": {
     "url": "https://i.ytimg.com/vi/UFEMle60E-4/hqdefault.jpg",
@@ -669,10 +669,10 @@ export const filmImages: Record<string, ImageRecord> = {
     "attribution": "Киностудия Горького (official YouTube)"
   },
   "fire-water-and-brass-pipes": {
-    "url": "https://i.ytimg.com/vi/d1L8NEdYLKU/hqdefault.jpg",
-    "descriptionUrl": "https://www.youtube.com/watch?v=d1L8NEdYLKU",
-    "licenseName": "Unverified source",
-    "attribution": "Soviet and Russian Cinema (unverified source)"
+    "url": "https://i.ytimg.com/vi/XJeH1wkx80o/hqdefault.jpg",
+    "descriptionUrl": "https://www.youtube.com/watch?v=XJeH1wkx80o",
+    "licenseName": "Official YouTube upload",
+    "attribution": "Киностудия Горького (official YouTube)"
   },
   "to-kill-a-dragon": {
     "url": "https://i.ytimg.com/vi/qGbN7cUgJlo/hqdefault.jpg",
@@ -1640,13 +1640,6 @@ export const personImages: Record<string, ImageRecord> = {
     "licenseName": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "attribution": "Барканов Сергей Владимирович / Личная фототека"
-  },
-  "rashid-nugmanov": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/RachidNougmanov.jpg",
-    "descriptionUrl": "https://commons.wikimedia.org/wiki/File:RachidNougmanov.jpg",
-    "licenseName": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "attribution": "Y.Romanova / Own work"
   },
   "marina-smirnova": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Marina_Smirnova_President_of_Young_Readers_Found.jpg",

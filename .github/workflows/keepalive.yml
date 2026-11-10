@@ -38,3 +38,19 @@ jobs:
             -H "apikey: $SUPABASE_ANON_KEY" \
             "$SUPABASE_URL/auth/v1/health"
           echo
+
+  # Separate job so a dead video never blocks the keep-alive ping above.
+  # Fails (and GitHub emails you) if any linked YouTube video was removed,
+  # made private, or had embedding turned off.
+  youtube-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check YouTube watch links and thumbnails
+        run: node scripts/check-youtube-links.mjs

@@ -16,9 +16,14 @@ function Spotlight({
 }) {
   const [i, setI] = useState(0);
   const paused = useRef(false);
+  const touchX = useRef<number | null>(null);
 
   useEffect(() => {
     if (films.length < 2) return;
+    // Auto-rotate on larger screens only. On phones it's distracting and pulls
+    // a big image every few seconds; there you swipe instead.
+    const mq = window.matchMedia("(min-width: 640px) and (prefers-reduced-motion: no-preference)");
+    if (!mq.matches) return;
     const t = setInterval(() => {
       if (!paused.current) setI((n) => (n + 1) % films.length);
     }, 7000);
@@ -27,12 +32,20 @@ function Spotlight({
 
   if (films.length === 0) return null;
   const film = films[i];
+  const step = (dir: 1 | -1) => setI((n) => (n + dir + films.length) % films.length);
 
   return (
     <section
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
-      className="relative h-[380px] w-full overflow-hidden border-b border-kot-line bg-kot-ink sm:h-[460px]"
+      onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+      onTouchEnd={(e) => {
+        if (touchX.current === null) return;
+        const dx = e.changedTouches[0].clientX - touchX.current;
+        touchX.current = null;
+        if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+      }}
+      className="relative h-[260px] w-full overflow-hidden border-b border-kot-line bg-kot-ink sm:h-[460px]"
     >
       {film.posterUrl && (
         <Image
@@ -50,11 +63,11 @@ function Spotlight({
       <div className="absolute inset-0 bg-gradient-to-r from-kot-ink/85 via-kot-ink/30 to-transparent" />
 
       <div className="absolute inset-0 flex items-end">
-        <div className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 sm:pb-12">
+        <div className="mx-auto w-full max-w-6xl px-4 pb-5 sm:px-6 sm:pb-12">
           <p className="font-display text-xs uppercase tracking-[0.25em] text-kot-gold">
             Featured film
           </p>
-          <h2 className="mt-2 max-w-2xl font-display text-3xl font-bold leading-tight tracking-wide text-kot-creamHi sm:text-5xl">
+          <h2 className="mt-1 line-clamp-2 max-w-2xl font-display text-2xl font-bold leading-tight tracking-wide text-kot-creamHi sm:mt-2 sm:text-5xl">
             {film.title}
           </h2>
           <p className="mt-1 text-sm text-kot-cream/80">
@@ -64,7 +77,7 @@ function Spotlight({
           <p className="mt-3 hidden max-w-xl text-sm leading-relaxed text-kot-cream/85 sm:line-clamp-3">
             {film.summary}
           </p>
-          <div className="mt-5 flex items-center gap-3">
+          <div className="mt-3 flex items-center gap-3 sm:mt-5">
             <button
               onClick={() => onOpen(film)}
               className="inline-flex items-center gap-2 rounded-full bg-kot-red px-6 py-2.5 font-display text-sm uppercase tracking-wider text-kot-creamHi transition-colors hover:bg-kot-redDeep"
@@ -82,7 +95,7 @@ function Spotlight({
           </div>
 
           {films.length > 1 && (
-            <div className="mt-5 flex gap-2">
+            <div className="mt-3 flex gap-2 sm:mt-5">
               {films.map((f, n) => (
                 <button
                   key={f.slug}
@@ -111,7 +124,7 @@ function PosterCard({
   return (
     <button
       onClick={() => onOpen(film)}
-      className="group w-44 shrink-0 text-left sm:w-56"
+      className="group w-40 shrink-0 text-left sm:w-56"
     >
       <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-lg border border-kot-line bg-kot-char transition-colors group-hover:border-kot-red">
         {film.posterUrl ? (
@@ -119,7 +132,7 @@ function PosterCard({
             src={film.posterUrl}
             alt=""
             fill
-            sizes="(max-width: 640px) 176px, 224px"
+            sizes="(max-width: 640px) 160px, 224px"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
@@ -156,10 +169,20 @@ function Rail({
     ref.current?.scrollBy({ left: dir * ref.current.clientWidth * 0.85, behavior: "smooth" });
 
   return (
-    <section className="group/rail">
-      <h2 className="mb-2 font-display text-lg font-semibold uppercase tracking-[0.14em] text-kot-red">
-        {rail.title}
-      </h2>
+    <section className={`group/rail ${rail.mobile ? "" : "hidden sm:block"}`}>
+      <div className="mb-2 flex items-baseline justify-between gap-3">
+        <h2 className="font-display text-base font-semibold uppercase tracking-[0.14em] text-kot-red sm:text-lg">
+          {rail.title}
+        </h2>
+        {rail.href && (
+          <Link
+            href={rail.href}
+            className="shrink-0 font-display text-xs uppercase tracking-wider text-kot-char/75 transition-colors hover:text-kot-red"
+          >
+            See all →
+          </Link>
+        )}
+      </div>
       <div className="relative">
         <div
           ref={ref}
@@ -196,13 +219,34 @@ export default function HomeBrowser({
   featured?: HomePoster[];
 }) {
   const [selected, setSelected] = useState<HomePoster | null>(null);
+  // On phones, rails not flagged `mobile` collapse into these browse chips.
+  const chips = rails.filter((r) => !r.mobile && r.href);
   return (
     <>
       <Spotlight films={featured} onOpen={setSelected} />
-      <div className="mx-auto flex max-w-6xl flex-col gap-9 px-4 py-10 sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-7 px-4 py-6 sm:gap-9 sm:px-6 sm:py-10">
         {rails.map((rail) => (
           <Rail key={rail.key} rail={rail} onOpen={setSelected} />
         ))}
+        {chips.length > 0 && (
+          <section className="sm:hidden">
+            <h2 className="mb-3 font-display text-base font-semibold uppercase tracking-[0.14em] text-kot-red">
+              Browse more
+            </h2>
+            <ul className="flex flex-wrap gap-2">
+              {chips.map((r) => (
+                <li key={r.key}>
+                  <Link
+                    href={r.href!}
+                    className="block rounded-full border border-kot-line bg-kot-creamHi px-3.5 py-1.5 text-sm text-kot-ink transition-colors hover:border-kot-red hover:text-kot-red"
+                  >
+                    {r.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
       <FilmPlayerModal film={selected} onClose={() => setSelected(null)} />
     </>

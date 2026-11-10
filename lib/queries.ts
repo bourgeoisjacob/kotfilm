@@ -65,7 +65,27 @@ export type HomePoster = {
   watchResolved?: boolean;
 };
 
-export type HomeRail = { key: string; title: string; films: HomePoster[] };
+export type HomeRail = {
+  key: string;
+  title: string;
+  films: HomePoster[];
+  /** Catalogue URL showing the whole category ("See all"). */
+  href?: string;
+  /** Shown as a full rail on phones; other rails collapse into browse chips. */
+  mobile?: boolean;
+};
+
+/** Films per home rail; "See all" links to the full catalogue view. */
+const RAIL_LIMIT = 12;
+/** Rails kept as full rows on phones (the rest become chips). */
+const MOBILE_RAILS = new Set([
+  "start-here",
+  "genre-comedy",
+  "genre-war",
+  "genre-animation",
+  "era-1960s",
+  "era-1970s",
+]);
 
 /** Buckets the catalogue into category rows for the home page. One DB query;
  *  films may appear in several rails. Rows with fewer than 4 films are dropped.
@@ -116,11 +136,23 @@ export async function getHomeRails(restricted = false): Promise<HomeRail[]> {
   const source = (f: Row) => f.watchLinks[0]?.sourceType;
 
   const rails: HomeRail[] = [];
-  const push = (key: string, title: string, list: Row[]) => {
-    if (list.length >= 4) rails.push({ key, title, films: list.slice(0, 30).map(toPoster) });
+  const push = (key: string, title: string, list: Row[], href?: string) => {
+    if (list.length >= 4)
+      rails.push({
+        key,
+        title,
+        films: list.slice(0, RAIL_LIMIT).map(toPoster),
+        href,
+        mobile: MOBILE_RAILS.has(key),
+      });
   };
 
-  push("start-here", "Start here", films.filter((f) => f.starterClassic));
+  push(
+    "start-here",
+    "Start here",
+    films.filter((f) => f.starterClassic),
+    "/films?sort=classics",
+  );
 
   const genreRows: [string, string][] = [
     ["comedy", "Comedies"],
@@ -133,17 +165,41 @@ export async function getHomeRails(restricted = false): Promise<HomeRail[]> {
     ["romance", "Romance"],
   ];
   for (const [slug, label] of genreRows)
-    push(`genre-${slug}`, label, films.filter((f) => hasGenre(f, slug)));
+    push(
+      `genre-${slug}`,
+      label,
+      films.filter((f) => hasGenre(f, slug)),
+      `/films?genre=${slug}`,
+    );
 
-  push("era-silent", "The silent era", films.filter((f) => f.year <= 1935));
-  push("era-1960s", "The Thaw and the 1960s", films.filter((f) => f.year >= 1956 && f.year <= 1969));
-  push("era-1970s", "The 1970s", films.filter((f) => f.year >= 1970 && f.year <= 1979));
-  push("era-1980s", "The 1980s", films.filter((f) => f.year >= 1980 && f.year <= 1991));
+  push("era-silent", "The silent era", films.filter((f) => f.year <= 1935), "/films?sort=year");
+  push(
+    "era-1960s",
+    "The Thaw and the 1960s",
+    films.filter((f) => f.year >= 1956 && f.year <= 1969),
+    "/films?decade=1960",
+  );
+  push(
+    "era-1970s",
+    "The 1970s",
+    films.filter((f) => f.year >= 1970 && f.year <= 1979),
+    "/films?decade=1970",
+  );
+  push(
+    "era-1980s",
+    "The 1980s",
+    films.filter((f) => f.year >= 1980 && f.year <= 1991),
+    "/films?decade=1980",
+  );
 
-  const byDir = new Map<string, { name: string; films: Row[] }>();
+  const byDir = new Map<string, { name: string; slug: string; films: Row[] }>();
   for (const f of films) {
     if (!f.director) continue;
-    const e = byDir.get(f.director.slug) ?? { name: f.director.name, films: [] };
+    const e = byDir.get(f.director.slug) ?? {
+      name: f.director.name,
+      slug: f.director.slug,
+      films: [],
+    };
     e.films.push(f);
     byDir.set(f.director.slug, e);
   }
@@ -151,7 +207,9 @@ export async function getHomeRails(restricted = false): Promise<HomeRail[]> {
     .filter((d) => d.films.length >= 4)
     .sort((a, b) => b.films.length - a.films.length)
     .slice(0, 6)
-    .forEach((d) => push(`dir-${d.name}`, `Directed by ${d.name}`, d.films));
+    .forEach((d) =>
+      push(`dir-${d.slug}`, `Directed by ${d.name}`, d.films, `/films?director=${d.slug}`),
+    );
 
   push(
     "archive",

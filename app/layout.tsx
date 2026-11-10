@@ -41,7 +41,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={display.variable}>
-      <body className="flex min-h-screen flex-col">
+      {/* Bottom padding on phones keeps the footer clear of the fixed tab bar. */}
+      <body className="flex min-h-screen flex-col pb-[calc(3.75rem+env(safe-area-inset-bottom))] sm:pb-0">
         <Providers>
           <SiteHeader />
           <div className="flex-1">{children}</div>

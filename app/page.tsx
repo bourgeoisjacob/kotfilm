@@ -22,27 +22,28 @@ export default async function Home() {
 
   return (
     <main>
-      {/* Slim brand hero */}
+      {/* Slim brand hero. On phones the header already carries the brand, so
+          only the search box shows. */}
       <section className="grain border-b border-kot-line bg-kot-cream">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-10 text-center sm:py-12">
-          <Image
-            src="/kotfilm-icon.png"
-            alt="Kotfilm, a cat gazing up beside a Soviet film reel and a red star"
-            width={88}
-            height={88}
-            priority
-            className="rounded-full shadow-sm ring-1 ring-kot-line"
-          />
-          <div>
-            <h1 className="font-display text-4xl font-bold tracking-[0.16em] text-kot-red sm:text-5xl">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-3 text-center sm:py-12">
+          <h1 className="sr-only sm:not-sr-only">
+            <Image
+              src="/kotfilm-icon.png"
+              alt="Kotfilm, a cat gazing up beside a Soviet film reel and a red star"
+              width={88}
+              height={88}
+              priority
+              className="mx-auto mb-4 hidden rounded-full shadow-sm ring-1 ring-kot-line sm:block"
+            />
+            <span className="block font-display text-4xl font-bold tracking-[0.16em] text-kot-red sm:text-5xl">
               KOTFILM
-            </h1>
-            <p className="mt-2 font-display text-sm uppercase tracking-[0.25em] text-kot-char">
+            </span>
+            <span className="mt-2 block font-display text-sm uppercase tracking-[0.25em] text-kot-char">
               Catnip for Soviet Film Lovers
-            </p>
-          </div>
+            </span>
+          </h1>
 
-          <p className="max-w-xl text-pretty text-base leading-relaxed text-kot-char sm:text-lg">
+          <p className="hidden max-w-xl text-pretty text-base leading-relaxed text-kot-char sm:block sm:text-lg">
             The great films of Soviet cinema, free and legal, gathered in one place.
           </p>
 
@@ -50,7 +51,7 @@ export default async function Home() {
             action="/films"
             method="get"
             role="search"
-            className="mt-1 flex w-full max-w-md items-center gap-2"
+            className="flex w-full max-w-md items-center gap-2 sm:mt-1"
           >
             <label htmlFor="q" className="sr-only">
               Search films, directors, actors
